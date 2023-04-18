@@ -387,6 +387,6 @@ if __name__ == '__main__':
                 logging.info('Epoch {} done. Time: {:.2}min'.format(epoch , (time.time() - start_time) / 60))
 
             logging.info('Starting testing...')
-            loss, rho_s, rho_p = eval_epoch(config, best_epoch, net, criterion, val_loader)
+            loss, rho_s, rho_p = eval_epoch(config, best_epoch, net, criterion, test_loader)
             writer.add_scalar(f"Test_SRCC_{split_id}_{fold_id}", rho_s, best_epoch)
             writer.add_scalar(f"Test_PRCC_{split_id}_{fold_id}", rho_p, best_epoch)
