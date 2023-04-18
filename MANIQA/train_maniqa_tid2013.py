@@ -230,7 +230,7 @@ if __name__ == '__main__':
     """
     # reading the dataframe to do splitting into train val test
     df_tid = pd.read_csv(
-        r"C:\Users\pqlet\pass\IQA\datasets\tid2013\mos_with_names.txt",
+        config.train_txt_file_name,
         sep=' ',
         names=['MOS', 'img_filename']
     )
