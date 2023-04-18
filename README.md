@@ -2,7 +2,7 @@
 Trying to reproduce results of MANIQA paper
 
 ## TO DO TID2013 training 
-- [ ] 1) dataset for TID2013 and dataloader
+- [x] 1) dataset for TID2013 and dataloader
  Rewrite Dataset to take dist_img and scores as pandas DataFrame to stratify train_test_split and make val and test Datasets
 - [ ] 2) list of seeds 
 5 train__test_splits  10 fold run through the training split (10  times train+predict test) = 50 times 
