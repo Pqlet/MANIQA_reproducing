@@ -5,7 +5,3 @@ Dis/
 *.zip
 
 output/
-
-.ipynb_checkpoints/
-
-Untitled.ipynb
