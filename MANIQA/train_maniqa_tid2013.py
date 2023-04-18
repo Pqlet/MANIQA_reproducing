@@ -13,13 +13,14 @@ from config import Config
 from utils.process import RandCrop, ToTensor, RandHorizontalFlip, Normalize, five_point_crop
 from scipy.stats import spearmanr, pearsonr
 from data.pipal21 import PIPAL21
-from data.tid2013 import TID2013_train, TID2013
+from data.tid2013 import TID2013, TID2013_pd
 from torch.utils.tensorboard import SummaryWriter 
 from tqdm import tqdm
 
 import argparse
 
-from sklearn.model_selection import train_test_split, KFold
+import pandas as pd
+from sklearn.model_selection import GroupShuffleSplit, GroupKFold
 
 
 
@@ -99,6 +100,9 @@ def eval_epoch(config, epoch, net, criterion, test_loader):
 
         for data in tqdm(test_loader):
             pred = 0
+            # num_avg_val - this parameter accounts for the number
+            # of crop in inside five_point_crop
+            # from 0 to 4
             for i in range(config.num_avg_val):
                 x_d = data['d_img_org'].cuda()
                 labels = data['score']
@@ -134,19 +138,18 @@ if __name__ == '__main__':
     os.environ['NUMEXPR_NUM_THREADS'] = str(cpu_num)
     torch.set_num_threads(cpu_num)
 
-
     parser = argparse.ArgumentParser(description="Parses for train and inf",
                                  formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("seed", help="Random Seed", type=int)
     args = parser.parse_args()
     parsed_config = vars(args)
-    SEED = parsed_config['seed']    
+    SEED = parsed_config['seed']
 
     setup_seed(SEED)
 
     initial_bs = 8
     initial_lr = 1e-5
-    # !!! you need to change scheduler's T_max too 
+    # !!! you need to change scheduler's T_max too
     # to account for more items being with the current lr
     new_bs = 8
     new_lr = initial_lr * (new_bs/initial_bs)
@@ -155,7 +158,7 @@ if __name__ == '__main__':
         # dataset path
         "db_name": "TID2013",
         # path to dstorted images
-        "train_dis_path": "C:\Users\pqlet\pass\IQA\datasets\tid2013\distorted_images",
+        "train_dis_path": r"C:\Users\pqlet\pass\IQA\datasets\tid2013\distorted_images",
         #"val_dis_path": "../../datasets/NITRE2022/NTIRE2022_NR_Valid_Dis/",
         # path to MOS_with_names files
         "train_txt_file_name": r"C:\Users\pqlet\pass\IQA\datasets\tid2013\mos_with_names.txt",
@@ -188,10 +191,10 @@ if __name__ == '__main__':
         "num_outputs": 1,
         "num_tab": 2,
         "scale": 0.13,
-        
+
         # load & save checkpoint
-        "model_name": f"model_maniqa__tid__seed{SEED}",
-        
+        "model_name": f"model_maniqa__tid__seed_{SEED}__TEST1",
+
         "output_path": "./output",
         "snap_path": "./output/models/",               # directory for saving checkpoint
         "log_path": "./output/log/maniqa/",
@@ -204,7 +207,7 @@ if __name__ == '__main__':
 
     if not os.path.exists(config.snap_path):
         os.mkdir(config.snap_path)
-    
+
     if not os.path.exists(config.tensorboard_path):
         os.mkdir(config.tensorboard_path)
 
@@ -225,24 +228,36 @@ if __name__ == '__main__':
     10 fold run through EVERY training split 
     (10 times train on train + predict test) = 50 times
     """
-    df_tif = pd.read_csv(
-        r"C:\Users\pqlet\pass\IQA\datasets\tid2013\mos_with_names.txt", 
-        sep=' ', 
+    # reading the dataframe to do splitting into train val test
+    df_tid = pd.read_csv(
+        r"C:\Users\pqlet\pass\IQA\datasets\tid2013\mos_with_names.txt",
+        sep=' ',
         names=['MOS', 'img_filename']
     )
+    # for the debug run
+    # To stratify by original image later
+    df_tid['origin'] = df_tid['img_filename'].apply(lambda x: x[:3].lower())
+    # DONE: EMPLOY THE GroupKFold split FOR TID2013 so that there are no original images (i.e. with dist) in different folds to not leak
+    gss = GroupShuffleSplit(
+        n_splits=5,
+        test_size=0.2,
+        random_state=SEED,
+    )
+    gkfold10 = GroupKFold(n_splits=10)
 
-    kfold10 = KFold(n_splits=10, shuffle=True, random_state=42, )
-    # Define the seeds in range() 
+    # Define the seeds in range()
     # i used for seeding train_test_split
-    for i in range(5):
-        train_idx, test_idx = train_test_split(
-            list(range(df_tif.shape[0])),
-            test_size=0.2,
-            random_state=i,
-        )
-        
-        for fold_train_idx, fold_val_idx in kfold10.split(train_idx):
-            train_df = df_tif.iloc[fold_train_idx]
+    for split_id, (train_idx, test_idx) in enumerate(gss.split(
+            X=list(range(df_tid.shape[0])),
+            groups=df_tid['origin'].values
+    )):
+        for fold_id, (fold_train_idx, fold_val_idx) in enumerate(gkfold10.split(
+                train_idx,
+                groups=df_tid.iloc[train_idx]['origin'].values
+        )):
+            logging.info('--- Split id:{}\n--- Fold id:{}'.format(split_id, fold_id))
+
+            train_df = df_tid.iloc[fold_train_idx]
             train_dataset = TID2013_pd(
                 df = train_df,
                 dis_path = config.train_dis_path,
@@ -252,119 +267,126 @@ if __name__ == '__main__':
                     Normalize(0.5, 0.5),
                     RandHorizontalFlip(),
                     ToTensor()
-                ]
-            ))
-            
+                ])
+            )
+
             # Val dataset is not separate here
             # Validation subset is derived from the whole set
-            # Test dataset also 
+            # Test dataset also
             # SO KEEP IN MIND TO OMIT SCORES WHEN IT'S VAL AND TEST DATALOADERS
-            val_df = df_tif.iloc[fold_val_idx]
+            val_df = df_tid.iloc[fold_val_idx]
             val_dataset = TID2013_pd(
                 df = val_df,
                 dis_path = config.train_dis_path,
-                transform = transforms.Compose(
-                [
-                    RandCrop(224),
-                    Normalize(0.5, 0.5),
-                    RandHorizontalFlip(),
-                    ToTensor()
-                ]
-            ))
-            
-            
+                transform = transforms.Compose([Normalize(0.5, 0.5), ToTensor()])
+            )
+            test_df = df_tid.iloc[test_idx]
+            test_dataset = TID2013_pd(
+                df = test_df,
+                dis_path = config.train_dis_path,
+                transform = transforms.Compose([Normalize(0.5, 0.5), ToTensor()])
+            )
 
 
 
+            logging.info('number of train scenes: {}'.format(len(train_dataset)))
+            logging.info('number of val scenes: {}'.format(len(val_dataset)))
 
-    logging.info('number of train scenes: {}'.format(len(train_dataset)))
-    logging.info('number of val scenes: {}'.format(len(val_dataset)))
+            train_loader = DataLoader(
+                dataset=train_dataset,
+                batch_size=config.batch_size,
+                num_workers=config.num_workers,
+                drop_last=True,
+                shuffle=True
+            )
+            val_loader = DataLoader(
+                dataset=val_dataset,
+                batch_size=config.batch_size,
+                num_workers=config.num_workers,
+                drop_last=True,
+                shuffle=False
+            )
+            test_loader = DataLoader(
+                dataset=test_dataset,
+                batch_size=config.batch_size,
+                num_workers=config.num_workers,
+                drop_last=True,
+                shuffle=False
+            )
 
-    train_loader = DataLoader(
-        dataset=train_dataset,
-        batch_size=config.batch_size,
-        num_workers=config.num_workers,
-        drop_last=True,
-        shuffle=True
-    )
-    val_loader = DataLoader(
-        dataset=val_dataset,
-        batch_size=config.batch_size,
-        num_workers=config.num_workers,
-        drop_last=True,
-        shuffle=False
-    )
-    
-    net = MANIQA(
-        embed_dim=config.embed_dim,
-        num_outputs=config.num_outputs,
-        dim_mlp=config.dim_mlp,
-        patch_size=config.patch_size,
-        img_size=config.img_size,
-        window_size=config.window_size,
-        depths=config.depths,
-        num_heads=config.num_heads,
-        num_tab=config.num_tab,
-        scale=config.scale
-    )
-    net = nn.DataParallel(net)
-    net = net.cuda()
 
-    # loss function
-    criterion = torch.nn.MSELoss()
-    optimizer = torch.optim.Adam(
-        net.parameters(),
-        lr=config.learning_rate,
-        weight_decay=config.weight_decay,
-    )
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=config.T_max, eta_min=config.eta_min)
+            net = MANIQA(
+                embed_dim=config.embed_dim,
+                num_outputs=config.num_outputs,
+                dim_mlp=config.dim_mlp,
+                patch_size=config.patch_size,
+                img_size=config.img_size,
+                window_size=config.window_size,
+                depths=config.depths,
+                num_heads=config.num_heads,
+                num_tab=config.num_tab,
+                scale=config.scale
+            )
+            net = nn.DataParallel(net)
+            net = net.cuda()
 
-    # make directory for saving weights
-    if not os.path.exists(config.snap_path):
-        os.mkdir(config.snap_path)
-    
-    
-    
-    # TO DO
-    EMPLOY THE GroupKFold split FOR TID2013 so that there are no original images (i.e. with dist) in different folds to not leak 
-    
-    
-    
-    # train & validation
-    losses, scores = [], []
-    best_srocc = 0
-    best_plcc = 0
-    for epoch in range(0, config.n_epoch):
-        start_time = time.time()
-        logging.info('Running training epoch {}'.format(epoch + 1))
-        
-        
-        loss_val, rho_s, rho_p = train_epoch(epoch, net, criterion, optimizer, scheduler, train_loader)
-        
-        # Saving training loss and metrics
-        writer.add_scalar("Train_loss", loss_val, epoch)
-        writer.add_scalar("Train_SRCC", rho_s, epoch)
-        writer.add_scalar("Train_PLCC", rho_p, epoch)
+            # loss function
+            criterion = torch.nn.MSELoss()
+            optimizer = torch.optim.Adam(
+                net.parameters(),
+                lr=config.learning_rate,
+                weight_decay=config.weight_decay,
+            )
+            scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=config.T_max, eta_min=config.eta_min)
 
-        if (epoch + 1) % config.val_freq == 0:
-            logging.info('Starting eval...')
-            logging.info('Running testing in epoch {}'.format(epoch + 1))
-            loss, rho_s, rho_p = eval_epoch(config, epoch, net, criterion, val_loader)
-            
-            # Saving validation loss and metrics
-            writer.add_scalar("Val_loss", loss_val, epoch)
-            writer.add_scalar("Val_SRCC", rho_s, epoch)
-            writer.add_scalar("Val_PLCC", rho_p, epoch)
-                        
-            logging.info('Eval done...')
+            # make directory for saving weights
+            if not os.path.exists(config.snap_path):
+                os.mkdir(config.snap_path)
 
-            if rho_s > best_srocc or rho_p > best_plcc:
-                best_srocc = rho_s
-                best_plcc = rho_p
-                # save weights
-                model_name = "epoch{}".format(epoch + 1)
-                model_save_path = os.path.join(config.snap_path, model_name)
-                torch.save(net, model_save_path)
-                logging.info('Saving weights and model of epoch{}, SRCC:{}, PLCC:{}'.format(epoch + 1, best_srocc, best_plcc))
-        
-        logging.info('Epoch {} done. Time: {:.2}min'.format(epoch + 1, (time.time() - start_time) / 60))
+
+            # train & validation
+            losses, scores = [], []
+            best_srocc = 0
+            best_plcc = 0
+            best_epoch = 0
+            for epoch in range(0, config.n_epoch):
+                start_time = time.time()
+                logging.info('Running training epoch {}'.format(epoch ))
+
+
+                loss_val, rho_s, rho_p = train_epoch(epoch, net, criterion, optimizer, scheduler, train_loader)
+
+                # Saving training loss and metrics
+                writer.add_scalar("Train_loss_{split_id}_{fold_id}", loss_val, epoch)
+                writer.add_scalar("Train_SRCC_{split_id}_{fold_id}", rho_s, epoch)
+                writer.add_scalar("Train_PLCC_{split_id}_{fold_id}", rho_p, epoch)
+
+                # starting evaluaton only every config.val_freq epoch
+                if (epoch + 1) % config.val_freq == 0:
+                    logging.info('Starting eval...')
+                    logging.info('Running validation in epoch {}'.format(epoch ))
+                    loss, rho_s, rho_p = eval_epoch(config, epoch, net, criterion, val_loader)
+
+                    # Saving validation loss and metrics
+                    writer.add_scalar("Val_loss_{split_id}_{fold_id}", loss_val, epoch)
+                    writer.add_scalar("Val_SRCC_{split_id}_{fold_id}", rho_s, epoch)
+                    writer.add_scalar("Val_PLCC_{split_id}_{fold_id}", rho_p, epoch)
+
+                    logging.info('Eval on validation subset is done...')
+
+                    if rho_s > best_srocc:
+                        best_srocc = rho_s
+                        best_plcc = rho_p
+                        best_epoch = epoch
+                        # save weights
+                        model_name = "epoch{}".format(epoch)
+                        model_save_path = os.path.join(config.snap_path, model_name)
+                        torch.save(net, model_save_path)
+                        logging.info('Saving weights and model of epoch{}, SRCC:{}, PLCC:{}'.format(epoch , best_srocc, best_plcc))
+
+                logging.info('Epoch {} done. Time: {:.2}min'.format(epoch , (time.time() - start_time) / 60))
+
+            logging.info('Starting testing...')
+            loss, rho_s, rho_p = eval_epoch(config, best_epoch, net, criterion, val_loader)
+            writer.add_scalar(f"Test_SRCC_{split_id}_{fold_id}", rho_s, best_epoch)
+            writer.add_scalar(f"Test_PRCC_{split_id}_{fold_id}", rho_p, best_epoch)
