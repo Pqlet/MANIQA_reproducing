@@ -5,23 +5,18 @@ import cv2
 
 
 
-class TID2013_train(torch.utils.data.Dataset):
-    def __init__(self, dis_path, txt_file_name, transform):
-        super(TID2013_train, self).__init__()
+class TID2013_pd(torch.utils.data.Dataset):
+    def __init__(self, df, dis_path, transform):
+        super(TID2013_pd, self).__init__()
+        self.df = df
         self.dis_path = dis_path
-        self.txt_file_name = txt_file_name
         self.transform = transform
-
+        
+        
         dis_files_data, score_data = [], []
-        with open(self.txt_file_name, 'r') as listFile:
+        dis_files_data = self.df['img_filename'].values
+        score_data = self.df['MOS'].values
     
-            for line in listFile:
-                score, dis = line.split()
-                score = float(score)
-                dis_files_data.append(dis)
-                score_data.append(score)
-
-
         # reshape score_list (1xn -> nx1)
         score_data = np.array(score_data)
         score_data = self.normalization(score_data)

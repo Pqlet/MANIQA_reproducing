@@ -155,10 +155,10 @@ if __name__ == '__main__':
         # dataset path
         "db_name": "TID2013",
         # path to dstorted images
-        "train_dis_path": "C:\Users\MQTyor\ai_pc\Reserch_ai\IQA\datasets\tid2013\distorted_images",
+        "train_dis_path": "C:\Users\pqlet\pass\IQA\datasets\tid2013\distorted_images",
         #"val_dis_path": "../../datasets/NITRE2022/NTIRE2022_NR_Valid_Dis/",
         # path to MOS_with_names files
-        "train_txt_file_name": r"C:\Users\MQTyor\ai_pc\Reserch_ai\IQA\datasets\tid2013\mos_with_names.txt",
+        "train_txt_file_name": r"C:\Users\pqlet\pass\IQA\datasets\tid2013\mos_with_names.txt",
         #"val_txt_file_name": "./MANIQA/data/pipal21_val.txt",
 
         # optimization
@@ -220,32 +220,62 @@ if __name__ == '__main__':
     logging.info(f"Seed : {SEED}")
 
 
+    """
+    list of seeds - 5 train__test_splits 
+    10 fold run through EVERY training split 
+    (10 times train on train + predict test) = 50 times
+    """
+    df_tif = pd.read_csv(
+        r"C:\Users\pqlet\pass\IQA\datasets\tid2013\mos_with_names.txt", 
+        sep=' ', 
+        names=['MOS', 'img_filename']
+    )
+
+    kfold10 = KFold(n_splits=10, shuffle=True, random_state=42, )
+    # Define the seeds in range() 
+    # i used for seeding train_test_split
+    for i in range(5):
+        train_idx, test_idx = train_test_split(
+            list(range(df_tif.shape[0])),
+            test_size=0.2,
+            random_state=i,
+        )
+        
+        for fold_train_idx, fold_val_idx in kfold10.split(train_idx):
+            train_df = df_tif.iloc[fold_train_idx]
+            train_dataset = TID2013_pd(
+                df = train_df,
+                dis_path = config.train_dis_path,
+                transform = transforms.Compose(
+                [
+                    RandCrop(224),
+                    Normalize(0.5, 0.5),
+                    RandHorizontalFlip(),
+                    ToTensor()
+                ]
+            ))
+            
+            # Val dataset is not separate here
+            # Validation subset is derived from the whole set
+            # Test dataset also 
+            # SO KEEP IN MIND TO OMIT SCORES WHEN IT'S VAL AND TEST DATALOADERS
+            val_df = df_tif.iloc[fold_val_idx]
+            val_dataset = TID2013_pd(
+                df = val_df,
+                dis_path = config.train_dis_path,
+                transform = transforms.Compose(
+                [
+                    RandCrop(224),
+                    Normalize(0.5, 0.5),
+                    RandHorizontalFlip(),
+                    ToTensor()
+                ]
+            ))
+            
+            
 
 
-    # data load
-    train_dataset = TID2013_train(
-        dis_path=config.train_dis_path,
-        txt_file_name=config.train_txt_file_name,
-        transform=transforms.Compose(
-            [
-                RandCrop(config.crop_size),
-                Normalize(0.5, 0.5),
-                RandHorizontalFlip(),
-                ToTensor()
-            ]
-        ),
-    )
-    # Val dataset is not separate here
-    # Validation subset is derived from train
-    # Test dataset also 
-    # SO KEEP IN MIND TO OMIT SCORES WHEN IT'S VAL AND TEST DATALOADERS
-    """
-    val_dataset = PIPAL21(
-        dis_path=config.val_dis_path,
-        txt_file_name=config.val_txt_file_name,
-        transform=transforms.Compose([Normalize(0.5, 0.5), ToTensor()]),
-    )
-    """
+
 
     logging.info('number of train scenes: {}'.format(len(train_dataset)))
     logging.info('number of val scenes: {}'.format(len(val_dataset)))
@@ -264,6 +294,7 @@ if __name__ == '__main__':
         drop_last=True,
         shuffle=False
     )
+    
     net = MANIQA(
         embed_dim=config.embed_dim,
         num_outputs=config.num_outputs,
