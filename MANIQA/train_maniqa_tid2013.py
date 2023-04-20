@@ -51,6 +51,7 @@ def set_logging(config):
     )
 
 
+
 def train_epoch(epoch, net, criterion, optimizer, scheduler, train_loader):
     losses = []
     net.train()
@@ -85,7 +86,7 @@ def train_epoch(epoch, net, criterion, optimizer, scheduler, train_loader):
     rho_p, _ = pearsonr(np.squeeze(pred_epoch), np.squeeze(labels_epoch))
 
     ret_loss = np.mean(losses)
-    logging.info('train epoch:{} / loss:{:.4} / SRCC:{:.4} / PLCC:{:.4}'.format(epoch + 1, ret_loss, rho_s, rho_p))
+    logging.info('train epoch:{} / loss:{:.4} / SRCC:{:.4} / PLCC:{:.4}'.format(epoch, ret_loss, rho_s, rho_p))
 
     return ret_loss, rho_s, rho_p
 
@@ -125,7 +126,7 @@ def eval_epoch(config, epoch, net, criterion, test_loader):
         rho_s, _ = spearmanr(np.squeeze(pred_epoch), np.squeeze(labels_epoch))
         rho_p, _ = pearsonr(np.squeeze(pred_epoch), np.squeeze(labels_epoch))
 
-        logging.info('Epoch:{} ===== loss:{:.4} ===== SRCC:{:.4} ===== PLCC:{:.4}'.format(epoch + 1, np.mean(losses), rho_s, rho_p))
+        logging.info('Epoch:{} ===== loss:{:.4} ===== SRCC:{:.4} ===== PLCC:{:.4}'.format(epoch, np.mean(losses), rho_s, rho_p))
         return np.mean(losses), rho_s, rho_p
 
 
@@ -158,10 +159,10 @@ if __name__ == '__main__':
         # dataset path
         "db_name": "TID2013",
         # path to dstorted images
-        "train_dis_path": r"C:\Users\pqlet\pass\IQA\datasets\tid2013\distorted_images",
+        "train_dis_path": r"C:\Users\MQTyor\ai_pc\Reserch_ai\IQA\datasets\tid2013\distorted_images",
         #"val_dis_path": "../../datasets/NITRE2022/NTIRE2022_NR_Valid_Dis/",
         # path to MOS_with_names files
-        "train_txt_file_name": r"C:\Users\pqlet\pass\IQA\datasets\tid2013\mos_with_names.txt",
+        "train_txt_file_name": r"C:\Users\MQTyor\ai_pc\Reserch_ai\IQA\datasets\tid2013\mos_with_names.txt",
         #"val_txt_file_name": "./MANIQA/data/pipal21_val.txt",
 
         # optimization
@@ -172,13 +173,15 @@ if __name__ == '__main__':
         # The authors trained for 1 epoch
         # The shceduler steps every batch - that's why you don't log it
         # That's why 5 runs with its' different seeds
-        "n_epoch": 1,
+        "n_epoch": 12,
         "val_freq": 1,
         "T_max": 50,
         "eta_min": 0,
         "num_avg_val": 5,
         "crop_size": 224,
         "num_workers": 4,
+
+        "early_stopping": 2,
 
         # model
         "patch_size": 8,
@@ -193,7 +196,7 @@ if __name__ == '__main__':
         "scale": 0.13,
 
         # load & save checkpoint
-        "model_name": f"model_maniqa__tid__seed_{SEED}__TEST1",
+        "model_name": f"model_maniqa__tid__seed_{SEED}__TEST3",
 
         "output_path": "./output",
         "snap_path": "./output/models/",               # directory for saving checkpoint
@@ -238,15 +241,19 @@ if __name__ == '__main__':
     # To stratify by original image later
     df_tid['origin'] = df_tid['img_filename'].apply(lambda x: x[:3].lower())
     # DONE: EMPLOY THE GroupKFold split FOR TID2013 so that there are no original images (i.e. with dist) in different folds to not leak
+    N_SPLITS = 5
+    N_FOLDS = 10
     gss = GroupShuffleSplit(
-        n_splits=5,
+        n_splits=N_SPLITS,
         test_size=0.2,
         random_state=SEED,
     )
-    gkfold10 = GroupKFold(n_splits=10)
+    gkfold10 = GroupKFold(n_splits=N_FOLDS)
 
     # Define the seeds in range()
     # i used for seeding train_test_split
+    split_metrics = {"srocc": [[]]*N_SPLITS, "plcc": [[]]*N_SPLITS}
+
     for split_id, (train_idx, test_idx) in enumerate(gss.split(
             X=list(range(df_tid.shape[0])),
             groups=df_tid['origin'].values
@@ -255,7 +262,8 @@ if __name__ == '__main__':
                 train_idx,
                 groups=df_tid.iloc[train_idx]['origin'].values
         )):
-            logging.info('--- Split id:{}\n--- Fold id:{}'.format(split_id, fold_id))
+            logging.info('--- Split id:{}'.format(split_id))
+            logging.info('--- Fold id:{}'.format(fold_id))
 
             train_df = df_tid.iloc[fold_train_idx]
             train_dataset = TID2013_pd(
@@ -291,6 +299,7 @@ if __name__ == '__main__':
 
             logging.info('number of train scenes: {}'.format(len(train_dataset)))
             logging.info('number of val scenes: {}'.format(len(val_dataset)))
+            logging.info('number of test scenes: {}'.format(len(test_dataset)))
 
             train_loader = DataLoader(
                 dataset=train_dataset,
@@ -349,7 +358,10 @@ if __name__ == '__main__':
             best_srocc = 0
             best_plcc = 0
             best_epoch = 0
+            patience = config.early_stopping
             for epoch in range(0, config.n_epoch):
+                if patience <= 0:
+                    break
                 start_time = time.time()
                 logging.info('Running training epoch {}'.format(epoch ))
 
@@ -378,15 +390,27 @@ if __name__ == '__main__':
                         best_srocc = rho_s
                         best_plcc = rho_p
                         best_epoch = epoch
+                        patience = config.early_stopping
                         # save weights
-                        model_name = "epoch{}".format(epoch)
+                        model_name = "split{}_fold{}_epoch{}".format(split_id, fold_id, epoch)
                         model_save_path = os.path.join(config.snap_path, model_name)
                         torch.save(net, model_save_path)
                         logging.info('Saving weights and model of epoch{}, SRCC:{}, PLCC:{}'.format(epoch , best_srocc, best_plcc))
+                    else:
+                        patience -= 1
 
                 logging.info('Epoch {} done. Time: {:.2}min'.format(epoch , (time.time() - start_time) / 60))
 
             logging.info('Starting testing...')
+            net = torch.load(model_save_path)
+            net.eval()
             loss, rho_s, rho_p = eval_epoch(config, best_epoch, net, criterion, test_loader)
             writer.add_scalar(f"Test_SRCC_{split_id}_{fold_id}", rho_s, best_epoch)
             writer.add_scalar(f"Test_PRCC_{split_id}_{fold_id}", rho_p, best_epoch)
+            split_metrics["srocc"][split_id].append(rho_s)
+            split_metrics["plcc"][split_id].append(rho_p)
+
+        logging.info(f'Mean split test SROCC{np.mean(split_metrics["srocc"][split_id])}\n\ '
+                     f'Mean split test PLCC{np.mean(split_metrics["plcc"][split_id])}'
+                     )
+
