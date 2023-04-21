@@ -173,7 +173,7 @@ if __name__ == '__main__':
         # The authors trained for 1 epoch
         # The shceduler steps every batch - that's why you don't log it
         # That's why 5 runs with its' different seeds
-        "n_epoch": 12,
+        "n_epoch": 25,
         "val_freq": 1,
         "T_max": 50,
         "eta_min": 0,
@@ -181,7 +181,8 @@ if __name__ == '__main__':
         "crop_size": 224,
         "num_workers": 4,
 
-        "early_stopping": 2,
+        # added this
+        "early_stopping": 8,
 
         # model
         "patch_size": 8,
@@ -392,7 +393,7 @@ if __name__ == '__main__':
                         best_epoch = epoch
                         patience = config.early_stopping
                         # save weights
-                        model_name = "split{}_fold{}_epoch{}".format(split_id, fold_id, epoch)
+                        model_name = "split{}_fold{}".format(split_id, fold_id)
                         model_save_path = os.path.join(config.snap_path, model_name)
                         torch.save(net, model_save_path)
                         logging.info('Saving weights and model of epoch{}, SRCC:{}, PLCC:{}'.format(epoch , best_srocc, best_plcc))
