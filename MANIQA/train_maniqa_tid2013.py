@@ -370,9 +370,9 @@ if __name__ == '__main__':
                 loss_val, rho_s, rho_p = train_epoch(epoch, net, criterion, optimizer, scheduler, train_loader)
 
                 # Saving training loss and metrics
-                writer.add_scalar("Train_loss_{split_id}_{fold_id}", loss_val, epoch)
-                writer.add_scalar("Train_SRCC_{split_id}_{fold_id}", rho_s, epoch)
-                writer.add_scalar("Train_PLCC_{split_id}_{fold_id}", rho_p, epoch)
+                writer.add_scalar(f"Train_loss_{split_id}_{fold_id}", loss_val, epoch)
+                writer.add_scalar(f"Train_SRCC_{split_id}_{fold_id}", rho_s, epoch)
+                writer.add_scalar(f"Train_PLCC_{split_id}_{fold_id}", rho_p, epoch)
 
                 # starting evaluaton only every config.val_freq epoch
                 if (epoch + 1) % config.val_freq == 0:
@@ -381,9 +381,9 @@ if __name__ == '__main__':
                     loss, rho_s, rho_p = eval_epoch(config, epoch, net, criterion, val_loader)
 
                     # Saving validation loss and metrics
-                    writer.add_scalar("Val_loss_{split_id}_{fold_id}", loss_val, epoch)
-                    writer.add_scalar("Val_SRCC_{split_id}_{fold_id}", rho_s, epoch)
-                    writer.add_scalar("Val_PLCC_{split_id}_{fold_id}", rho_p, epoch)
+                    writer.add_scalar(f"Val_loss_{split_id}_{fold_id}", loss_val, epoch)
+                    writer.add_scalar(f"Val_SRCC_{split_id}_{fold_id}", rho_s, epoch)
+                    writer.add_scalar(f"Val_PLCC_{split_id}_{fold_id}", rho_p, epoch)
 
                     logging.info('Eval on validation subset is done...')
 
@@ -406,8 +406,8 @@ if __name__ == '__main__':
             net = torch.load(model_save_path)
             net.eval()
             loss, rho_s, rho_p = eval_epoch(config, best_epoch, net, criterion, test_loader)
-            writer.add_scalar(f"Test_SRCC_{split_id}_{fold_id}", rho_s, best_epoch)
-            writer.add_scalar(f"Test_PRCC_{split_id}_{fold_id}", rho_p, best_epoch)
+            writer.add_scalar(f"Test_SRCC_{split_id}", rho_s, best_epoch)
+            writer.add_scalar(f"Test_PRCC_{split_id}", rho_p, best_epoch)
             split_metrics["srocc"][split_id].append(rho_s)
             split_metrics["plcc"][split_id].append(rho_p)
 
