@@ -173,7 +173,7 @@ if __name__ == '__main__':
         # The authors trained for 1 epoch
         # The shceduler steps every batch - that's why you don't log it
         # That's why 5 runs with its' different seeds
-        "n_epoch": 25,
+        "n_epoch": 20,
         "val_freq": 1,
         "T_max": 50,
         "eta_min": 0,
@@ -197,7 +197,7 @@ if __name__ == '__main__':
         "scale": 0.13,
 
         # load & save checkpoint
-        "model_name": f"model_maniqa__tid__seed_{SEED}__TEST3",
+        "model_name": f"model_maniqa__tid__seed_{SEED}__TEST4",
 
         "output_path": "./output",
         "snap_path": "./output/models/",               # directory for saving checkpoint
