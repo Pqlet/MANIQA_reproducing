@@ -182,7 +182,7 @@ if __name__ == '__main__':
         "num_workers": 4,
 
         # added this
-        "early_stopping": 8,
+        "early_stopping": 3,
 
         # model
         "patch_size": 8,
@@ -197,7 +197,7 @@ if __name__ == '__main__':
         "scale": 0.13,
 
         # load & save checkpoint
-        "model_name": f"model_maniqa__tid__seed_{SEED}__TEST4",
+        "model_name": f"model_maniqa__tid__seed_{SEED}__TEST5",
 
         "output_path": "./output",
         "snap_path": "./output/models/",               # directory for saving checkpoint
