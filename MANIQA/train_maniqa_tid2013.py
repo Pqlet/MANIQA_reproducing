@@ -181,8 +181,13 @@ if __name__ == '__main__':
         "crop_size": 224,
         "num_workers": 4,
 
-        # added this
+        """
+        added this
+        """
         "early_stopping": 3,
+        "n_splits": 2,
+        "n_folds": 5,
+
 
         # model
         "patch_size": 8,
@@ -242,8 +247,8 @@ if __name__ == '__main__':
     # To stratify by original image later
     df_tid['origin'] = df_tid['img_filename'].apply(lambda x: x[:3].lower())
     # DONE: EMPLOY THE GroupKFold split FOR TID2013 so that there are no original images (i.e. with dist) in different folds to not leak
-    N_SPLITS = 5
-    N_FOLDS = 10
+    N_SPLITS = config.n_splits
+    N_FOLDS = config.n_folds
     gss = GroupShuffleSplit(
         n_splits=N_SPLITS,
         test_size=0.2,
