@@ -1,3 +1,6 @@
+-300423 13:40
+test metrics to .txt file
+
 -300423 12:49
 update logging to save to the console too
 add debug mode - 1 epoch, 2 images per origin
