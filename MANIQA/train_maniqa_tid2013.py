@@ -199,6 +199,7 @@ if __name__ == '__main__':
         "n_splits": 2,
         "n_folds": 5,
         "metrics_file": ".pkl",
+        "metrics_txt": ".txt",
         # debug means
         # 2 images per origin and n_epoch=1
         "debug": True,
@@ -217,7 +218,7 @@ if __name__ == '__main__':
         "scale": 0.13,
 
         # load & save checkpoint
-        "model_name": f"model_maniqa__tid__seed_{SEED}__2splti5fold__default__test",
+        "model_name": f"model_maniqa__tid__seed_{SEED}__2splt5fold__default__test__new",
 
         "output_path": "./output",
         "snap_path": "./output/models/",               # directory for saving checkpoint
@@ -243,6 +244,8 @@ if __name__ == '__main__':
 
     config.metrics_file = config.model_name + config.metrics_file
     metrics_filepath = os.path.join(config.log_path, config.metrics_file)
+    config.metrics_txt = config.model_name + "__metrics" + config.metrics_txt
+    metrics_txtpath = os.path.join(config.log_path,  config.metrics_txt)
 
 
     set_logging(config)
@@ -459,8 +462,14 @@ if __name__ == '__main__':
             split_metrics["plcc"][split_id].append(rho_p)
 
             # Saving dictionary with metrics
-            with open(metrics_filepath, 'wb') as f:
-                pickle.dump(split_metrics, f)
+            with open(metrics_filepath, 'wb') as f_pkl_metrics:
+                pickle.dump(split_metrics, f_pkl_metrics)
+            # Saving lists from split_metrics dictionary
+            with open(metrics_txtpath, 'w') as f_txt_metrics:
+                for _key, _dict_val in split_metrics.items():
+                    for _split_id, _lists in enumerate(_dict_val):
+                        for _fold_id, _val in enumerate(_lists):
+                            f_txt_metrics.write(f'{_key}-split{_split_id:02d}-fold{_fold_id:02d}: {_val}\n')
 
         logging.info(f'Mean split test SROCC {np.mean(split_metrics["srocc"][split_id])}')
         logging.info(f'Mean split test PLCC {np.mean(split_metrics["plcc"][split_id])}')
