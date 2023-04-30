@@ -202,7 +202,7 @@ if __name__ == '__main__':
         "metrics_txt": ".txt",
         # debug means
         # 2 images per origin and n_epoch=1
-        "debug": True,
+        "debug": False,
 
 
         # model
@@ -218,7 +218,7 @@ if __name__ == '__main__':
         "scale": 0.13,
 
         # load & save checkpoint
-        "model_name": f"model_maniqa__tid__seed_{SEED}__2splt5fold__default__test__new",
+        "model_name": f"MANIQA_tid2013_seed{SEED}_2s_5f__default",
 
         "output_path": "./output",
         "snap_path": "./output/models/",               # directory for saving checkpoint
@@ -274,7 +274,7 @@ if __name__ == '__main__':
     """
     DEBUG RUN
     """
-    if config.debug == True:
+    if config.debug:
         df_tid = (df_tid.groupby(['origin']).head(2))
         config.n_epoch = 1
 
@@ -340,8 +340,6 @@ if __name__ == '__main__':
                 dis_path = config.train_dis_path,
                 transform = transforms.Compose([Normalize(0.5, 0.5), ToTensor()])
             )
-
-
 
             logging.info('number of train scenes: {}'.format(len(train_dataset)))
             logging.info('number of val scenes: {}'.format(len(val_dataset)))
