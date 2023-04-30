@@ -1,0 +1,925 @@
+[20230429 18:49:08 INFO    ] {'db_name': 'TID2013', 'train_dis_path': 'C:\\Users\\MQTyor\\ai_pc\\Reserch_ai\\IQA\\datasets\\tid2013\\distorted_images', 'train_txt_file_name': 'C:\\Users\\MQTyor\\ai_pc\\Reserch_ai\\IQA\\datasets\\tid2013\\mos_with_names.txt', 'batch_size': 8, 'learning_rate': 1e-05, 'weight_decay': 1e-05, 'n_epoch': 20, 'val_freq': 1, 'T_max': 50, 'eta_min': 0, 'num_avg_val': 5, 'crop_size': 224, 'num_workers': 4, 'early_stopping': 3, 'n_splits': 2, 'n_folds': 5, 'patch_size': 8, 'img_size': 224, 'embed_dim': 768, 'dim_mlp': 768, 'num_heads': [4, 4], 'window_size': 4, 'depths': [2, 2], 'num_outputs': 1, 'num_tab': 2, 'scale': 0.13, 'model_name': 'model_maniqa__tid__seed_151__TEST5', 'output_path': './output', 'snap_path': './output/models/model_maniqa__tid__seed_151__TEST5', 'log_path': './output/log/maniqa/', 'log_file': 'model_maniqa__tid__seed_151__TEST5.txt', 'tensorboard_path': './output/tensorboard/model_maniqa__tid__seed_151__TEST5'}
+[20230429 18:49:08 INFO    ] Seed : 151
+[20230429 18:49:08 INFO    ] --- Split id:0
+[20230429 18:49:08 INFO    ] --- Fold id:0
+[20230429 18:49:08 INFO    ] number of train scenes: 1920
+[20230429 18:49:08 INFO    ] number of val scenes: 480
+[20230429 18:49:08 INFO    ] number of test scenes: 600
+[20230429 18:49:09 INFO    ] Running training epoch 0
+[20230429 18:54:19 INFO    ] train epoch:0 / loss:0.02594 / SRCC:0.5236 / PLCC:0.5048
+[20230429 18:54:19 INFO    ] Starting eval...
+[20230429 18:54:19 INFO    ] Running validation in epoch 0
+[20230429 18:56:39 INFO    ] Epoch:0 ===== loss:0.01592 ===== SRCC:0.8237 ===== PLCC:0.8604
+[20230429 18:56:39 INFO    ] Eval on validation subset is done...
+[20230429 18:56:39 INFO    ] Saving weights and model of epoch0, SRCC:0.8237328480349912, PLCC:0.8604219802885908
+[20230429 18:56:39 INFO    ] Epoch 0 done. Time: 7.5min
+[20230429 18:56:39 INFO    ] Running training epoch 1
+[20230429 19:01:46 INFO    ] train epoch:1 / loss:0.007495 / SRCC:0.8476 / PLCC:0.8747
+[20230429 19:01:46 INFO    ] Starting eval...
+[20230429 19:01:46 INFO    ] Running validation in epoch 1
+[20230429 19:04:10 INFO    ] Epoch:1 ===== loss:0.008949 ===== SRCC:0.8865 ===== PLCC:0.9027
+[20230429 19:04:10 INFO    ] Eval on validation subset is done...
+[20230429 19:04:10 INFO    ] Saving weights and model of epoch1, SRCC:0.8864892859961874, PLCC:0.9026649292210427
+[20230429 19:04:10 INFO    ] Epoch 1 done. Time: 7.5min
+[20230429 19:04:10 INFO    ] Running training epoch 2
+[20230429 19:09:24 INFO    ] train epoch:2 / loss:0.005606 / SRCC:0.89 / PLCC:0.9081
+[20230429 19:09:24 INFO    ] Starting eval...
+[20230429 19:09:24 INFO    ] Running validation in epoch 2
+[20230429 19:11:47 INFO    ] Epoch:2 ===== loss:0.01075 ===== SRCC:0.9145 ===== PLCC:0.9212
+[20230429 19:11:47 INFO    ] Eval on validation subset is done...
+[20230429 19:11:48 INFO    ] Saving weights and model of epoch2, SRCC:0.9144832807379055, PLCC:0.9212482297503617
+[20230429 19:11:48 INFO    ] Epoch 2 done. Time: 7.6min
+[20230429 19:11:48 INFO    ] Running training epoch 3
+[20230429 19:17:01 INFO    ] train epoch:3 / loss:0.004266 / SRCC:0.9137 / PLCC:0.9308
+[20230429 19:17:01 INFO    ] Starting eval...
+[20230429 19:17:01 INFO    ] Running validation in epoch 3
+[20230429 19:19:24 INFO    ] Epoch:3 ===== loss:0.008281 ===== SRCC:0.9146 ===== PLCC:0.9282
+[20230429 19:19:24 INFO    ] Eval on validation subset is done...
+[20230429 19:19:25 INFO    ] Saving weights and model of epoch3, SRCC:0.9146211942165674, PLCC:0.9282179780768778
+[20230429 19:19:25 INFO    ] Epoch 3 done. Time: 7.6min
+[20230429 19:19:25 INFO    ] Running training epoch 4
+[20230429 19:24:38 INFO    ] train epoch:4 / loss:0.003738 / SRCC:0.9245 / PLCC:0.9397
+[20230429 19:24:38 INFO    ] Starting eval...
+[20230429 19:24:38 INFO    ] Running validation in epoch 4
+[20230429 19:27:02 INFO    ] Epoch:4 ===== loss:0.007493 ===== SRCC:0.9348 ===== PLCC:0.9442
+[20230429 19:27:02 INFO    ] Eval on validation subset is done...
+[20230429 19:27:02 INFO    ] Saving weights and model of epoch4, SRCC:0.9347817901765704, PLCC:0.9442187259076609
+[20230429 19:27:02 INFO    ] Epoch 4 done. Time: 7.6min
+[20230429 19:27:02 INFO    ] Running training epoch 5
+[20230429 19:32:15 INFO    ] train epoch:5 / loss:0.003538 / SRCC:0.9273 / PLCC:0.9429
+[20230429 19:32:15 INFO    ] Starting eval...
+[20230429 19:32:15 INFO    ] Running validation in epoch 5
+[20230429 19:34:39 INFO    ] Epoch:5 ===== loss:0.01159 ===== SRCC:0.9315 ===== PLCC:0.9419
+[20230429 19:34:39 INFO    ] Eval on validation subset is done...
+[20230429 19:34:39 INFO    ] Epoch 5 done. Time: 7.6min
+[20230429 19:34:39 INFO    ] Running training epoch 6
+[20230429 19:39:52 INFO    ] train epoch:6 / loss:0.003292 / SRCC:0.935 / PLCC:0.9471
+[20230429 19:39:52 INFO    ] Starting eval...
+[20230429 19:39:52 INFO    ] Running validation in epoch 6
+[20230429 19:42:16 INFO    ] Epoch:6 ===== loss:0.008045 ===== SRCC:0.9348 ===== PLCC:0.9467
+[20230429 19:42:16 INFO    ] Eval on validation subset is done...
+[20230429 19:42:16 INFO    ] Saving weights and model of epoch6, SRCC:0.934803708762479, PLCC:0.946738122448053
+[20230429 19:42:16 INFO    ] Epoch 6 done. Time: 7.6min
+[20230429 19:42:16 INFO    ] Running training epoch 7
+[20230429 19:47:29 INFO    ] train epoch:7 / loss:0.003157 / SRCC:0.9379 / PLCC:0.9493
+[20230429 19:47:29 INFO    ] Starting eval...
+[20230429 19:47:29 INFO    ] Running validation in epoch 7
+[20230429 19:49:52 INFO    ] Epoch:7 ===== loss:0.01241 ===== SRCC:0.9248 ===== PLCC:0.9382
+[20230429 19:49:52 INFO    ] Eval on validation subset is done...
+[20230429 19:49:52 INFO    ] Epoch 7 done. Time: 7.6min
+[20230429 19:49:52 INFO    ] Running training epoch 8
+[20230429 19:55:05 INFO    ] train epoch:8 / loss:0.002807 / SRCC:0.9444 / PLCC:0.9551
+[20230429 19:55:05 INFO    ] Starting eval...
+[20230429 19:55:05 INFO    ] Running validation in epoch 8
+[20230429 19:57:28 INFO    ] Epoch:8 ===== loss:0.00913 ===== SRCC:0.933 ===== PLCC:0.9473
+[20230429 19:57:28 INFO    ] Eval on validation subset is done...
+[20230429 19:57:28 INFO    ] Epoch 8 done. Time: 7.6min
+[20230429 19:57:28 INFO    ] Running training epoch 9
+[20230429 20:02:40 INFO    ] train epoch:9 / loss:0.002859 / SRCC:0.9423 / PLCC:0.9542
+[20230429 20:02:40 INFO    ] Starting eval...
+[20230429 20:02:40 INFO    ] Running validation in epoch 9
+[20230429 20:05:03 INFO    ] Epoch:9 ===== loss:0.006137 ===== SRCC:0.9347 ===== PLCC:0.9411
+[20230429 20:05:03 INFO    ] Eval on validation subset is done...
+[20230429 20:05:03 INFO    ] Epoch 9 done. Time: 7.6min
+[20230429 20:05:03 INFO    ] Starting testing...
+[20230429 20:08:01 INFO    ] Epoch:6 ===== loss:0.002914 ===== SRCC:0.9501 ===== PLCC:0.9587
+[20230429 20:08:01 INFO    ] --- Split id:0
+[20230429 20:08:01 INFO    ] --- Fold id:1
+[20230429 20:08:01 INFO    ] number of train scenes: 1920
+[20230429 20:08:01 INFO    ] number of val scenes: 480
+[20230429 20:08:01 INFO    ] number of test scenes: 600
+[20230429 20:08:02 INFO    ] Running training epoch 0
+[20230429 20:13:14 INFO    ] train epoch:0 / loss:0.02496 / SRCC:0.5737 / PLCC:0.5505
+[20230429 20:13:14 INFO    ] Starting eval...
+[20230429 20:13:14 INFO    ] Running validation in epoch 0
+[20230429 20:15:37 INFO    ] Epoch:0 ===== loss:0.01021 ===== SRCC:0.8417 ===== PLCC:0.8694
+[20230429 20:15:37 INFO    ] Eval on validation subset is done...
+[20230429 20:15:38 INFO    ] Saving weights and model of epoch0, SRCC:0.841700204779328, PLCC:0.8693662552554506
+[20230429 20:15:38 INFO    ] Epoch 0 done. Time: 7.6min
+[20230429 20:15:38 INFO    ] Running training epoch 1
+[20230429 20:20:50 INFO    ] train epoch:1 / loss:0.007737 / SRCC:0.839 / PLCC:0.8704
+[20230429 20:20:50 INFO    ] Starting eval...
+[20230429 20:20:50 INFO    ] Running validation in epoch 1
+[20230429 20:23:13 INFO    ] Epoch:1 ===== loss:0.008632 ===== SRCC:0.884 ===== PLCC:0.9062
+[20230429 20:23:13 INFO    ] Eval on validation subset is done...
+[20230429 20:23:13 INFO    ] Saving weights and model of epoch1, SRCC:0.8839653034308134, PLCC:0.9062062033979701
+[20230429 20:23:13 INFO    ] Epoch 1 done. Time: 7.6min
+[20230429 20:23:13 INFO    ] Running training epoch 2
+[20230429 20:28:26 INFO    ] train epoch:2 / loss:0.005269 / SRCC:0.8908 / PLCC:0.9138
+[20230429 20:28:26 INFO    ] Starting eval...
+[20230429 20:28:26 INFO    ] Running validation in epoch 2
+[20230429 20:30:49 INFO    ] Epoch:2 ===== loss:0.005322 ===== SRCC:0.9179 ===== PLCC:0.9302
+[20230429 20:30:49 INFO    ] Eval on validation subset is done...
+[20230429 20:30:50 INFO    ] Saving weights and model of epoch2, SRCC:0.9179272973358, PLCC:0.9301828888831921
+[20230429 20:30:50 INFO    ] Epoch 2 done. Time: 7.6min
+[20230429 20:30:50 INFO    ] Running training epoch 3
+[20230429 20:36:02 INFO    ] train epoch:3 / loss:0.004552 / SRCC:0.9107 / PLCC:0.9262
+[20230429 20:36:02 INFO    ] Starting eval...
+[20230429 20:36:02 INFO    ] Running validation in epoch 3
+[20230429 20:38:29 INFO    ] Epoch:3 ===== loss:0.006156 ===== SRCC:0.9082 ===== PLCC:0.9217
+[20230429 20:38:29 INFO    ] Eval on validation subset is done...
+[20230429 20:38:29 INFO    ] Epoch 3 done. Time: 7.7min
+[20230429 20:38:29 INFO    ] Running training epoch 4
+[20230429 20:43:42 INFO    ] train epoch:4 / loss:0.003617 / SRCC:0.9272 / PLCC:0.9417
+[20230429 20:43:42 INFO    ] Starting eval...
+[20230429 20:43:42 INFO    ] Running validation in epoch 4
+[20230429 20:46:05 INFO    ] Epoch:4 ===== loss:0.005684 ===== SRCC:0.9217 ===== PLCC:0.9326
+[20230429 20:46:05 INFO    ] Eval on validation subset is done...
+[20230429 20:46:06 INFO    ] Saving weights and model of epoch4, SRCC:0.9216871078371189, PLCC:0.9325786935683298
+[20230429 20:46:06 INFO    ] Epoch 4 done. Time: 7.6min
+[20230429 20:46:06 INFO    ] Running training epoch 5
+[20230429 20:51:18 INFO    ] train epoch:5 / loss:0.003363 / SRCC:0.9339 / PLCC:0.9459
+[20230429 20:51:18 INFO    ] Starting eval...
+[20230429 20:51:18 INFO    ] Running validation in epoch 5
+[20230429 20:53:41 INFO    ] Epoch:5 ===== loss:0.005232 ===== SRCC:0.9279 ===== PLCC:0.9312
+[20230429 20:53:41 INFO    ] Eval on validation subset is done...
+[20230429 20:53:42 INFO    ] Saving weights and model of epoch5, SRCC:0.927851352419209, PLCC:0.9311667205807694
+[20230429 20:53:42 INFO    ] Epoch 5 done. Time: 7.6min
+[20230429 20:53:42 INFO    ] Running training epoch 6
+[20230429 20:58:54 INFO    ] train epoch:6 / loss:0.003304 / SRCC:0.9346 / PLCC:0.9468
+[20230429 20:58:54 INFO    ] Starting eval...
+[20230429 20:58:54 INFO    ] Running validation in epoch 6
+[20230429 21:01:17 INFO    ] Epoch:6 ===== loss:0.004905 ===== SRCC:0.9236 ===== PLCC:0.9346
+[20230429 21:01:17 INFO    ] Eval on validation subset is done...
+[20230429 21:01:17 INFO    ] Epoch 6 done. Time: 7.6min
+[20230429 21:01:17 INFO    ] Running training epoch 7
+[20230429 21:06:30 INFO    ] train epoch:7 / loss:0.00337 / SRCC:0.9305 / PLCC:0.9458
+[20230429 21:06:30 INFO    ] Starting eval...
+[20230429 21:06:30 INFO    ] Running validation in epoch 7
+[20230429 21:08:53 INFO    ] Epoch:7 ===== loss:0.004979 ===== SRCC:0.9376 ===== PLCC:0.9447
+[20230429 21:08:53 INFO    ] Eval on validation subset is done...
+[20230429 21:08:53 INFO    ] Saving weights and model of epoch7, SRCC:0.9375781395230683, PLCC:0.9446926403996937
+[20230429 21:08:53 INFO    ] Epoch 7 done. Time: 7.6min
+[20230429 21:08:53 INFO    ] Running training epoch 8
+[20230429 21:14:06 INFO    ] train epoch:8 / loss:0.002631 / SRCC:0.9482 / PLCC:0.9579
+[20230429 21:14:06 INFO    ] Starting eval...
+[20230429 21:14:06 INFO    ] Running validation in epoch 8
+[20230429 21:16:29 INFO    ] Epoch:8 ===== loss:0.005151 ===== SRCC:0.9203 ===== PLCC:0.9321
+[20230429 21:16:29 INFO    ] Eval on validation subset is done...
+[20230429 21:16:29 INFO    ] Epoch 8 done. Time: 7.6min
+[20230429 21:16:29 INFO    ] Running training epoch 9
+[20230429 21:21:37 INFO    ] train epoch:9 / loss:0.002727 / SRCC:0.9461 / PLCC:0.9563
+[20230429 21:21:37 INFO    ] Starting eval...
+[20230429 21:21:37 INFO    ] Running validation in epoch 9
+[20230429 21:24:05 INFO    ] Epoch:9 ===== loss:0.01337 ===== SRCC:0.8808 ===== PLCC:0.8989
+[20230429 21:24:05 INFO    ] Eval on validation subset is done...
+[20230429 21:24:05 INFO    ] Epoch 9 done. Time: 7.6min
+[20230429 21:24:05 INFO    ] Running training epoch 10
+[20230429 21:29:32 INFO    ] train epoch:10 / loss:0.002753 / SRCC:0.9448 / PLCC:0.956
+[20230429 21:29:32 INFO    ] Starting eval...
+[20230429 21:29:32 INFO    ] Running validation in epoch 10
+[20230429 21:31:56 INFO    ] Epoch:10 ===== loss:0.005493 ===== SRCC:0.9205 ===== PLCC:0.9352
+[20230429 21:31:56 INFO    ] Eval on validation subset is done...
+[20230429 21:31:56 INFO    ] Epoch 10 done. Time: 7.9min
+[20230429 21:31:56 INFO    ] Starting testing...
+[20230429 21:34:59 INFO    ] Epoch:7 ===== loss:0.002912 ===== SRCC:0.954 ===== PLCC:0.9595
+[20230429 21:34:59 INFO    ] --- Split id:0
+[20230429 21:34:59 INFO    ] --- Fold id:2
+[20230429 21:34:59 INFO    ] number of train scenes: 1920
+[20230429 21:34:59 INFO    ] number of val scenes: 480
+[20230429 21:34:59 INFO    ] number of test scenes: 600
+[20230429 21:35:00 INFO    ] Running training epoch 0
+[20230429 21:40:28 INFO    ] train epoch:0 / loss:0.0265 / SRCC:0.5571 / PLCC:0.5327
+[20230429 21:40:28 INFO    ] Starting eval...
+[20230429 21:40:28 INFO    ] Running validation in epoch 0
+[20230429 21:42:56 INFO    ] Epoch:0 ===== loss:0.01267 ===== SRCC:0.8154 ===== PLCC:0.854
+[20230429 21:42:56 INFO    ] Eval on validation subset is done...
+[20230429 21:42:57 INFO    ] Saving weights and model of epoch0, SRCC:0.8154416793070471, PLCC:0.8539742486614553
+[20230429 21:42:57 INFO    ] Epoch 0 done. Time: 8.0min
+[20230429 21:42:57 INFO    ] Running training epoch 1
+[20230429 21:48:52 INFO    ] train epoch:1 / loss:0.00608 / SRCC:0.8793 / PLCC:0.8982
+[20230429 21:48:52 INFO    ] Starting eval...
+[20230429 21:48:52 INFO    ] Running validation in epoch 1
+[20230429 21:51:41 INFO    ] Epoch:1 ===== loss:0.007175 ===== SRCC:0.8864 ===== PLCC:0.9021
+[20230429 21:51:41 INFO    ] Eval on validation subset is done...
+[20230429 21:51:42 INFO    ] Saving weights and model of epoch1, SRCC:0.8863821684221271, PLCC:0.9020609003425015
+[20230429 21:51:42 INFO    ] Epoch 1 done. Time: 8.7min
+[20230429 21:51:42 INFO    ] Running training epoch 2
+[20230429 21:58:33 INFO    ] train epoch:2 / loss:0.004824 / SRCC:0.8991 / PLCC:0.9201
+[20230429 21:58:33 INFO    ] Starting eval...
+[20230429 21:58:33 INFO    ] Running validation in epoch 2
+[20230429 22:01:24 INFO    ] Epoch:2 ===== loss:0.01164 ===== SRCC:0.8915 ===== PLCC:0.9038
+[20230429 22:01:24 INFO    ] Eval on validation subset is done...
+[20230429 22:01:25 INFO    ] Saving weights and model of epoch2, SRCC:0.8915401479922586, PLCC:0.9037575349088475
+[20230429 22:01:25 INFO    ] Epoch 2 done. Time: 9.7min
+[20230429 22:01:25 INFO    ] Running training epoch 3
+[20230429 22:06:51 INFO    ] train epoch:3 / loss:0.004155 / SRCC:0.9139 / PLCC:0.9316
+[20230429 22:06:51 INFO    ] Starting eval...
+[20230429 22:06:51 INFO    ] Running validation in epoch 3
+[20230429 22:09:18 INFO    ] Epoch:3 ===== loss:0.00977 ===== SRCC:0.9079 ===== PLCC:0.9179
+[20230429 22:09:18 INFO    ] Eval on validation subset is done...
+[20230429 22:09:19 INFO    ] Saving weights and model of epoch3, SRCC:0.907924522641755, PLCC:0.9179151877208556
+[20230429 22:09:19 INFO    ] Epoch 3 done. Time: 7.9min
+[20230429 22:09:19 INFO    ] Running training epoch 4
+[20230429 22:14:42 INFO    ] train epoch:4 / loss:0.003817 / SRCC:0.9175 / PLCC:0.9373
+[20230429 22:14:42 INFO    ] Starting eval...
+[20230429 22:14:42 INFO    ] Running validation in epoch 4
+[20230429 22:17:11 INFO    ] Epoch:4 ===== loss:0.008488 ===== SRCC:0.8728 ===== PLCC:0.8907
+[20230429 22:17:11 INFO    ] Eval on validation subset is done...
+[20230429 22:17:11 INFO    ] Epoch 4 done. Time: 7.9min
+[20230429 22:17:11 INFO    ] Running training epoch 5
+[20230429 22:22:32 INFO    ] train epoch:5 / loss:0.003772 / SRCC:0.9205 / PLCC:0.9381
+[20230429 22:22:32 INFO    ] Starting eval...
+[20230429 22:22:32 INFO    ] Running validation in epoch 5
+[20230429 22:25:02 INFO    ] Epoch:5 ===== loss:0.00989 ===== SRCC:0.8922 ===== PLCC:0.9078
+[20230429 22:25:02 INFO    ] Eval on validation subset is done...
+[20230429 22:25:02 INFO    ] Epoch 5 done. Time: 7.9min
+[20230429 22:25:02 INFO    ] Running training epoch 6
+[20230429 22:30:24 INFO    ] train epoch:6 / loss:0.003279 / SRCC:0.9342 / PLCC:0.9464
+[20230429 22:30:24 INFO    ] Starting eval...
+[20230429 22:30:24 INFO    ] Running validation in epoch 6
+[20230429 22:32:53 INFO    ] Epoch:6 ===== loss:0.009394 ===== SRCC:0.8827 ===== PLCC:0.8969
+[20230429 22:32:53 INFO    ] Eval on validation subset is done...
+[20230429 22:32:53 INFO    ] Epoch 6 done. Time: 7.8min
+[20230429 22:32:53 INFO    ] Starting testing...
+[20230429 22:36:00 INFO    ] Epoch:3 ===== loss:0.00419 ===== SRCC:0.9341 ===== PLCC:0.9433
+[20230429 22:36:00 INFO    ] --- Split id:0
+[20230429 22:36:00 INFO    ] --- Fold id:3
+[20230429 22:36:00 INFO    ] number of train scenes: 1920
+[20230429 22:36:00 INFO    ] number of val scenes: 480
+[20230429 22:36:00 INFO    ] number of test scenes: 600
+[20230429 22:36:01 INFO    ] Running training epoch 0
+[20230429 22:42:05 INFO    ] train epoch:0 / loss:0.02168 / SRCC:0.5776 / PLCC:0.6001
+[20230429 22:42:05 INFO    ] Starting eval...
+[20230429 22:42:05 INFO    ] Running validation in epoch 0
+[20230429 22:44:39 INFO    ] Epoch:0 ===== loss:0.01228 ===== SRCC:0.8504 ===== PLCC:0.8575
+[20230429 22:44:39 INFO    ] Eval on validation subset is done...
+[20230429 22:44:39 INFO    ] Saving weights and model of epoch0, SRCC:0.8504438322613306, PLCC:0.857495599515599
+[20230429 22:44:39 INFO    ] Epoch 0 done. Time: 8.6min
+[20230429 22:44:39 INFO    ] Running training epoch 1
+[20230429 22:50:27 INFO    ] train epoch:1 / loss:0.006343 / SRCC:0.871 / PLCC:0.8953
+[20230429 22:50:27 INFO    ] Starting eval...
+[20230429 22:50:27 INFO    ] Running validation in epoch 1
+[20230429 22:53:01 INFO    ] Epoch:1 ===== loss:0.009746 ===== SRCC:0.8944 ===== PLCC:0.9078
+[20230429 22:53:01 INFO    ] Eval on validation subset is done...
+[20230429 22:53:01 INFO    ] Saving weights and model of epoch1, SRCC:0.8943743631670803, PLCC:0.9078031661014468
+[20230429 22:53:01 INFO    ] Epoch 1 done. Time: 8.4min
+[20230429 22:53:01 INFO    ] Running training epoch 2
+[20230429 22:58:23 INFO    ] train epoch:2 / loss:0.004776 / SRCC:0.904 / PLCC:0.9224
+[20230429 22:58:23 INFO    ] Starting eval...
+[20230429 22:58:23 INFO    ] Running validation in epoch 2
+[20230429 23:01:05 INFO    ] Epoch:2 ===== loss:0.01214 ===== SRCC:0.8834 ===== PLCC:0.9061
+[20230429 23:01:05 INFO    ] Eval on validation subset is done...
+[20230429 23:01:05 INFO    ] Epoch 2 done. Time: 8.1min
+[20230429 23:01:05 INFO    ] Running training epoch 3
+[20230429 23:07:05 INFO    ] train epoch:3 / loss:0.00378 / SRCC:0.9239 / PLCC:0.939
+[20230429 23:07:05 INFO    ] Starting eval...
+[20230429 23:07:05 INFO    ] Running validation in epoch 3
+[20230429 23:09:56 INFO    ] Epoch:3 ===== loss:0.00802 ===== SRCC:0.9112 ===== PLCC:0.9258
+[20230429 23:09:56 INFO    ] Eval on validation subset is done...
+[20230429 23:09:57 INFO    ] Saving weights and model of epoch3, SRCC:0.911221341802171, PLCC:0.9257939567123439
+[20230429 23:09:57 INFO    ] Epoch 3 done. Time: 8.9min
+[20230429 23:09:57 INFO    ] Running training epoch 4
+[20230429 23:15:50 INFO    ] train epoch:4 / loss:0.003351 / SRCC:0.9303 / PLCC:0.9462
+[20230429 23:15:50 INFO    ] Starting eval...
+[20230429 23:15:50 INFO    ] Running validation in epoch 4
+[20230429 23:18:42 INFO    ] Epoch:4 ===== loss:0.00628 ===== SRCC:0.9117 ===== PLCC:0.9154
+[20230429 23:18:42 INFO    ] Eval on validation subset is done...
+[20230429 23:18:42 INFO    ] Saving weights and model of epoch4, SRCC:0.9116638366986441, PLCC:0.9153777917028149
+[20230429 23:18:42 INFO    ] Epoch 4 done. Time: 8.8min
+[20230429 23:18:42 INFO    ] Running training epoch 5
+[20230429 23:23:54 INFO    ] train epoch:5 / loss:0.00306 / SRCC:0.9376 / PLCC:0.951
+[20230429 23:23:54 INFO    ] Starting eval...
+[20230429 23:23:54 INFO    ] Running validation in epoch 5
+[20230429 23:26:17 INFO    ] Epoch:5 ===== loss:0.007848 ===== SRCC:0.9156 ===== PLCC:0.9262
+[20230429 23:26:17 INFO    ] Eval on validation subset is done...
+[20230429 23:26:18 INFO    ] Saving weights and model of epoch5, SRCC:0.9156110257248853, PLCC:0.9261781540666942
+[20230429 23:26:18 INFO    ] Epoch 5 done. Time: 7.6min
+[20230429 23:26:18 INFO    ] Running training epoch 6
+[20230429 23:31:22 INFO    ] train epoch:6 / loss:0.002664 / SRCC:0.9465 / PLCC:0.9574
+[20230429 23:31:22 INFO    ] Starting eval...
+[20230429 23:31:22 INFO    ] Running validation in epoch 6
+[20230429 23:33:41 INFO    ] Epoch:6 ===== loss:0.01041 ===== SRCC:0.9192 ===== PLCC:0.9288
+[20230429 23:33:41 INFO    ] Eval on validation subset is done...
+[20230429 23:33:42 INFO    ] Saving weights and model of epoch6, SRCC:0.9191547284165172, PLCC:0.9287872596277147
+[20230429 23:33:42 INFO    ] Epoch 6 done. Time: 7.4min
+[20230429 23:33:42 INFO    ] Running training epoch 7
+[20230429 23:38:58 INFO    ] train epoch:7 / loss:0.003202 / SRCC:0.9339 / PLCC:0.9486
+[20230429 23:38:58 INFO    ] Starting eval...
+[20230429 23:38:58 INFO    ] Running validation in epoch 7
+[20230429 23:41:24 INFO    ] Epoch:7 ===== loss:0.008556 ===== SRCC:0.9088 ===== PLCC:0.9244
+[20230429 23:41:24 INFO    ] Eval on validation subset is done...
+[20230429 23:41:24 INFO    ] Epoch 7 done. Time: 7.7min
+[20230429 23:41:24 INFO    ] Running training epoch 8
+[20230429 23:46:43 INFO    ] train epoch:8 / loss:0.002434 / SRCC:0.9499 / PLCC:0.9612
+[20230429 23:46:43 INFO    ] Starting eval...
+[20230429 23:46:43 INFO    ] Running validation in epoch 8
+[20230429 23:49:12 INFO    ] Epoch:8 ===== loss:0.007291 ===== SRCC:0.915 ===== PLCC:0.9271
+[20230429 23:49:12 INFO    ] Eval on validation subset is done...
+[20230429 23:49:12 INFO    ] Epoch 8 done. Time: 7.8min
+[20230429 23:49:12 INFO    ] Running training epoch 9
+[20230429 23:54:24 INFO    ] train epoch:9 / loss:0.002535 / SRCC:0.9484 / PLCC:0.9595
+[20230429 23:54:24 INFO    ] Starting eval...
+[20230429 23:54:24 INFO    ] Running validation in epoch 9
+[20230429 23:56:45 INFO    ] Epoch:9 ===== loss:0.009098 ===== SRCC:0.8986 ===== PLCC:0.9115
+[20230429 23:56:45 INFO    ] Eval on validation subset is done...
+[20230429 23:56:45 INFO    ] Epoch 9 done. Time: 7.6min
+[20230429 23:56:45 INFO    ] Starting testing...
+[20230429 23:59:37 INFO    ] Epoch:6 ===== loss:0.002677 ===== SRCC:0.9644 ===== PLCC:0.9681
+[20230429 23:59:37 INFO    ] --- Split id:0
+[20230429 23:59:37 INFO    ] --- Fold id:4
+[20230429 23:59:37 INFO    ] number of train scenes: 1920
+[20230429 23:59:37 INFO    ] number of val scenes: 480
+[20230429 23:59:37 INFO    ] number of test scenes: 600
+[20230429 23:59:39 INFO    ] Running training epoch 0
+[20230430 00:05:40 INFO    ] train epoch:0 / loss:0.02304 / SRCC:0.6201 / PLCC:0.6021
+[20230430 00:05:40 INFO    ] Starting eval...
+[20230430 00:05:40 INFO    ] Running validation in epoch 0
+[20230430 00:08:23 INFO    ] Epoch:0 ===== loss:0.009265 ===== SRCC:0.8104 ===== PLCC:0.8521
+[20230430 00:08:23 INFO    ] Eval on validation subset is done...
+[20230430 00:08:24 INFO    ] Saving weights and model of epoch0, SRCC:0.8103785459711171, PLCC:0.8520969996880816
+[20230430 00:08:24 INFO    ] Epoch 0 done. Time: 8.7min
+[20230430 00:08:24 INFO    ] Running training epoch 1
+[20230430 00:14:16 INFO    ] train epoch:1 / loss:0.006922 / SRCC:0.8649 / PLCC:0.8902
+[20230430 00:14:16 INFO    ] Starting eval...
+[20230430 00:14:16 INFO    ] Running validation in epoch 1
+[20230430 00:16:35 INFO    ] Epoch:1 ===== loss:0.006301 ===== SRCC:0.8902 ===== PLCC:0.9098
+[20230430 00:16:35 INFO    ] Eval on validation subset is done...
+[20230430 00:16:35 INFO    ] Saving weights and model of epoch1, SRCC:0.8901849981852552, PLCC:0.9098251725793599
+[20230430 00:16:35 INFO    ] Epoch 1 done. Time: 8.2min
+[20230430 00:16:35 INFO    ] Running training epoch 2
+[20230430 00:22:30 INFO    ] train epoch:2 / loss:0.005579 / SRCC:0.8902 / PLCC:0.9126
+[20230430 00:22:30 INFO    ] Starting eval...
+[20230430 00:22:30 INFO    ] Running validation in epoch 2
+[20230430 00:25:26 INFO    ] Epoch:2 ===== loss:0.007244 ===== SRCC:0.8826 ===== PLCC:0.9025
+[20230430 00:25:26 INFO    ] Eval on validation subset is done...
+[20230430 00:25:26 INFO    ] Epoch 2 done. Time: 8.8min
+[20230430 00:25:26 INFO    ] Running training epoch 3
+[20230430 00:31:40 INFO    ] train epoch:3 / loss:0.004397 / SRCC:0.9117 / PLCC:0.9319
+[20230430 00:31:40 INFO    ] Starting eval...
+[20230430 00:31:40 INFO    ] Running validation in epoch 3
+[20230430 00:34:46 INFO    ] Epoch:3 ===== loss:0.005083 ===== SRCC:0.9199 ===== PLCC:0.9307
+[20230430 00:34:46 INFO    ] Eval on validation subset is done...
+[20230430 00:34:46 INFO    ] Saving weights and model of epoch3, SRCC:0.9199192125925795, PLCC:0.9306693337658029
+[20230430 00:34:46 INFO    ] Epoch 3 done. Time: 9.3min
+[20230430 00:34:46 INFO    ] Running training epoch 4
+[20230430 00:40:58 INFO    ] train epoch:4 / loss:0.003758 / SRCC:0.9287 / PLCC:0.9421
+[20230430 00:40:58 INFO    ] Starting eval...
+[20230430 00:40:58 INFO    ] Running validation in epoch 4
+[20230430 00:43:57 INFO    ] Epoch:4 ===== loss:0.005052 ===== SRCC:0.9166 ===== PLCC:0.9286
+[20230430 00:43:57 INFO    ] Eval on validation subset is done...
+[20230430 00:43:57 INFO    ] Epoch 4 done. Time: 9.2min
+[20230430 00:43:57 INFO    ] Running training epoch 5
+[20230430 00:49:24 INFO    ] train epoch:5 / loss:0.004186 / SRCC:0.9137 / PLCC:0.9352
+[20230430 00:49:24 INFO    ] Starting eval...
+[20230430 00:49:24 INFO    ] Running validation in epoch 5
+[20230430 00:52:00 INFO    ] Epoch:5 ===== loss:0.005738 ===== SRCC:0.9105 ===== PLCC:0.9279
+[20230430 00:52:00 INFO    ] Eval on validation subset is done...
+[20230430 00:52:00 INFO    ] Epoch 5 done. Time: 8.1min
+[20230430 00:52:00 INFO    ] Running training epoch 6
+[20230430 00:57:35 INFO    ] train epoch:6 / loss:0.003615 / SRCC:0.9296 / PLCC:0.9445
+[20230430 00:57:35 INFO    ] Starting eval...
+[20230430 00:57:35 INFO    ] Running validation in epoch 6
+[20230430 00:59:55 INFO    ] Epoch:6 ===== loss:0.004546 ===== SRCC:0.9241 ===== PLCC:0.9351
+[20230430 00:59:55 INFO    ] Eval on validation subset is done...
+[20230430 00:59:55 INFO    ] Saving weights and model of epoch6, SRCC:0.9240611235113512, PLCC:0.935101831594989
+[20230430 00:59:55 INFO    ] Epoch 6 done. Time: 7.9min
+[20230430 00:59:55 INFO    ] Running training epoch 7
+[20230430 01:04:59 INFO    ] train epoch:7 / loss:0.003379 / SRCC:0.9335 / PLCC:0.948
+[20230430 01:04:59 INFO    ] Starting eval...
+[20230430 01:04:59 INFO    ] Running validation in epoch 7
+[20230430 01:07:18 INFO    ] Epoch:7 ===== loss:0.007733 ===== SRCC:0.91 ===== PLCC:0.9267
+[20230430 01:07:18 INFO    ] Eval on validation subset is done...
+[20230430 01:07:18 INFO    ] Epoch 7 done. Time: 7.4min
+[20230430 01:07:18 INFO    ] Running training epoch 8
+[20230430 01:12:26 INFO    ] train epoch:8 / loss:0.003198 / SRCC:0.9371 / PLCC:0.9509
+[20230430 01:12:26 INFO    ] Starting eval...
+[20230430 01:12:26 INFO    ] Running validation in epoch 8
+[20230430 01:14:46 INFO    ] Epoch:8 ===== loss:0.005809 ===== SRCC:0.899 ===== PLCC:0.92
+[20230430 01:14:46 INFO    ] Eval on validation subset is done...
+[20230430 01:14:46 INFO    ] Epoch 8 done. Time: 7.5min
+[20230430 01:14:46 INFO    ] Running training epoch 9
+[20230430 01:19:59 INFO    ] train epoch:9 / loss:0.002607 / SRCC:0.9499 / PLCC:0.9601
+[20230430 01:19:59 INFO    ] Starting eval...
+[20230430 01:19:59 INFO    ] Running validation in epoch 9
+[20230430 01:22:23 INFO    ] Epoch:9 ===== loss:0.004021 ===== SRCC:0.9322 ===== PLCC:0.9426
+[20230430 01:22:23 INFO    ] Eval on validation subset is done...
+[20230430 01:22:23 INFO    ] Saving weights and model of epoch9, SRCC:0.9321814781338487, PLCC:0.9426245317310185
+[20230430 01:22:23 INFO    ] Epoch 9 done. Time: 7.6min
+[20230430 01:22:23 INFO    ] Running training epoch 10
+[20230430 01:27:34 INFO    ] train epoch:10 / loss:0.002854 / SRCC:0.9456 / PLCC:0.9563
+[20230430 01:27:34 INFO    ] Starting eval...
+[20230430 01:27:34 INFO    ] Running validation in epoch 10
+[20230430 01:29:53 INFO    ] Epoch:10 ===== loss:0.003835 ===== SRCC:0.9394 ===== PLCC:0.9471
+[20230430 01:29:53 INFO    ] Eval on validation subset is done...
+[20230430 01:29:53 INFO    ] Saving weights and model of epoch10, SRCC:0.9393624252460501, PLCC:0.9471096115816526
+[20230430 01:29:53 INFO    ] Epoch 10 done. Time: 7.5min
+[20230430 01:29:53 INFO    ] Running training epoch 11
+[20230430 01:34:57 INFO    ] train epoch:11 / loss:0.002839 / SRCC:0.9432 / PLCC:0.9565
+[20230430 01:34:57 INFO    ] Starting eval...
+[20230430 01:34:57 INFO    ] Running validation in epoch 11
+[20230430 01:37:16 INFO    ] Epoch:11 ===== loss:0.003749 ===== SRCC:0.94 ===== PLCC:0.9459
+[20230430 01:37:16 INFO    ] Eval on validation subset is done...
+[20230430 01:37:17 INFO    ] Saving weights and model of epoch11, SRCC:0.939969038897371, PLCC:0.9459314508343067
+[20230430 01:37:17 INFO    ] Epoch 11 done. Time: 7.4min
+[20230430 01:37:17 INFO    ] Running training epoch 12
+[20230430 01:42:20 INFO    ] train epoch:12 / loss:0.002895 / SRCC:0.9426 / PLCC:0.9557
+[20230430 01:42:20 INFO    ] Starting eval...
+[20230430 01:42:20 INFO    ] Running validation in epoch 12
+[20230430 01:44:40 INFO    ] Epoch:12 ===== loss:0.004266 ===== SRCC:0.9175 ===== PLCC:0.934
+[20230430 01:44:40 INFO    ] Eval on validation subset is done...
+[20230430 01:44:40 INFO    ] Epoch 12 done. Time: 7.4min
+[20230430 01:44:40 INFO    ] Running training epoch 13
+[20230430 01:49:43 INFO    ] train epoch:13 / loss:0.002179 / SRCC:0.9585 / PLCC:0.9668
+[20230430 01:49:43 INFO    ] Starting eval...
+[20230430 01:49:43 INFO    ] Running validation in epoch 13
+[20230430 01:52:02 INFO    ] Epoch:13 ===== loss:0.004335 ===== SRCC:0.9278 ===== PLCC:0.9399
+[20230430 01:52:02 INFO    ] Eval on validation subset is done...
+[20230430 01:52:02 INFO    ] Epoch 13 done. Time: 7.4min
+[20230430 01:52:02 INFO    ] Running training epoch 14
+[20230430 01:57:05 INFO    ] train epoch:14 / loss:0.002316 / SRCC:0.9543 / PLCC:0.9647
+[20230430 01:57:05 INFO    ] Starting eval...
+[20230430 01:57:05 INFO    ] Running validation in epoch 14
+[20230430 01:59:24 INFO    ] Epoch:14 ===== loss:0.00397 ===== SRCC:0.9296 ===== PLCC:0.9385
+[20230430 01:59:24 INFO    ] Eval on validation subset is done...
+[20230430 01:59:24 INFO    ] Epoch 14 done. Time: 7.4min
+[20230430 01:59:24 INFO    ] Starting testing...
+[20230430 02:02:17 INFO    ] Epoch:11 ===== loss:0.003845 ===== SRCC:0.9522 ===== PLCC:0.955
+[20230430 02:02:17 INFO    ] Mean split test SROCC0.9509400197962418
+\ Mean split test PLCC0.9569027801539012
+[20230430 02:02:17 INFO    ] --- Split id:1
+[20230430 02:02:17 INFO    ] --- Fold id:0
+[20230430 02:02:17 INFO    ] number of train scenes: 1920
+[20230430 02:02:17 INFO    ] number of val scenes: 480
+[20230430 02:02:17 INFO    ] number of test scenes: 600
+[20230430 02:02:18 INFO    ] Running training epoch 0
+[20230430 02:07:22 INFO    ] train epoch:0 / loss:0.02269 / SRCC:0.6007 / PLCC:0.5981
+[20230430 02:07:22 INFO    ] Starting eval...
+[20230430 02:07:22 INFO    ] Running validation in epoch 0
+[20230430 02:09:41 INFO    ] Epoch:0 ===== loss:0.01608 ===== SRCC:0.8399 ===== PLCC:0.8804
+[20230430 02:09:41 INFO    ] Eval on validation subset is done...
+[20230430 02:09:42 INFO    ] Saving weights and model of epoch0, SRCC:0.8398538052089171, PLCC:0.880396735171205
+[20230430 02:09:42 INFO    ] Epoch 0 done. Time: 7.4min
+[20230430 02:09:42 INFO    ] Running training epoch 1
+[20230430 02:14:45 INFO    ] train epoch:1 / loss:0.006684 / SRCC:0.8693 / PLCC:0.8892
+[20230430 02:14:45 INFO    ] Starting eval...
+[20230430 02:14:45 INFO    ] Running validation in epoch 1
+[20230430 02:17:05 INFO    ] Epoch:1 ===== loss:0.008075 ===== SRCC:0.9059 ===== PLCC:0.9185
+[20230430 02:17:05 INFO    ] Eval on validation subset is done...
+[20230430 02:17:05 INFO    ] Saving weights and model of epoch1, SRCC:0.9058554417248582, PLCC:0.9185170513443408
+[20230430 02:17:05 INFO    ] Epoch 1 done. Time: 7.4min
+[20230430 02:17:05 INFO    ] Running training epoch 2
+[20230430 02:22:09 INFO    ] train epoch:2 / loss:0.004989 / SRCC:0.9041 / PLCC:0.9185
+[20230430 02:22:09 INFO    ] Starting eval...
+[20230430 02:22:09 INFO    ] Running validation in epoch 2
+[20230430 02:24:28 INFO    ] Epoch:2 ===== loss:0.01466 ===== SRCC:0.9108 ===== PLCC:0.9241
+[20230430 02:24:28 INFO    ] Eval on validation subset is done...
+[20230430 02:24:28 INFO    ] Saving weights and model of epoch2, SRCC:0.9107548424685887, PLCC:0.9240730871388663
+[20230430 02:24:28 INFO    ] Epoch 2 done. Time: 7.4min
+[20230430 02:24:28 INFO    ] Running training epoch 3
+[20230430 02:29:32 INFO    ] train epoch:3 / loss:0.00454 / SRCC:0.9088 / PLCC:0.9261
+[20230430 02:29:32 INFO    ] Starting eval...
+[20230430 02:29:32 INFO    ] Running validation in epoch 3
+[20230430 02:31:51 INFO    ] Epoch:3 ===== loss:0.008526 ===== SRCC:0.9271 ===== PLCC:0.9369
+[20230430 02:31:51 INFO    ] Eval on validation subset is done...
+[20230430 02:31:51 INFO    ] Saving weights and model of epoch3, SRCC:0.9270595576882374, PLCC:0.9369413548962926
+[20230430 02:31:51 INFO    ] Epoch 3 done. Time: 7.4min
+[20230430 02:31:51 INFO    ] Running training epoch 4
+[20230430 02:36:55 INFO    ] train epoch:4 / loss:0.003576 / SRCC:0.9267 / PLCC:0.9423
+[20230430 02:36:55 INFO    ] Starting eval...
+[20230430 02:36:55 INFO    ] Running validation in epoch 4
+[20230430 02:39:14 INFO    ] Epoch:4 ===== loss:0.006324 ===== SRCC:0.9179 ===== PLCC:0.9349
+[20230430 02:39:14 INFO    ] Eval on validation subset is done...
+[20230430 02:39:14 INFO    ] Epoch 4 done. Time: 7.4min
+[20230430 02:39:14 INFO    ] Running training epoch 5
+[20230430 02:44:18 INFO    ] train epoch:5 / loss:0.003895 / SRCC:0.9215 / PLCC:0.9371
+[20230430 02:44:18 INFO    ] Starting eval...
+[20230430 02:44:18 INFO    ] Running validation in epoch 5
+[20230430 02:46:37 INFO    ] Epoch:5 ===== loss:0.01412 ===== SRCC:0.9319 ===== PLCC:0.9437
+[20230430 02:46:37 INFO    ] Eval on validation subset is done...
+[20230430 02:46:37 INFO    ] Saving weights and model of epoch5, SRCC:0.9318766552269603, PLCC:0.943684640611774
+[20230430 02:46:37 INFO    ] Epoch 5 done. Time: 7.4min
+[20230430 02:46:37 INFO    ] Running training epoch 6
+[20230430 02:51:41 INFO    ] train epoch:6 / loss:0.0032 / SRCC:0.9371 / PLCC:0.9485
+[20230430 02:51:41 INFO    ] Starting eval...
+[20230430 02:51:41 INFO    ] Running validation in epoch 6
+[20230430 02:54:00 INFO    ] Epoch:6 ===== loss:0.008704 ===== SRCC:0.9347 ===== PLCC:0.9459
+[20230430 02:54:00 INFO    ] Eval on validation subset is done...
+[20230430 02:54:01 INFO    ] Saving weights and model of epoch6, SRCC:0.9346624315404349, PLCC:0.9458652935955162
+[20230430 02:54:01 INFO    ] Epoch 6 done. Time: 7.4min
+[20230430 02:54:01 INFO    ] Running training epoch 7
+[20230430 02:59:05 INFO    ] train epoch:7 / loss:0.003068 / SRCC:0.9368 / PLCC:0.9508
+[20230430 02:59:05 INFO    ] Starting eval...
+[20230430 02:59:05 INFO    ] Running validation in epoch 7
+[20230430 03:01:24 INFO    ] Epoch:7 ===== loss:0.007853 ===== SRCC:0.9271 ===== PLCC:0.9417
+[20230430 03:01:24 INFO    ] Eval on validation subset is done...
+[20230430 03:01:24 INFO    ] Epoch 7 done. Time: 7.4min
+[20230430 03:01:24 INFO    ] Running training epoch 8
+[20230430 03:06:27 INFO    ] train epoch:8 / loss:0.003243 / SRCC:0.9328 / PLCC:0.9479
+[20230430 03:06:27 INFO    ] Starting eval...
+[20230430 03:06:27 INFO    ] Running validation in epoch 8
+[20230430 03:08:46 INFO    ] Epoch:8 ===== loss:0.01086 ===== SRCC:0.9369 ===== PLCC:0.9476
+[20230430 03:08:46 INFO    ] Eval on validation subset is done...
+[20230430 03:08:47 INFO    ] Saving weights and model of epoch8, SRCC:0.9369386549854626, PLCC:0.9475705149633021
+[20230430 03:08:47 INFO    ] Epoch 8 done. Time: 7.4min
+[20230430 03:08:47 INFO    ] Running training epoch 9
+[20230430 03:14:01 INFO    ] train epoch:9 / loss:0.00296 / SRCC:0.9396 / PLCC:0.9525
+[20230430 03:14:01 INFO    ] Starting eval...
+[20230430 03:14:01 INFO    ] Running validation in epoch 9
+[20230430 03:16:24 INFO    ] Epoch:9 ===== loss:0.009879 ===== SRCC:0.9308 ===== PLCC:0.9438
+[20230430 03:16:24 INFO    ] Eval on validation subset is done...
+[20230430 03:16:24 INFO    ] Epoch 9 done. Time: 7.6min
+[20230430 03:16:24 INFO    ] Running training epoch 10
+[20230430 03:21:38 INFO    ] train epoch:10 / loss:0.002855 / SRCC:0.943 / PLCC:0.9542
+[20230430 03:21:38 INFO    ] Starting eval...
+[20230430 03:21:38 INFO    ] Running validation in epoch 10
+[20230430 03:24:02 INFO    ] Epoch:10 ===== loss:0.008013 ===== SRCC:0.9327 ===== PLCC:0.9474
+[20230430 03:24:02 INFO    ] Eval on validation subset is done...
+[20230430 03:24:02 INFO    ] Epoch 10 done. Time: 7.6min
+[20230430 03:24:02 INFO    ] Running training epoch 11
+[20230430 03:29:16 INFO    ] train epoch:11 / loss:0.002294 / SRCC:0.9533 / PLCC:0.9634
+[20230430 03:29:16 INFO    ] Starting eval...
+[20230430 03:29:16 INFO    ] Running validation in epoch 11
+[20230430 03:31:40 INFO    ] Epoch:11 ===== loss:0.01174 ===== SRCC:0.9403 ===== PLCC:0.9494
+[20230430 03:31:40 INFO    ] Eval on validation subset is done...
+[20230430 03:31:40 INFO    ] Saving weights and model of epoch11, SRCC:0.9402959964042494, PLCC:0.9494239430490612
+[20230430 03:31:40 INFO    ] Epoch 11 done. Time: 7.6min
+[20230430 03:31:40 INFO    ] Running training epoch 12
+[20230430 03:36:54 INFO    ] train epoch:12 / loss:0.002387 / SRCC:0.9522 / PLCC:0.9619
+[20230430 03:36:54 INFO    ] Starting eval...
+[20230430 03:36:54 INFO    ] Running validation in epoch 12
+[20230430 03:39:17 INFO    ] Epoch:12 ===== loss:0.007948 ===== SRCC:0.9372 ===== PLCC:0.9495
+[20230430 03:39:17 INFO    ] Eval on validation subset is done...
+[20230430 03:39:17 INFO    ] Epoch 12 done. Time: 7.6min
+[20230430 03:39:17 INFO    ] Running training epoch 13
+[20230430 03:44:31 INFO    ] train epoch:13 / loss:0.002759 / SRCC:0.9436 / PLCC:0.9558
+[20230430 03:44:31 INFO    ] Starting eval...
+[20230430 03:44:31 INFO    ] Running validation in epoch 13
+[20230430 03:46:55 INFO    ] Epoch:13 ===== loss:0.008831 ===== SRCC:0.9346 ===== PLCC:0.9477
+[20230430 03:46:55 INFO    ] Eval on validation subset is done...
+[20230430 03:46:55 INFO    ] Epoch 13 done. Time: 7.6min
+[20230430 03:46:55 INFO    ] Running training epoch 14
+[20230430 03:52:08 INFO    ] train epoch:14 / loss:0.002497 / SRCC:0.9467 / PLCC:0.9601
+[20230430 03:52:08 INFO    ] Starting eval...
+[20230430 03:52:08 INFO    ] Running validation in epoch 14
+[20230430 03:54:32 INFO    ] Epoch:14 ===== loss:0.01066 ===== SRCC:0.9426 ===== PLCC:0.9531
+[20230430 03:54:32 INFO    ] Eval on validation subset is done...
+[20230430 03:54:32 INFO    ] Saving weights and model of epoch14, SRCC:0.9426336352929613, PLCC:0.9530995033083112
+[20230430 03:54:32 INFO    ] Epoch 14 done. Time: 7.6min
+[20230430 03:54:32 INFO    ] Running training epoch 15
+[20230430 03:59:46 INFO    ] train epoch:15 / loss:0.00244 / SRCC:0.95 / PLCC:0.961
+[20230430 03:59:46 INFO    ] Starting eval...
+[20230430 03:59:46 INFO    ] Running validation in epoch 15
+[20230430 04:02:10 INFO    ] Epoch:15 ===== loss:0.008152 ===== SRCC:0.9447 ===== PLCC:0.9556
+[20230430 04:02:10 INFO    ] Eval on validation subset is done...
+[20230430 04:02:10 INFO    ] Saving weights and model of epoch15, SRCC:0.9446804188869813, PLCC:0.9555864130207363
+[20230430 04:02:10 INFO    ] Epoch 15 done. Time: 7.6min
+[20230430 04:02:10 INFO    ] Running training epoch 16
+[20230430 04:07:24 INFO    ] train epoch:16 / loss:0.002247 / SRCC:0.953 / PLCC:0.9642
+[20230430 04:07:24 INFO    ] Starting eval...
+[20230430 04:07:24 INFO    ] Running validation in epoch 16
+[20230430 04:09:48 INFO    ] Epoch:16 ===== loss:0.006961 ===== SRCC:0.9343 ===== PLCC:0.9475
+[20230430 04:09:48 INFO    ] Eval on validation subset is done...
+[20230430 04:09:48 INFO    ] Epoch 16 done. Time: 7.6min
+[20230430 04:09:48 INFO    ] Running training epoch 17
+[20230430 04:15:01 INFO    ] train epoch:17 / loss:0.002088 / SRCC:0.9572 / PLCC:0.9668
+[20230430 04:15:01 INFO    ] Starting eval...
+[20230430 04:15:01 INFO    ] Running validation in epoch 17
+[20230430 04:17:25 INFO    ] Epoch:17 ===== loss:0.007203 ===== SRCC:0.9373 ===== PLCC:0.9508
+[20230430 04:17:25 INFO    ] Eval on validation subset is done...
+[20230430 04:17:25 INFO    ] Epoch 17 done. Time: 7.6min
+[20230430 04:17:25 INFO    ] Running training epoch 18
+[20230430 04:22:38 INFO    ] train epoch:18 / loss:0.0022 / SRCC:0.9553 / PLCC:0.9649
+[20230430 04:22:38 INFO    ] Starting eval...
+[20230430 04:22:38 INFO    ] Running validation in epoch 18
+[20230430 04:25:02 INFO    ] Epoch:18 ===== loss:0.008104 ===== SRCC:0.9467 ===== PLCC:0.9578
+[20230430 04:25:02 INFO    ] Eval on validation subset is done...
+[20230430 04:25:03 INFO    ] Saving weights and model of epoch18, SRCC:0.9467071827824857, PLCC:0.9578202753401812
+[20230430 04:25:03 INFO    ] Epoch 18 done. Time: 7.6min
+[20230430 04:25:03 INFO    ] Running training epoch 19
+[20230430 04:30:16 INFO    ] train epoch:19 / loss:0.002352 / SRCC:0.9492 / PLCC:0.9625
+[20230430 04:30:16 INFO    ] Starting eval...
+[20230430 04:30:16 INFO    ] Running validation in epoch 19
+[20230430 04:32:40 INFO    ] Epoch:19 ===== loss:0.006252 ===== SRCC:0.9493 ===== PLCC:0.9584
+[20230430 04:32:40 INFO    ] Eval on validation subset is done...
+[20230430 04:32:40 INFO    ] Saving weights and model of epoch19, SRCC:0.9492745327918326, PLCC:0.9584035174511828
+[20230430 04:32:40 INFO    ] Epoch 19 done. Time: 7.6min
+[20230430 04:32:40 INFO    ] Starting testing...
+[20230430 04:35:38 INFO    ] Epoch:19 ===== loss:0.01493 ===== SRCC:0.7851 ===== PLCC:0.8211
+[20230430 04:35:38 INFO    ] --- Split id:1
+[20230430 04:35:38 INFO    ] --- Fold id:1
+[20230430 04:35:38 INFO    ] number of train scenes: 1920
+[20230430 04:35:38 INFO    ] number of val scenes: 480
+[20230430 04:35:38 INFO    ] number of test scenes: 600
+[20230430 04:35:40 INFO    ] Running training epoch 0
+[20230430 04:40:53 INFO    ] train epoch:0 / loss:0.02554 / SRCC:0.5236 / PLCC:0.5156
+[20230430 04:40:53 INFO    ] Starting eval...
+[20230430 04:40:53 INFO    ] Running validation in epoch 0
+[20230430 04:43:17 INFO    ] Epoch:0 ===== loss:0.01507 ===== SRCC:0.8422 ===== PLCC:0.8444
+[20230430 04:43:17 INFO    ] Eval on validation subset is done...
+[20230430 04:43:17 INFO    ] Saving weights and model of epoch0, SRCC:0.8422469235444333, PLCC:0.8443642616621367
+[20230430 04:43:17 INFO    ] Epoch 0 done. Time: 7.6min
+[20230430 04:43:17 INFO    ] Running training epoch 1
+[20230430 04:48:30 INFO    ] train epoch:1 / loss:0.007646 / SRCC:0.8413 / PLCC:0.8722
+[20230430 04:48:30 INFO    ] Starting eval...
+[20230430 04:48:30 INFO    ] Running validation in epoch 1
+[20230430 04:50:54 INFO    ] Epoch:1 ===== loss:0.01221 ===== SRCC:0.856 ===== PLCC:0.8848
+[20230430 04:50:54 INFO    ] Eval on validation subset is done...
+[20230430 04:50:55 INFO    ] Saving weights and model of epoch1, SRCC:0.8559768508768614, PLCC:0.8848332054364638
+[20230430 04:50:55 INFO    ] Epoch 1 done. Time: 7.6min
+[20230430 04:50:55 INFO    ] Running training epoch 2
+[20230430 04:56:08 INFO    ] train epoch:2 / loss:0.005708 / SRCC:0.8842 / PLCC:0.9062
+[20230430 04:56:08 INFO    ] Starting eval...
+[20230430 04:56:08 INFO    ] Running validation in epoch 2
+[20230430 04:58:32 INFO    ] Epoch:2 ===== loss:0.006763 ===== SRCC:0.9077 ===== PLCC:0.9198
+[20230430 04:58:32 INFO    ] Eval on validation subset is done...
+[20230430 04:58:32 INFO    ] Saving weights and model of epoch2, SRCC:0.9077008297886919, PLCC:0.9197509398384865
+[20230430 04:58:32 INFO    ] Epoch 2 done. Time: 7.6min
+[20230430 04:58:32 INFO    ] Running training epoch 3
+[20230430 05:03:46 INFO    ] train epoch:3 / loss:0.003613 / SRCC:0.9277 / PLCC:0.9417
+[20230430 05:03:46 INFO    ] Starting eval...
+[20230430 05:03:46 INFO    ] Running validation in epoch 3
+[20230430 05:06:10 INFO    ] Epoch:3 ===== loss:0.006385 ===== SRCC:0.9074 ===== PLCC:0.9233
+[20230430 05:06:10 INFO    ] Eval on validation subset is done...
+[20230430 05:06:10 INFO    ] Epoch 3 done. Time: 7.6min
+[20230430 05:06:10 INFO    ] Running training epoch 4
+[20230430 05:11:23 INFO    ] train epoch:4 / loss:0.003457 / SRCC:0.9328 / PLCC:0.9443
+[20230430 05:11:23 INFO    ] Starting eval...
+[20230430 05:11:23 INFO    ] Running validation in epoch 4
+[20230430 05:13:47 INFO    ] Epoch:4 ===== loss:0.00571 ===== SRCC:0.9141 ===== PLCC:0.9305
+[20230430 05:13:47 INFO    ] Eval on validation subset is done...
+[20230430 05:13:47 INFO    ] Saving weights and model of epoch4, SRCC:0.914053553182926, PLCC:0.9304610926768776
+[20230430 05:13:47 INFO    ] Epoch 4 done. Time: 7.6min
+[20230430 05:13:47 INFO    ] Running training epoch 5
+[20230430 05:19:01 INFO    ] train epoch:5 / loss:0.003101 / SRCC:0.9374 / PLCC:0.9502
+[20230430 05:19:01 INFO    ] Starting eval...
+[20230430 05:19:01 INFO    ] Running validation in epoch 5
+[20230430 05:21:25 INFO    ] Epoch:5 ===== loss:0.007678 ===== SRCC:0.9327 ===== PLCC:0.9416
+[20230430 05:21:25 INFO    ] Eval on validation subset is done...
+[20230430 05:21:25 INFO    ] Saving weights and model of epoch5, SRCC:0.9327101343709566, PLCC:0.9416493595448003
+[20230430 05:21:25 INFO    ] Epoch 5 done. Time: 7.6min
+[20230430 05:21:25 INFO    ] Running training epoch 6
+[20230430 05:26:39 INFO    ] train epoch:6 / loss:0.003121 / SRCC:0.9365 / PLCC:0.95
+[20230430 05:26:39 INFO    ] Starting eval...
+[20230430 05:26:39 INFO    ] Running validation in epoch 6
+[20230430 05:29:03 INFO    ] Epoch:6 ===== loss:0.005618 ===== SRCC:0.9263 ===== PLCC:0.9369
+[20230430 05:29:03 INFO    ] Eval on validation subset is done...
+[20230430 05:29:03 INFO    ] Epoch 6 done. Time: 7.6min
+[20230430 05:29:03 INFO    ] Running training epoch 7
+[20230430 05:34:16 INFO    ] train epoch:7 / loss:0.00262 / SRCC:0.9473 / PLCC:0.9581
+[20230430 05:34:16 INFO    ] Starting eval...
+[20230430 05:34:16 INFO    ] Running validation in epoch 7
+[20230430 05:36:40 INFO    ] Epoch:7 ===== loss:0.009191 ===== SRCC:0.9175 ===== PLCC:0.931
+[20230430 05:36:40 INFO    ] Eval on validation subset is done...
+[20230430 05:36:40 INFO    ] Epoch 7 done. Time: 7.6min
+[20230430 05:36:40 INFO    ] Running training epoch 8
+[20230430 05:41:53 INFO    ] train epoch:8 / loss:0.002676 / SRCC:0.9466 / PLCC:0.9572
+[20230430 05:41:53 INFO    ] Starting eval...
+[20230430 05:41:53 INFO    ] Running validation in epoch 8
+[20230430 05:44:17 INFO    ] Epoch:8 ===== loss:0.005005 ===== SRCC:0.9261 ===== PLCC:0.9366
+[20230430 05:44:17 INFO    ] Eval on validation subset is done...
+[20230430 05:44:17 INFO    ] Epoch 8 done. Time: 7.6min
+[20230430 05:44:17 INFO    ] Starting testing...
+[20230430 05:47:15 INFO    ] Epoch:5 ===== loss:0.02988 ===== SRCC:0.7059 ===== PLCC:0.7225
+[20230430 05:47:15 INFO    ] --- Split id:1
+[20230430 05:47:15 INFO    ] --- Fold id:2
+[20230430 05:47:15 INFO    ] number of train scenes: 1920
+[20230430 05:47:15 INFO    ] number of val scenes: 480
+[20230430 05:47:15 INFO    ] number of test scenes: 600
+[20230430 05:47:16 INFO    ] Running training epoch 0
+[20230430 05:52:30 INFO    ] train epoch:0 / loss:0.02353 / SRCC:0.6236 / PLCC:0.5868
+[20230430 05:52:30 INFO    ] Starting eval...
+[20230430 05:52:30 INFO    ] Running validation in epoch 0
+[20230430 05:54:53 INFO    ] Epoch:0 ===== loss:0.007953 ===== SRCC:0.8506 ===== PLCC:0.8794
+[20230430 05:54:53 INFO    ] Eval on validation subset is done...
+[20230430 05:54:54 INFO    ] Saving weights and model of epoch0, SRCC:0.8506385109621912, PLCC:0.879374438210138
+[20230430 05:54:54 INFO    ] Epoch 0 done. Time: 7.6min
+[20230430 05:54:54 INFO    ] Running training epoch 1
+[20230430 06:00:07 INFO    ] train epoch:1 / loss:0.006196 / SRCC:0.8718 / PLCC:0.8961
+[20230430 06:00:07 INFO    ] Starting eval...
+[20230430 06:00:07 INFO    ] Running validation in epoch 1
+[20230430 06:02:31 INFO    ] Epoch:1 ===== loss:0.008653 ===== SRCC:0.8661 ===== PLCC:0.8866
+[20230430 06:02:31 INFO    ] Eval on validation subset is done...
+[20230430 06:02:32 INFO    ] Saving weights and model of epoch1, SRCC:0.8660756112241826, PLCC:0.8865698103531483
+[20230430 06:02:32 INFO    ] Epoch 1 done. Time: 7.6min
+[20230430 06:02:32 INFO    ] Running training epoch 2
+[20230430 06:07:45 INFO    ] train epoch:2 / loss:0.004987 / SRCC:0.8946 / PLCC:0.9173
+[20230430 06:07:45 INFO    ] Starting eval...
+[20230430 06:07:45 INFO    ] Running validation in epoch 2
+[20230430 06:10:09 INFO    ] Epoch:2 ===== loss:0.007648 ===== SRCC:0.8823 ===== PLCC:0.8884
+[20230430 06:10:09 INFO    ] Eval on validation subset is done...
+[20230430 06:10:10 INFO    ] Saving weights and model of epoch2, SRCC:0.8823058503333068, PLCC:0.8884310093526733
+[20230430 06:10:10 INFO    ] Epoch 2 done. Time: 7.6min
+[20230430 06:10:10 INFO    ] Running training epoch 3
+[20230430 06:15:23 INFO    ] train epoch:3 / loss:0.004409 / SRCC:0.9141 / PLCC:0.9273
+[20230430 06:15:23 INFO    ] Starting eval...
+[20230430 06:15:23 INFO    ] Running validation in epoch 3
+[20230430 06:17:47 INFO    ] Epoch:3 ===== loss:0.01027 ===== SRCC:0.8869 ===== PLCC:0.9026
+[20230430 06:17:47 INFO    ] Eval on validation subset is done...
+[20230430 06:17:48 INFO    ] Saving weights and model of epoch3, SRCC:0.886905122478322, PLCC:0.9025753039384843
+[20230430 06:17:48 INFO    ] Epoch 3 done. Time: 7.6min
+[20230430 06:17:48 INFO    ] Running training epoch 4
+[20230430 06:23:01 INFO    ] train epoch:4 / loss:0.003899 / SRCC:0.9165 / PLCC:0.9359
+[20230430 06:23:01 INFO    ] Starting eval...
+[20230430 06:23:01 INFO    ] Running validation in epoch 4
+[20230430 06:25:25 INFO    ] Epoch:4 ===== loss:0.009275 ===== SRCC:0.892 ===== PLCC:0.9053
+[20230430 06:25:25 INFO    ] Eval on validation subset is done...
+[20230430 06:25:25 INFO    ] Saving weights and model of epoch4, SRCC:0.8919790083886233, PLCC:0.9052519131660923
+[20230430 06:25:25 INFO    ] Epoch 4 done. Time: 7.6min
+[20230430 06:25:25 INFO    ] Running training epoch 5
+[20230430 06:30:39 INFO    ] train epoch:5 / loss:0.003486 / SRCC:0.9279 / PLCC:0.9429
+[20230430 06:30:39 INFO    ] Starting eval...
+[20230430 06:30:39 INFO    ] Running validation in epoch 5
+[20230430 06:33:03 INFO    ] Epoch:5 ===== loss:0.01174 ===== SRCC:0.8949 ===== PLCC:0.9029
+[20230430 06:33:03 INFO    ] Eval on validation subset is done...
+[20230430 06:33:03 INFO    ] Saving weights and model of epoch5, SRCC:0.8949139856246406, PLCC:0.902945064546445
+[20230430 06:33:03 INFO    ] Epoch 5 done. Time: 7.6min
+[20230430 06:33:03 INFO    ] Running training epoch 6
+[20230430 06:38:17 INFO    ] train epoch:6 / loss:0.003398 / SRCC:0.9306 / PLCC:0.9444
+[20230430 06:38:17 INFO    ] Starting eval...
+[20230430 06:38:17 INFO    ] Running validation in epoch 6
+[20230430 06:40:41 INFO    ] Epoch:6 ===== loss:0.0109 ===== SRCC:0.8926 ===== PLCC:0.9032
+[20230430 06:40:41 INFO    ] Eval on validation subset is done...
+[20230430 06:40:41 INFO    ] Epoch 6 done. Time: 7.6min
+[20230430 06:40:41 INFO    ] Running training epoch 7
+[20230430 06:45:54 INFO    ] train epoch:7 / loss:0.003142 / SRCC:0.9367 / PLCC:0.9487
+[20230430 06:45:54 INFO    ] Starting eval...
+[20230430 06:45:54 INFO    ] Running validation in epoch 7
+[20230430 06:48:18 INFO    ] Epoch:7 ===== loss:0.01001 ===== SRCC:0.891 ===== PLCC:0.9035
+[20230430 06:48:18 INFO    ] Eval on validation subset is done...
+[20230430 06:48:18 INFO    ] Epoch 7 done. Time: 7.6min
+[20230430 06:48:18 INFO    ] Running training epoch 8
+[20230430 06:53:32 INFO    ] train epoch:8 / loss:0.002736 / SRCC:0.9435 / PLCC:0.9555
+[20230430 06:53:32 INFO    ] Starting eval...
+[20230430 06:53:32 INFO    ] Running validation in epoch 8
+[20230430 06:55:55 INFO    ] Epoch:8 ===== loss:0.01141 ===== SRCC:0.8809 ===== PLCC:0.8924
+[20230430 06:55:55 INFO    ] Eval on validation subset is done...
+[20230430 06:55:55 INFO    ] Epoch 8 done. Time: 7.6min
+[20230430 06:55:55 INFO    ] Starting testing...
+[20230430 06:58:53 INFO    ] Epoch:5 ===== loss:0.0205 ===== SRCC:0.7483 ===== PLCC:0.7672
+[20230430 06:58:53 INFO    ] --- Split id:1
+[20230430 06:58:53 INFO    ] --- Fold id:3
+[20230430 06:58:53 INFO    ] number of train scenes: 1920
+[20230430 06:58:53 INFO    ] number of val scenes: 480
+[20230430 06:58:53 INFO    ] number of test scenes: 600
+[20230430 06:58:54 INFO    ] Running training epoch 0
+[20230430 07:04:08 INFO    ] train epoch:0 / loss:0.02469 / SRCC:0.575 / PLCC:0.5559
+[20230430 07:04:08 INFO    ] Starting eval...
+[20230430 07:04:08 INFO    ] Running validation in epoch 0
+[20230430 07:06:32 INFO    ] Epoch:0 ===== loss:0.01592 ===== SRCC:0.7989 ===== PLCC:0.8406
+[20230430 07:06:32 INFO    ] Eval on validation subset is done...
+[20230430 07:06:33 INFO    ] Saving weights and model of epoch0, SRCC:0.7988652360581243, PLCC:0.840574470972578
+[20230430 07:06:33 INFO    ] Epoch 0 done. Time: 7.6min
+[20230430 07:06:33 INFO    ] Running training epoch 1
+[20230430 07:11:46 INFO    ] train epoch:1 / loss:0.006473 / SRCC:0.8662 / PLCC:0.8931
+[20230430 07:11:46 INFO    ] Starting eval...
+[20230430 07:11:46 INFO    ] Running validation in epoch 1
+[20230430 07:14:10 INFO    ] Epoch:1 ===== loss:0.008123 ===== SRCC:0.8888 ===== PLCC:0.9006
+[20230430 07:14:10 INFO    ] Eval on validation subset is done...
+[20230430 07:14:10 INFO    ] Saving weights and model of epoch1, SRCC:0.8888091055051819, PLCC:0.9005756854346213
+[20230430 07:14:10 INFO    ] Epoch 1 done. Time: 7.6min
+[20230430 07:14:10 INFO    ] Running training epoch 2
+[20230430 07:19:24 INFO    ] train epoch:2 / loss:0.0045 / SRCC:0.914 / PLCC:0.927
+[20230430 07:19:24 INFO    ] Starting eval...
+[20230430 07:19:24 INFO    ] Running validation in epoch 2
+[20230430 07:21:48 INFO    ] Epoch:2 ===== loss:0.009415 ===== SRCC:0.8715 ===== PLCC:0.893
+[20230430 07:21:48 INFO    ] Eval on validation subset is done...
+[20230430 07:21:48 INFO    ] Epoch 2 done. Time: 7.6min
+[20230430 07:21:48 INFO    ] Running training epoch 3
+[20230430 07:27:02 INFO    ] train epoch:3 / loss:0.003907 / SRCC:0.922 / PLCC:0.9369
+[20230430 07:27:02 INFO    ] Starting eval...
+[20230430 07:27:02 INFO    ] Running validation in epoch 3
+[20230430 07:29:26 INFO    ] Epoch:3 ===== loss:0.008486 ===== SRCC:0.8899 ===== PLCC:0.9074
+[20230430 07:29:26 INFO    ] Eval on validation subset is done...
+[20230430 07:29:26 INFO    ] Saving weights and model of epoch3, SRCC:0.8898965166393181, PLCC:0.9073716011423032
+[20230430 07:29:26 INFO    ] Epoch 3 done. Time: 7.6min
+[20230430 07:29:26 INFO    ] Running training epoch 4
+[20230430 07:34:40 INFO    ] train epoch:4 / loss:0.003399 / SRCC:0.9318 / PLCC:0.9454
+[20230430 07:34:40 INFO    ] Starting eval...
+[20230430 07:34:40 INFO    ] Running validation in epoch 4
+[20230430 07:37:04 INFO    ] Epoch:4 ===== loss:0.008852 ===== SRCC:0.892 ===== PLCC:0.9082
+[20230430 07:37:04 INFO    ] Eval on validation subset is done...
+[20230430 07:37:04 INFO    ] Saving weights and model of epoch4, SRCC:0.892015999918576, PLCC:0.9081796119192207
+[20230430 07:37:04 INFO    ] Epoch 4 done. Time: 7.6min
+[20230430 07:37:04 INFO    ] Running training epoch 5
+[20230430 07:42:18 INFO    ] train epoch:5 / loss:0.003389 / SRCC:0.9324 / PLCC:0.9455
+[20230430 07:42:18 INFO    ] Starting eval...
+[20230430 07:42:18 INFO    ] Running validation in epoch 5
+[20230430 07:44:42 INFO    ] Epoch:5 ===== loss:0.007092 ===== SRCC:0.9043 ===== PLCC:0.9193
+[20230430 07:44:42 INFO    ] Eval on validation subset is done...
+[20230430 07:44:42 INFO    ] Saving weights and model of epoch5, SRCC:0.9042756476339132, PLCC:0.9193195637037876
+[20230430 07:44:42 INFO    ] Epoch 5 done. Time: 7.6min
+[20230430 07:44:42 INFO    ] Running training epoch 6
+[20230430 07:49:56 INFO    ] train epoch:6 / loss:0.002803 / SRCC:0.9413 / PLCC:0.9552
+[20230430 07:49:56 INFO    ] Starting eval...
+[20230430 07:49:56 INFO    ] Running validation in epoch 6
+[20230430 07:52:20 INFO    ] Epoch:6 ===== loss:0.007955 ===== SRCC:0.9016 ===== PLCC:0.9192
+[20230430 07:52:20 INFO    ] Eval on validation subset is done...
+[20230430 07:52:20 INFO    ] Epoch 6 done. Time: 7.6min
+[20230430 07:52:20 INFO    ] Running training epoch 7
+[20230430 07:57:34 INFO    ] train epoch:7 / loss:0.003051 / SRCC:0.9374 / PLCC:0.9513
+[20230430 07:57:34 INFO    ] Starting eval...
+[20230430 07:57:34 INFO    ] Running validation in epoch 7
+[20230430 07:59:58 INFO    ] Epoch:7 ===== loss:0.00928 ===== SRCC:0.9126 ===== PLCC:0.9237
+[20230430 07:59:58 INFO    ] Eval on validation subset is done...
+[20230430 07:59:58 INFO    ] Saving weights and model of epoch7, SRCC:0.912619953368648, PLCC:0.923736663642662
+[20230430 07:59:58 INFO    ] Epoch 7 done. Time: 7.6min
+[20230430 07:59:58 INFO    ] Running training epoch 8
+[20230430 08:05:12 INFO    ] train epoch:8 / loss:0.002531 / SRCC:0.9486 / PLCC:0.9597
+[20230430 08:05:12 INFO    ] Starting eval...
+[20230430 08:05:12 INFO    ] Running validation in epoch 8
+[20230430 08:07:36 INFO    ] Epoch:8 ===== loss:0.007798 ===== SRCC:0.9162 ===== PLCC:0.9223
+[20230430 08:07:36 INFO    ] Eval on validation subset is done...
+[20230430 08:07:36 INFO    ] Saving weights and model of epoch8, SRCC:0.9161927904103786, PLCC:0.922317888692312
+[20230430 08:07:36 INFO    ] Epoch 8 done. Time: 7.6min
+[20230430 08:07:36 INFO    ] Running training epoch 9
+[20230430 08:12:50 INFO    ] train epoch:9 / loss:0.002291 / SRCC:0.9525 / PLCC:0.9635
+[20230430 08:12:50 INFO    ] Starting eval...
+[20230430 08:12:50 INFO    ] Running validation in epoch 9
+[20230430 08:15:13 INFO    ] Epoch:9 ===== loss:0.008126 ===== SRCC:0.8941 ===== PLCC:0.9118
+[20230430 08:15:13 INFO    ] Eval on validation subset is done...
+[20230430 08:15:13 INFO    ] Epoch 9 done. Time: 7.6min
+[20230430 08:15:13 INFO    ] Running training epoch 10
+[20230430 08:20:27 INFO    ] train epoch:10 / loss:0.002682 / SRCC:0.9456 / PLCC:0.9572
+[20230430 08:20:27 INFO    ] Starting eval...
+[20230430 08:20:27 INFO    ] Running validation in epoch 10
+[20230430 08:22:50 INFO    ] Epoch:10 ===== loss:0.007839 ===== SRCC:0.8919 ===== PLCC:0.9054
+[20230430 08:22:50 INFO    ] Eval on validation subset is done...
+[20230430 08:22:50 INFO    ] Epoch 10 done. Time: 7.6min
+[20230430 08:22:50 INFO    ] Running training epoch 11
+[20230430 08:28:04 INFO    ] train epoch:11 / loss:0.002219 / SRCC:0.9538 / PLCC:0.9648
+[20230430 08:28:04 INFO    ] Starting eval...
+[20230430 08:28:04 INFO    ] Running validation in epoch 11
+[20230430 08:30:27 INFO    ] Epoch:11 ===== loss:0.007469 ===== SRCC:0.906 ===== PLCC:0.917
+[20230430 08:30:27 INFO    ] Eval on validation subset is done...
+[20230430 08:30:27 INFO    ] Epoch 11 done. Time: 7.6min
+[20230430 08:30:27 INFO    ] Starting testing...
+[20230430 08:33:25 INFO    ] Epoch:8 ===== loss:0.01784 ===== SRCC:0.7444 ===== PLCC:0.7767
+[20230430 08:33:25 INFO    ] --- Split id:1
+[20230430 08:33:25 INFO    ] --- Fold id:4
+[20230430 08:33:25 INFO    ] number of train scenes: 1920
+[20230430 08:33:25 INFO    ] number of val scenes: 480
+[20230430 08:33:25 INFO    ] number of test scenes: 600
+[20230430 08:33:26 INFO    ] Running training epoch 0
+[20230430 08:38:40 INFO    ] train epoch:0 / loss:0.03147 / SRCC:0.5199 / PLCC:0.4972
+[20230430 08:38:40 INFO    ] Starting eval...
+[20230430 08:38:40 INFO    ] Running validation in epoch 0
+[20230430 08:41:03 INFO    ] Epoch:0 ===== loss:0.01184 ===== SRCC:0.7701 ===== PLCC:0.8073
+[20230430 08:41:03 INFO    ] Eval on validation subset is done...
+[20230430 08:41:04 INFO    ] Saving weights and model of epoch0, SRCC:0.7701184101149011, PLCC:0.8072614617088268
+[20230430 08:41:04 INFO    ] Epoch 0 done. Time: 7.6min
+[20230430 08:41:04 INFO    ] Running training epoch 1
+[20230430 08:46:18 INFO    ] train epoch:1 / loss:0.009164 / SRCC:0.8091 / PLCC:0.8516
+[20230430 08:46:18 INFO    ] Starting eval...
+[20230430 08:46:18 INFO    ] Running validation in epoch 1
+[20230430 08:48:42 INFO    ] Epoch:1 ===== loss:0.00746 ===== SRCC:0.9 ===== PLCC:0.9086
+[20230430 08:48:42 INFO    ] Eval on validation subset is done...
+[20230430 08:48:42 INFO    ] Saving weights and model of epoch1, SRCC:0.8999800101349434, PLCC:0.9085839457910716
+[20230430 08:48:42 INFO    ] Epoch 1 done. Time: 7.6min
+[20230430 08:48:42 INFO    ] Running training epoch 2
+[20230430 08:53:56 INFO    ] train epoch:2 / loss:0.006451 / SRCC:0.8735 / PLCC:0.8981
+[20230430 08:53:56 INFO    ] Starting eval...
+[20230430 08:53:56 INFO    ] Running validation in epoch 2
+[20230430 08:56:20 INFO    ] Epoch:2 ===== loss:0.006186 ===== SRCC:0.9109 ===== PLCC:0.9225
+[20230430 08:56:20 INFO    ] Eval on validation subset is done...
+[20230430 08:56:20 INFO    ] Saving weights and model of epoch2, SRCC:0.9109048067796593, PLCC:0.9224889851323114
+[20230430 08:56:20 INFO    ] Epoch 2 done. Time: 7.6min
+[20230430 08:56:20 INFO    ] Running training epoch 3
+[20230430 09:01:34 INFO    ] train epoch:3 / loss:0.004792 / SRCC:0.9086 / PLCC:0.9254
+[20230430 09:01:34 INFO    ] Starting eval...
+[20230430 09:01:34 INFO    ] Running validation in epoch 3
+[20230430 09:03:57 INFO    ] Epoch:3 ===== loss:0.005233 ===== SRCC:0.9223 ===== PLCC:0.9285
+[20230430 09:03:57 INFO    ] Eval on validation subset is done...
+[20230430 09:03:58 INFO    ] Saving weights and model of epoch3, SRCC:0.9223203305933404, PLCC:0.9285040863449219
+[20230430 09:03:58 INFO    ] Epoch 3 done. Time: 7.6min
+[20230430 09:03:58 INFO    ] Running training epoch 4
+[20230430 09:09:12 INFO    ] train epoch:4 / loss:0.004074 / SRCC:0.9219 / PLCC:0.937
+[20230430 09:09:12 INFO    ] Starting eval...
+[20230430 09:09:12 INFO    ] Running validation in epoch 4
+[20230430 09:11:35 INFO    ] Epoch:4 ===== loss:0.004536 ===== SRCC:0.9303 ===== PLCC:0.9352
+[20230430 09:11:35 INFO    ] Eval on validation subset is done...
+[20230430 09:11:36 INFO    ] Saving weights and model of epoch4, SRCC:0.9303270774002699, PLCC:0.9351645000204214
+[20230430 09:11:36 INFO    ] Epoch 4 done. Time: 7.6min
+[20230430 09:11:36 INFO    ] Running training epoch 5
+[20230430 09:16:49 INFO    ] train epoch:5 / loss:0.00409 / SRCC:0.9223 / PLCC:0.9367
+[20230430 09:16:49 INFO    ] Starting eval...
+[20230430 09:16:49 INFO    ] Running validation in epoch 5
+[20230430 09:19:13 INFO    ] Epoch:5 ===== loss:0.004026 ===== SRCC:0.937 ===== PLCC:0.9413
+[20230430 09:19:13 INFO    ] Eval on validation subset is done...
+[20230430 09:19:13 INFO    ] Saving weights and model of epoch5, SRCC:0.9370007498823085, PLCC:0.9412848768073718
+[20230430 09:19:13 INFO    ] Epoch 5 done. Time: 7.6min
+[20230430 09:19:13 INFO    ] Running training epoch 6
+[20230430 09:24:26 INFO    ] train epoch:6 / loss:0.003555 / SRCC:0.9317 / PLCC:0.9453
+[20230430 09:24:27 INFO    ] Starting eval...
+[20230430 09:24:27 INFO    ] Running validation in epoch 6
+[20230430 09:26:50 INFO    ] Epoch:6 ===== loss:0.004544 ===== SRCC:0.9311 ===== PLCC:0.939
+[20230430 09:26:50 INFO    ] Eval on validation subset is done...
+[20230430 09:26:50 INFO    ] Epoch 6 done. Time: 7.6min
+[20230430 09:26:50 INFO    ] Running training epoch 7
+[20230430 09:32:04 INFO    ] train epoch:7 / loss:0.003257 / SRCC:0.9359 / PLCC:0.9499
+[20230430 09:32:04 INFO    ] Starting eval...
+[20230430 09:32:04 INFO    ] Running validation in epoch 7
+[20230430 09:34:27 INFO    ] Epoch:7 ===== loss:0.003906 ===== SRCC:0.9337 ===== PLCC:0.9435
+[20230430 09:34:27 INFO    ] Eval on validation subset is done...
+[20230430 09:34:27 INFO    ] Epoch 7 done. Time: 7.6min
+[20230430 09:34:27 INFO    ] Running training epoch 8
+[20230430 09:39:41 INFO    ] train epoch:8 / loss:0.003418 / SRCC:0.9343 / PLCC:0.9474
+[20230430 09:39:41 INFO    ] Starting eval...
+[20230430 09:39:41 INFO    ] Running validation in epoch 8
+[20230430 09:42:04 INFO    ] Epoch:8 ===== loss:0.005149 ===== SRCC:0.9169 ===== PLCC:0.9256
+[20230430 09:42:04 INFO    ] Eval on validation subset is done...
+[20230430 09:42:04 INFO    ] Epoch 8 done. Time: 7.6min
+[20230430 09:42:04 INFO    ] Starting testing...
+[20230430 09:45:02 INFO    ] Epoch:5 ===== loss:0.01992 ===== SRCC:0.7275 ===== PLCC:0.7532
+[20230430 09:45:02 INFO    ] Mean split test SROCC0.8465822962975424
+\ Mean split test PLCC0.8625178350284362
