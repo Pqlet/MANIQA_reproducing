@@ -13,5 +13,5 @@ Trying to reproduce results of MANIQA paper
   - [ ] 5.2) Larger ViT ? 
   - [ ] 5.3) CLIP ViT - OpenCLIP
   - [ ] 5.4) ResNet...
-- [ ] *) Write a logger that logs to a file AND prints to the console
+- [x] *) Write a logger that logs to a file AND prints to the console
  

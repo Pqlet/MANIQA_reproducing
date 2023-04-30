@@ -1,0 +1,8 @@
+-300423 12:49
+update logging to save to the console too
+add debug mode - 1 epoch, 2 images per origin
+assert for early_stpoping
+save metrics dict now, bugfix-the link to the same list in dict val
+show more info in logging: model number of all the models, show message of best epoch, separate .info() for separate metrics
+pin memory in dataloaders
+move model_save_path higher to create outside of if() for the sake of saving the first model. modify if() for saving the model.

@@ -22,6 +22,8 @@ import argparse
 import pandas as pd
 from sklearn.model_selection import GroupShuffleSplit, GroupKFold
 
+#Added
+import pickle
 
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
@@ -44,11 +46,18 @@ def set_logging(config):
     filename = os.path.join(config.log_path, config.log_file)
     logging.basicConfig(
         level=logging.INFO,
-        filename=filename,
-        filemode='w',
+        # filename=filename, # redundant
+        # filemode='w', # redundant
         format='[%(asctime)s %(levelname)-8s] %(message)s',
         datefmt='%Y%m%d %H:%M:%S'
     )
+    rootLogger = logging.getLogger()
+    logFormatter = logging.Formatter('[%(asctime)s %(levelname)-8s] %(message)s')
+
+    fileHandler = logging.FileHandler(filename, mode='w', )
+    fileHandler.setFormatter(logFormatter)
+
+    rootLogger.addHandler(fileHandler)
 
 
 
@@ -181,12 +190,18 @@ if __name__ == '__main__':
         "crop_size": 224,
         "num_workers": 4,
 
-        """
-        added this
-        """
+        ###########
+        #added this
+        ###########
+        # early_stopping = 1 means training only
+        # if the metric grew on the current epoch
         "early_stopping": 3,
         "n_splits": 2,
         "n_folds": 5,
+        "metrics_file": ".pkl",
+        # debug means
+        # 2 images per origin and n_epoch=1
+        "debug": True,
 
 
         # model
@@ -202,7 +217,7 @@ if __name__ == '__main__':
         "scale": 0.13,
 
         # load & save checkpoint
-        "model_name": f"model_maniqa__tid__seed_{SEED}__TEST5",
+        "model_name": f"model_maniqa__tid__seed_{SEED}__2splti5fold__default__test",
 
         "output_path": "./output",
         "snap_path": "./output/models/",               # directory for saving checkpoint
@@ -220,9 +235,15 @@ if __name__ == '__main__':
     if not os.path.exists(config.tensorboard_path):
         os.mkdir(config.tensorboard_path)
 
+    assert config.early_stopping >= 1, f"config.early_stopping should be >= 1"
+
     config.snap_path += config.model_name
     config.log_file = config.model_name + config.log_file
     config.tensorboard_path += config.model_name
+
+    config.metrics_file = config.model_name + config.metrics_file
+    metrics_filepath = os.path.join(config.log_path, config.metrics_file)
+
 
     set_logging(config)
     logging.info(config)
@@ -238,17 +259,27 @@ if __name__ == '__main__':
     (10 times train on train + predict test) = 50 times
     """
     # reading the dataframe to do splitting into train val test
+    # TID2013 len = 3000
     df_tid = pd.read_csv(
         config.train_txt_file_name,
         sep=' ',
         names=['MOS', 'img_filename']
     )
-    # for the debug run
     # To stratify by original image later
     df_tid['origin'] = df_tid['img_filename'].apply(lambda x: x[:3].lower())
+
+    """
+    DEBUG RUN
+    """
+    if config.debug == True:
+        df_tid = (df_tid.groupby(['origin']).head(2))
+        config.n_epoch = 1
+
     # DONE: EMPLOY THE GroupKFold split FOR TID2013 so that there are no original images (i.e. with dist) in different folds to not leak
     N_SPLITS = config.n_splits
     N_FOLDS = config.n_folds
+    TOTAL_NUM_MODELS = N_SPLITS * N_FOLDS
+
     gss = GroupShuffleSplit(
         n_splits=N_SPLITS,
         test_size=0.2,
@@ -258,18 +289,24 @@ if __name__ == '__main__':
 
     # Define the seeds in range()
     # i used for seeding train_test_split
-    split_metrics = {"srocc": [[]]*N_SPLITS, "plcc": [[]]*N_SPLITS}
+    split_metrics = {
+        "srocc": [[] for _ in range(N_SPLITS)],
+        "plcc": [[] for _ in range(N_SPLITS)],
+    }
 
+    MODEL_COUNT = 0
     for split_id, (train_idx, test_idx) in enumerate(gss.split(
-            X=list(range(df_tid.shape[0])),
-            groups=df_tid['origin'].values
+        X=list(range(df_tid.shape[0])),
+        groups=df_tid['origin'].values
     )):
         for fold_id, (fold_train_idx, fold_val_idx) in enumerate(gkfold10.split(
-                train_idx,
-                groups=df_tid.iloc[train_idx]['origin'].values
+            train_idx,
+            groups=df_tid.iloc[train_idx]['origin'].values
         )):
             logging.info('--- Split id:{}'.format(split_id))
             logging.info('--- Fold id:{}'.format(fold_id))
+            MODEL_COUNT += 1
+            logging.info('--- Model number: {}/{}'.format(MODEL_COUNT, TOTAL_NUM_MODELS))
 
             train_df = df_tid.iloc[fold_train_idx]
             train_dataset = TID2013_pd(
@@ -312,23 +349,28 @@ if __name__ == '__main__':
                 batch_size=config.batch_size,
                 num_workers=config.num_workers,
                 drop_last=True,
-                shuffle=True
+                shuffle=True,
+                # Added
+                pin_memory=True,
             )
             val_loader = DataLoader(
                 dataset=val_dataset,
                 batch_size=config.batch_size,
                 num_workers=config.num_workers,
                 drop_last=True,
-                shuffle=False
+                shuffle=False,
+                # Added
+                pin_memory=True,
             )
             test_loader = DataLoader(
                 dataset=test_dataset,
                 batch_size=config.batch_size,
                 num_workers=config.num_workers,
                 drop_last=True,
-                shuffle=False
+                shuffle=False,
+                # Added
+                pin_memory=True,
             )
-
 
             net = MANIQA(
                 embed_dim=config.embed_dim,
@@ -358,13 +400,14 @@ if __name__ == '__main__':
             if not os.path.exists(config.snap_path):
                 os.mkdir(config.snap_path)
 
-
             # train & validation
             losses, scores = [], []
             best_srocc = 0
             best_plcc = 0
             best_epoch = 0
             patience = config.early_stopping
+            model_name = "split{}_fold{}".format(split_id, fold_id)
+            model_save_path = os.path.join(config.snap_path, model_name)
             for epoch in range(0, config.n_epoch):
                 if patience <= 0:
                     break
@@ -392,14 +435,12 @@ if __name__ == '__main__':
 
                     logging.info('Eval on validation subset is done...')
 
-                    if rho_s > best_srocc:
+                    if (rho_s > best_srocc) or not (os.path.exists(model_save_path)):
                         best_srocc = rho_s
                         best_plcc = rho_p
                         best_epoch = epoch
                         patience = config.early_stopping
                         # save weights
-                        model_name = "split{}_fold{}".format(split_id, fold_id)
-                        model_save_path = os.path.join(config.snap_path, model_name)
                         torch.save(net, model_save_path)
                         logging.info('Saving weights and model of epoch{}, SRCC:{}, PLCC:{}'.format(epoch , best_srocc, best_plcc))
                     else:
@@ -408,6 +449,7 @@ if __name__ == '__main__':
                 logging.info('Epoch {} done. Time: {:.2}min'.format(epoch , (time.time() - start_time) / 60))
 
             logging.info('Starting testing...')
+            logging.info('Best Epoch:{}'.format(best_epoch))
             net = torch.load(model_save_path)
             net.eval()
             loss, rho_s, rho_p = eval_epoch(config, best_epoch, net, criterion, test_loader)
@@ -416,7 +458,10 @@ if __name__ == '__main__':
             split_metrics["srocc"][split_id].append(rho_s)
             split_metrics["plcc"][split_id].append(rho_p)
 
-        logging.info(f'Mean split test SROCC{np.mean(split_metrics["srocc"][split_id])}\n\ '
-                     f'Mean split test PLCC{np.mean(split_metrics["plcc"][split_id])}'
-                     )
+            # Saving dictionary with metrics
+            with open(metrics_filepath, 'wb') as f:
+                pickle.dump(split_metrics, f)
+
+        logging.info(f'Mean split test SROCC {np.mean(split_metrics["srocc"][split_id])}')
+        logging.info(f'Mean split test PLCC {np.mean(split_metrics["plcc"][split_id])}')
 
