@@ -9,9 +9,10 @@ Trying to reproduce results of MANIQA paper
   - [x] 3.5) RUN training on full 80% and test on 20% - do this 5 times
 - [x] 4) how to train new models so that we won't have memory problems ? 
 - [ ] 5) Exepriments with different backbones - 2 splits - 5 folds
-  - [ ] 5.1) DEFAULT backbone
-  - [ ] 5.2) Larger ViT ? 
-  - [ ] 5.3) CLIP ViT - OpenCLIP
-  - [ ] 5.4) ResNet...
+  - [x] 5.1) DEFAULT backbone - vit_base_patch8_224
+  - [ ] 5.2) vit_base_patch8_224_dino 
+  - [ ] 5.3) Larger ViT ? 
+  - [ ] 5.4) CLIP ViT - OpenCLIP
+  - [ ] 5.5) ResNet...
 - [x] *) Write a logger that logs to a file AND prints to the console
  

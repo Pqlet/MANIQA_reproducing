@@ -193,6 +193,8 @@ if __name__ == '__main__':
         ###########
         #added this
         ###########
+        # backbone_str to use in MANIQA
+        "backbone_str": "vit_base_patch8_224_dino",
         # early_stopping = 1 means training only
         # if the metric grew on the current epoch
         "early_stopping": 3,
@@ -374,6 +376,9 @@ if __name__ == '__main__':
             )
 
             net = MANIQA(
+                # ADDED
+                backbone_str=config.backbone_str,
+                # original params
                 embed_dim=config.embed_dim,
                 num_outputs=config.num_outputs,
                 dim_mlp=config.dim_mlp,

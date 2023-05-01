@@ -45,18 +45,34 @@ class SaveOutput:
 
 
 class MANIQA(nn.Module):
-    def __init__(self, embed_dim=72, num_outputs=1, patch_size=8, drop=0.1, 
-                    depths=[2, 2], window_size=4, dim_mlp=768, num_heads=[4, 4],
-                    img_size=224, num_tab=2, scale=0.8, **kwargs):
+    def __init__(self,
+                 backbone_str,
+                 embed_dim=72, num_outputs=1, patch_size=8, drop=0.1,
+                 depths=[2, 2], window_size=4, dim_mlp=768, num_heads=[4, 4],
+                 img_size=224, num_tab=2, scale=0.8, **kwargs):
+        """
+        backbone_str - backbone to use
+            default - vit_base_patch8_224
+
+        """
         super().__init__()
         self.img_size = img_size
         self.patch_size = patch_size
         self.input_size = img_size // patch_size
         self.patches_resolution = (img_size // patch_size, img_size // patch_size)
         
+        # Updated - added backbone_str
         # Loading the backbone - VIT b-8
         # Originally the backbone is unfrozen - that's why bs=8, so the model would fit
-        self.vit = timm.create_model('vit_base_patch8_224', pretrained=True)
+        if backbone_str == 'default' or backbone_str == 'vit_base_patch8_224':
+            self.vit = timm.create_model('vit_base_patch8_224', pretrained=True)
+        # Backbones from TIMM can be loaded with the corresponding string
+        # https://github.com/huggingface/pytorch-image-models/blob/main/timm/models/vision_transformer.py
+        else:
+            self.vit = timm.create_model(backbone_str, pretrained=True)
+
+
+
         self.save_output = SaveOutput()
         hook_handles = []
         for layer in self.vit.modules():
