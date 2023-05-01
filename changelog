@@ -1,3 +1,6 @@
+-010523 12:00
+refactored - changed name of timm folder in MANIQA_reproducing/MANIQA to timm_ so it won't interfere with the newer pip package
+
 -300423 13:40
 test metrics to .txt file
 

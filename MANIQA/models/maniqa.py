@@ -53,6 +53,7 @@ class MANIQA(nn.Module):
         """
         backbone_str - backbone to use
             default - vit_base_patch8_224
+            ViT-L/14-openclip
 
         """
         super().__init__()
@@ -66,6 +67,11 @@ class MANIQA(nn.Module):
         # Originally the backbone is unfrozen - that's why bs=8, so the model would fit
         if backbone_str == 'default' or backbone_str == 'vit_base_patch8_224':
             self.vit = timm.create_model('vit_base_patch8_224', pretrained=True)
+        elif backbone_str == "ViT-L/14-openclip":
+            # "https://openaipublic.azureedge.net/clip/models/b8cca3fd41ae0c99ba7e8951adf17d267cdb84cd88be6f7c2e0eca1737a03836/ViT-L-14.pt"
+            # vit-l/14 from openclip
+            assert False, "To be added"
+
         # Backbones from TIMM can be loaded with the corresponding string
         # https://github.com/huggingface/pytorch-image-models/blob/main/timm/models/vision_transformer.py
         else:

@@ -1,18 +1,8 @@
-[2023-05-01 11:07:01,072 INFO    ] {'db_name': 'TID2013', 'train_dis_path': 'C:\\Users\\MQTyor\\ai_pc\\Reserch_ai\\IQA\\datasets\\tid2013\\distorted_images', 'train_txt_file_name': 'C:\\Users\\MQTyor\\ai_pc\\Reserch_ai\\IQA\\datasets\\tid2013\\mos_with_names.txt', 'batch_size': 8, 'learning_rate': 1e-05, 'weight_decay': 1e-05, 'n_epoch': 20, 'val_freq': 1, 'T_max': 50, 'eta_min': 0, 'num_avg_val': 5, 'crop_size': 224, 'num_workers': 4, 'backbone_str': 'vit_base_patch8_224_dino', 'early_stopping': 3, 'n_splits': 2, 'n_folds': 5, 'metrics_file': 'MANIQA_tid2013_seed151_2s_5f__default.pkl', 'metrics_txt': 'MANIQA_tid2013_seed151_2s_5f__default__metrics.txt', 'debug': False, 'patch_size': 8, 'img_size': 224, 'embed_dim': 768, 'dim_mlp': 768, 'num_heads': [4, 4], 'window_size': 4, 'depths': [2, 2], 'num_outputs': 1, 'num_tab': 2, 'scale': 0.13, 'model_name': 'MANIQA_tid2013_seed151_2s_5f__default', 'output_path': './output', 'snap_path': './output/models/MANIQA_tid2013_seed151_2s_5f__default', 'log_path': './output/log/maniqa/', 'log_file': 'MANIQA_tid2013_seed151_2s_5f__default.txt', 'tensorboard_path': './output/tensorboard/MANIQA_tid2013_seed151_2s_5f__default'}
-[2023-05-01 11:07:01,073 INFO    ] Seed : 151
-[2023-05-01 11:07:01,119 INFO    ] --- Split id:0
-[2023-05-01 11:07:01,119 INFO    ] --- Fold id:0
-[2023-05-01 11:07:01,119 INFO    ] --- Model number: 1/10
-[2023-05-01 11:07:01,120 INFO    ] number of train scenes: 1920
-[2023-05-01 11:07:01,120 INFO    ] number of val scenes: 480
-[2023-05-01 11:07:01,120 INFO    ] number of test scenes: 600
-[2023-05-01 11:07:01,742 INFO    ] Loading pretrained weights from url (https://dl.fbaipublicfiles.com/dino/dino_vitbase8_pretrain/dino_vitbase8_pretrain.pth)
-[2023-05-01 11:07:24,419 INFO    ] Running training epoch 0
-[2023-05-01 11:12:39,687 INFO    ] train epoch:0 / loss:0.02461 / SRCC:0.5345 / PLCC:0.5327
-[2023-05-01 11:12:39,688 INFO    ] Starting eval...
-[2023-05-01 11:12:39,688 INFO    ] Running validation in epoch 0
-[2023-05-01 11:15:01,856 INFO    ] Epoch:0 ===== loss:0.01448 ===== SRCC:0.8022 ===== PLCC:0.82
-[2023-05-01 11:15:01,856 INFO    ] Eval on validation subset is done...
-[2023-05-01 11:15:02,367 INFO    ] Saving weights and model of epoch0, SRCC:0.8021904045920936, PLCC:0.8199738096419327
-[2023-05-01 11:15:02,367 INFO    ] Epoch 0 done. Time: 7.6min
-[2023-05-01 11:15:02,367 INFO    ] Running training epoch 1
+[2023-05-01 11:36:57,485 INFO    ] {'db_name': 'TID2013', 'train_dis_path': 'C:\\Users\\MQTyor\\ai_pc\\Reserch_ai\\IQA\\datasets\\tid2013\\distorted_images', 'train_txt_file_name': 'C:\\Users\\MQTyor\\ai_pc\\Reserch_ai\\IQA\\datasets\\tid2013\\mos_with_names.txt', 'batch_size': 8, 'learning_rate': 1e-05, 'weight_decay': 1e-05, 'n_epoch': 20, 'val_freq': 1, 'T_max': 50, 'eta_min': 0, 'num_avg_val': 5, 'crop_size': 224, 'num_workers': 4, 'early_stopping': 3, 'n_splits': 2, 'n_folds': 5, 'metrics_file': 'MANIQA_tid2013_seed151_2s_5f__default.pkl', 'metrics_txt': 'MANIQA_tid2013_seed151_2s_5f__default__metrics.txt', 'debug': False, 'patch_size': 14, 'img_size': 224, 'embed_dim': 768, 'dim_mlp': 768, 'num_heads': [4, 4], 'window_size': 4, 'depths': [2, 2], 'num_outputs': 1, 'num_tab': 2, 'scale': 0.13, 'backbone_str': 'vit_large_patch14_224_clip_laion2b', 'model_name': 'MANIQA_tid2013_seed151_2s_5f__default', 'output_path': './output', 'snap_path': './output/models/MANIQA_tid2013_seed151_2s_5f__default', 'log_path': './output/log/maniqa/', 'log_file': 'MANIQA_tid2013_seed151_2s_5f__default.txt', 'tensorboard_path': './output/tensorboard/MANIQA_tid2013_seed151_2s_5f__default'}
+[2023-05-01 11:36:57,486 INFO    ] Seed : 151
+[2023-05-01 11:36:57,533 INFO    ] --- Split id:0
+[2023-05-01 11:36:57,533 INFO    ] --- Fold id:0
+[2023-05-01 11:36:57,533 INFO    ] --- Model number: 1/10
+[2023-05-01 11:36:57,534 INFO    ] number of train scenes: 1920
+[2023-05-01 11:36:57,534 INFO    ] number of val scenes: 480
+[2023-05-01 11:36:57,534 INFO    ] number of test scenes: 600

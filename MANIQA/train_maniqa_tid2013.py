@@ -161,7 +161,7 @@ if __name__ == '__main__':
     initial_lr = 1e-5
     # !!! you need to change scheduler's T_max too
     # to account for more items being with the current lr
-    new_bs = 8
+    new_bs = 3
     new_lr = initial_lr * (new_bs/initial_bs)
     # config file
     config = Config({
@@ -193,8 +193,6 @@ if __name__ == '__main__':
         ###########
         #added this
         ###########
-        # backbone_str to use in MANIQA
-        "backbone_str": "vit_base_patch8_224_dino",
         # early_stopping = 1 means training only
         # if the metric grew on the current epoch
         "early_stopping": 3,
@@ -208,9 +206,9 @@ if __name__ == '__main__':
 
 
         # model
-        "patch_size": 8,
+        "patch_size": 14, # 8 - default
         "img_size": 224,
-        "embed_dim": 768,
+        "embed_dim": 1280, # 768 - base, 1024 - large, 1280 - huge
         "dim_mlp": 768,
         "num_heads": [4, 4],
         "window_size": 4,
@@ -218,9 +216,13 @@ if __name__ == '__main__':
         "num_outputs": 1,
         "num_tab": 2,
         "scale": 0.13,
+        # added backbone param
+        # backbone_str to use in MANIQA
+        "backbone_str": "vit_huge_patch14_224_clip_laion2b",
+        # "backbone_str": "default",
 
         # load & save checkpoint
-        "model_name": f"MANIQA_tid2013_seed{SEED}_2s_5f__default",
+        "model_name": f"MANIQA_tid2013_seed{SEED}_2s_5f__vit_huge_patch14_224_clip_laion2b",
 
         "output_path": "./output",
         "snap_path": "./output/models/",               # directory for saving checkpoint
@@ -248,7 +250,6 @@ if __name__ == '__main__':
     metrics_filepath = os.path.join(config.log_path, config.metrics_file)
     config.metrics_txt = config.model_name + "__metrics" + config.metrics_txt
     metrics_txtpath = os.path.join(config.log_path,  config.metrics_txt)
-
 
     set_logging(config)
     logging.info(config)
