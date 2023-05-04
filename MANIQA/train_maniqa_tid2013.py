@@ -25,6 +25,14 @@ from sklearn.model_selection import GroupShuffleSplit, GroupKFold
 #Added
 import pickle
 
+from datetime import datetime
+def get_datetime_str():
+    # datetime object containing current date and time
+    now = datetime.now()
+    # ddmmYY-H_M_S
+    dt_string = now.strftime("%d%m%Y-%H_%M_%S")
+    return dt_string
+
 
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
@@ -206,9 +214,9 @@ if __name__ == '__main__':
 
 
         # model
-        "patch_size": 14, # 8 - default
+        "patch_size": 8,
         "img_size": 224,
-        "embed_dim": 1280, # 768 - base, 1024 - large, 1280 - huge
+        "embed_dim": 768, # 768 - base, 1024 - large, 1280 - huge
         "dim_mlp": 768,
         "num_heads": [4, 4],
         "window_size": 4,
@@ -218,11 +226,11 @@ if __name__ == '__main__':
         "scale": 0.13,
         # added backbone param
         # backbone_str to use in MANIQA
-        "backbone_str": "vit_huge_patch14_224_clip_laion2b",
-        # "backbone_str": "default",
+        # "backbone_str": "vit_huge_patch14_224_clip_laion2b",
+        "backbone_str": "default",
 
         # load & save checkpoint
-        "model_name": f"MANIQA_tid2013_seed{SEED}_2s_5f__vit_huge_patch14_224_clip_laion2b",
+        "model_name": "MANIQA_tid2013_2s_5f",
 
         "output_path": "./output",
         "snap_path": "./output/models/",               # directory for saving checkpoint
@@ -242,6 +250,13 @@ if __name__ == '__main__':
 
     assert config.early_stopping >= 1, f"config.early_stopping should be >= 1"
 
+    config.model_name = config.model_name + "__" + \
+                        config.backbone_str + "__" + \
+                        "seed" + str(SEED) + "__" + \
+                        get_datetime_str()
+
+
+
     config.snap_path += config.model_name
     config.log_file = config.model_name + config.log_file
     config.tensorboard_path += config.model_name
@@ -250,6 +265,12 @@ if __name__ == '__main__':
     metrics_filepath = os.path.join(config.log_path, config.metrics_file)
     config.metrics_txt = config.model_name + "__metrics" + config.metrics_txt
     metrics_txtpath = os.path.join(config.log_path,  config.metrics_txt)
+
+    # Correcting model architecture according to the backbone
+    if config.backbone_str == "vit_huge_patch14_224_clip_laion2b":
+        config.patch_size = 14
+        config.embed_dim = 1280
+
 
     set_logging(config)
     logging.info(config)

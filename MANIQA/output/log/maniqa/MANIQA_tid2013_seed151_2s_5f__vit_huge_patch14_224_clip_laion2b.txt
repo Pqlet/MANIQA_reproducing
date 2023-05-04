@@ -8,3 +8,881 @@
 [2023-05-02 01:43:34,038 INFO    ] number of test scenes: 600
 [2023-05-02 01:43:38,760 INFO    ] Loading pretrained weights from Hugging Face hub (('laion/CLIP-ViT-H-14-laion2B-s32B-b79K', 'open_clip_pytorch_model.bin'))
 [2023-05-02 01:43:41,810 INFO    ] Running training epoch 0
+[2023-05-02 01:49:34,142 INFO    ] train epoch:0 / loss:0.02198 / SRCC:0.5796 / PLCC:0.5861
+[2023-05-02 01:49:34,143 INFO    ] Starting eval...
+[2023-05-02 01:49:34,143 INFO    ] Running validation in epoch 0
+[2023-05-02 01:52:49,223 INFO    ] Epoch:0 ===== loss:0.01278 ===== SRCC:0.7789 ===== PLCC:0.8152
+[2023-05-02 01:52:49,223 INFO    ] Eval on validation subset is done...
+[2023-05-02 01:52:52,272 INFO    ] Saving weights and model of epoch0, SRCC:0.7788681611226406, PLCC:0.8151606680655592
+[2023-05-02 01:52:52,272 INFO    ] Epoch 0 done. Time: 9.2min
+[2023-05-02 01:52:52,272 INFO    ] Running training epoch 1
+[2023-05-02 01:58:39,480 INFO    ] train epoch:1 / loss:0.009387 / SRCC:0.8127 / PLCC:0.8402
+[2023-05-02 01:58:39,480 INFO    ] Starting eval...
+[2023-05-02 01:58:39,480 INFO    ] Running validation in epoch 1
+[2023-05-02 02:01:54,578 INFO    ] Epoch:1 ===== loss:0.009327 ===== SRCC:0.8281 ===== PLCC:0.8616
+[2023-05-02 02:01:54,578 INFO    ] Eval on validation subset is done...
+[2023-05-02 02:01:57,715 INFO    ] Saving weights and model of epoch1, SRCC:0.8280551497730072, PLCC:0.8616365267603318
+[2023-05-02 02:01:57,715 INFO    ] Epoch 1 done. Time: 9.1min
+[2023-05-02 02:01:57,715 INFO    ] Running training epoch 2
+[2023-05-02 02:07:44,727 INFO    ] train epoch:2 / loss:0.007582 / SRCC:0.8489 / PLCC:0.8732
+[2023-05-02 02:07:44,728 INFO    ] Starting eval...
+[2023-05-02 02:07:44,728 INFO    ] Running validation in epoch 2
+[2023-05-02 02:10:59,981 INFO    ] Epoch:2 ===== loss:0.008581 ===== SRCC:0.8457 ===== PLCC:0.8742
+[2023-05-02 02:10:59,982 INFO    ] Eval on validation subset is done...
+[2023-05-02 02:11:03,090 INFO    ] Saving weights and model of epoch2, SRCC:0.8456541466397678, PLCC:0.8742469609348108
+[2023-05-02 02:11:03,090 INFO    ] Epoch 2 done. Time: 9.1min
+[2023-05-02 02:11:03,090 INFO    ] Running training epoch 3
+[2023-05-02 02:16:50,168 INFO    ] train epoch:3 / loss:0.006483 / SRCC:0.8761 / PLCC:0.8929
+[2023-05-02 02:16:50,169 INFO    ] Starting eval...
+[2023-05-02 02:16:50,169 INFO    ] Running validation in epoch 3
+[2023-05-02 02:20:05,568 INFO    ] Epoch:3 ===== loss:0.007959 ===== SRCC:0.8649 ===== PLCC:0.8882
+[2023-05-02 02:20:05,568 INFO    ] Eval on validation subset is done...
+[2023-05-02 02:20:08,716 INFO    ] Saving weights and model of epoch3, SRCC:0.8648985565595805, PLCC:0.8882118258203091
+[2023-05-02 02:20:08,716 INFO    ] Epoch 3 done. Time: 9.1min
+[2023-05-02 02:20:08,716 INFO    ] Running training epoch 4
+[2023-05-02 02:25:55,893 INFO    ] train epoch:4 / loss:0.005548 / SRCC:0.8938 / PLCC:0.9091
+[2023-05-02 02:25:55,893 INFO    ] Starting eval...
+[2023-05-02 02:25:55,894 INFO    ] Running validation in epoch 4
+[2023-05-02 02:29:11,444 INFO    ] Epoch:4 ===== loss:0.006809 ===== SRCC:0.8955 ===== PLCC:0.9118
+[2023-05-02 02:29:11,444 INFO    ] Eval on validation subset is done...
+[2023-05-02 02:29:14,465 INFO    ] Saving weights and model of epoch4, SRCC:0.895454909949498, PLCC:0.9118299159372149
+[2023-05-02 02:29:14,465 INFO    ] Epoch 4 done. Time: 9.1min
+[2023-05-02 02:29:14,465 INFO    ] Running training epoch 5
+[2023-05-02 02:35:01,795 INFO    ] train epoch:5 / loss:0.006018 / SRCC:0.8834 / PLCC:0.9009
+[2023-05-02 02:35:01,795 INFO    ] Starting eval...
+[2023-05-02 02:35:01,796 INFO    ] Running validation in epoch 5
+[2023-05-02 02:38:17,212 INFO    ] Epoch:5 ===== loss:0.008967 ===== SRCC:0.8856 ===== PLCC:0.9068
+[2023-05-02 02:38:17,212 INFO    ] Eval on validation subset is done...
+[2023-05-02 02:38:17,213 INFO    ] Epoch 5 done. Time: 9.0min
+[2023-05-02 02:38:17,213 INFO    ] Running training epoch 6
+[2023-05-02 02:44:04,419 INFO    ] train epoch:6 / loss:0.004698 / SRCC:0.9084 / PLCC:0.9235
+[2023-05-02 02:44:04,420 INFO    ] Starting eval...
+[2023-05-02 02:44:04,420 INFO    ] Running validation in epoch 6
+[2023-05-02 02:47:19,791 INFO    ] Epoch:6 ===== loss:0.006663 ===== SRCC:0.9063 ===== PLCC:0.9222
+[2023-05-02 02:47:19,791 INFO    ] Eval on validation subset is done...
+[2023-05-02 02:47:22,825 INFO    ] Saving weights and model of epoch6, SRCC:0.9062889305897317, PLCC:0.922215975754399
+[2023-05-02 02:47:22,825 INFO    ] Epoch 6 done. Time: 9.1min
+[2023-05-02 02:47:22,825 INFO    ] Running training epoch 7
+[2023-05-02 02:53:09,926 INFO    ] train epoch:7 / loss:0.004739 / SRCC:0.9074 / PLCC:0.9228
+[2023-05-02 02:53:09,927 INFO    ] Starting eval...
+[2023-05-02 02:53:09,927 INFO    ] Running validation in epoch 7
+[2023-05-02 02:56:25,418 INFO    ] Epoch:7 ===== loss:0.006146 ===== SRCC:0.9054 ===== PLCC:0.9253
+[2023-05-02 02:56:25,418 INFO    ] Eval on validation subset is done...
+[2023-05-02 02:56:25,419 INFO    ] Epoch 7 done. Time: 9.0min
+[2023-05-02 02:56:25,419 INFO    ] Running training epoch 8
+[2023-05-02 03:02:12,548 INFO    ] train epoch:8 / loss:0.004259 / SRCC:0.9165 / PLCC:0.9309
+[2023-05-02 03:02:12,549 INFO    ] Starting eval...
+[2023-05-02 03:02:12,549 INFO    ] Running validation in epoch 8
+[2023-05-02 03:05:27,927 INFO    ] Epoch:8 ===== loss:0.006275 ===== SRCC:0.8998 ===== PLCC:0.9197
+[2023-05-02 03:05:27,927 INFO    ] Eval on validation subset is done...
+[2023-05-02 03:05:27,927 INFO    ] Epoch 8 done. Time: 9.0min
+[2023-05-02 03:05:27,927 INFO    ] Running training epoch 9
+[2023-05-02 03:11:15,169 INFO    ] train epoch:9 / loss:0.004132 / SRCC:0.9201 / PLCC:0.9331
+[2023-05-02 03:11:15,170 INFO    ] Starting eval...
+[2023-05-02 03:11:15,170 INFO    ] Running validation in epoch 9
+[2023-05-02 03:14:30,581 INFO    ] Epoch:9 ===== loss:0.006085 ===== SRCC:0.905 ===== PLCC:0.9224
+[2023-05-02 03:14:30,582 INFO    ] Eval on validation subset is done...
+[2023-05-02 03:14:30,582 INFO    ] Epoch 9 done. Time: 9.0min
+[2023-05-02 03:14:30,582 INFO    ] Starting testing...
+[2023-05-02 03:14:30,582 INFO    ] Best Epoch:6
+[2023-05-02 03:18:33,955 INFO    ] Epoch:6 ===== loss:0.00356 ===== SRCC:0.9419 ===== PLCC:0.9497
+[2023-05-02 03:18:33,956 INFO    ] --- Split id:0
+[2023-05-02 03:18:33,956 INFO    ] --- Fold id:1
+[2023-05-02 03:18:33,956 INFO    ] --- Model number: 2/10
+[2023-05-02 03:18:33,957 INFO    ] number of train scenes: 1920
+[2023-05-02 03:18:33,957 INFO    ] number of val scenes: 480
+[2023-05-02 03:18:33,957 INFO    ] number of test scenes: 600
+[2023-05-02 03:18:38,584 INFO    ] Loading pretrained weights from Hugging Face hub (('laion/CLIP-ViT-H-14-laion2B-s32B-b79K', 'open_clip_pytorch_model.bin'))
+[2023-05-02 03:18:41,586 INFO    ] Running training epoch 0
+[2023-05-02 03:24:28,951 INFO    ] train epoch:0 / loss:0.02047 / SRCC:0.5871 / PLCC:0.6135
+[2023-05-02 03:24:28,952 INFO    ] Starting eval...
+[2023-05-02 03:24:28,952 INFO    ] Running validation in epoch 0
+[2023-05-02 03:27:44,350 INFO    ] Epoch:0 ===== loss:0.01397 ===== SRCC:0.8036 ===== PLCC:0.8329
+[2023-05-02 03:27:44,350 INFO    ] Eval on validation subset is done...
+[2023-05-02 03:27:47,184 INFO    ] Saving weights and model of epoch0, SRCC:0.8036148977704419, PLCC:0.8328813437886078
+[2023-05-02 03:27:47,184 INFO    ] Epoch 0 done. Time: 9.1min
+[2023-05-02 03:27:47,184 INFO    ] Running training epoch 1
+[2023-05-02 03:33:34,636 INFO    ] train epoch:1 / loss:0.0104 / SRCC:0.7872 / PLCC:0.8221
+[2023-05-02 03:33:34,637 INFO    ] Starting eval...
+[2023-05-02 03:33:34,637 INFO    ] Running validation in epoch 1
+[2023-05-02 03:36:50,250 INFO    ] Epoch:1 ===== loss:0.009502 ===== SRCC:0.8536 ===== PLCC:0.8751
+[2023-05-02 03:36:50,250 INFO    ] Eval on validation subset is done...
+[2023-05-02 03:36:53,367 INFO    ] Saving weights and model of epoch1, SRCC:0.8536243379887273, PLCC:0.8750845960958951
+[2023-05-02 03:36:53,367 INFO    ] Epoch 1 done. Time: 9.1min
+[2023-05-02 03:36:53,367 INFO    ] Running training epoch 2
+[2023-05-02 03:42:40,685 INFO    ] train epoch:2 / loss:0.007942 / SRCC:0.846 / PLCC:0.8668
+[2023-05-02 03:42:40,685 INFO    ] Starting eval...
+[2023-05-02 03:42:40,686 INFO    ] Running validation in epoch 2
+[2023-05-02 03:45:56,251 INFO    ] Epoch:2 ===== loss:0.009897 ===== SRCC:0.8834 ===== PLCC:0.8999
+[2023-05-02 03:45:56,251 INFO    ] Eval on validation subset is done...
+[2023-05-02 03:45:59,208 INFO    ] Saving weights and model of epoch2, SRCC:0.8833749100992786, PLCC:0.8999320033947225
+[2023-05-02 03:45:59,208 INFO    ] Epoch 2 done. Time: 9.1min
+[2023-05-02 03:45:59,208 INFO    ] Running training epoch 3
+[2023-05-02 03:51:46,520 INFO    ] train epoch:3 / loss:0.006052 / SRCC:0.8842 / PLCC:0.9002
+[2023-05-02 03:51:46,521 INFO    ] Starting eval...
+[2023-05-02 03:51:46,521 INFO    ] Running validation in epoch 3
+[2023-05-02 03:55:01,997 INFO    ] Epoch:3 ===== loss:0.008256 ===== SRCC:0.8994 ===== PLCC:0.9139
+[2023-05-02 03:55:01,998 INFO    ] Eval on validation subset is done...
+[2023-05-02 03:55:05,148 INFO    ] Saving weights and model of epoch3, SRCC:0.8994348891142484, PLCC:0.9139245692044131
+[2023-05-02 03:55:05,149 INFO    ] Epoch 3 done. Time: 9.1min
+[2023-05-02 03:55:05,149 INFO    ] Running training epoch 4
+[2023-05-02 04:00:52,480 INFO    ] train epoch:4 / loss:0.00611 / SRCC:0.8848 / PLCC:0.8993
+[2023-05-02 04:00:52,481 INFO    ] Starting eval...
+[2023-05-02 04:00:52,481 INFO    ] Running validation in epoch 4
+[2023-05-02 04:04:07,955 INFO    ] Epoch:4 ===== loss:0.01133 ===== SRCC:0.8609 ===== PLCC:0.8884
+[2023-05-02 04:04:07,956 INFO    ] Eval on validation subset is done...
+[2023-05-02 04:04:07,956 INFO    ] Epoch 4 done. Time: 9.0min
+[2023-05-02 04:04:07,956 INFO    ] Running training epoch 5
+[2023-05-02 04:09:55,263 INFO    ] train epoch:5 / loss:0.005241 / SRCC:0.8995 / PLCC:0.9143
+[2023-05-02 04:09:55,264 INFO    ] Starting eval...
+[2023-05-02 04:09:55,264 INFO    ] Running validation in epoch 5
+[2023-05-02 04:13:10,707 INFO    ] Epoch:5 ===== loss:0.009237 ===== SRCC:0.8698 ===== PLCC:0.8925
+[2023-05-02 04:13:10,707 INFO    ] Eval on validation subset is done...
+[2023-05-02 04:13:10,707 INFO    ] Epoch 5 done. Time: 9.0min
+[2023-05-02 04:13:10,707 INFO    ] Running training epoch 6
+[2023-05-02 04:18:58,218 INFO    ] train epoch:6 / loss:0.004699 / SRCC:0.9106 / PLCC:0.9236
+[2023-05-02 04:18:58,219 INFO    ] Starting eval...
+[2023-05-02 04:18:58,219 INFO    ] Running validation in epoch 6
+[2023-05-02 04:22:13,843 INFO    ] Epoch:6 ===== loss:0.006675 ===== SRCC:0.8887 ===== PLCC:0.9088
+[2023-05-02 04:22:13,843 INFO    ] Eval on validation subset is done...
+[2023-05-02 04:22:13,843 INFO    ] Epoch 6 done. Time: 9.1min
+[2023-05-02 04:22:13,843 INFO    ] Starting testing...
+[2023-05-02 04:22:13,843 INFO    ] Best Epoch:3
+[2023-05-02 04:26:17,198 INFO    ] Epoch:3 ===== loss:0.004326 ===== SRCC:0.9367 ===== PLCC:0.9425
+[2023-05-02 04:26:17,199 INFO    ] --- Split id:0
+[2023-05-02 04:26:17,199 INFO    ] --- Fold id:2
+[2023-05-02 04:26:17,199 INFO    ] --- Model number: 3/10
+[2023-05-02 04:26:17,200 INFO    ] number of train scenes: 1920
+[2023-05-02 04:26:17,200 INFO    ] number of val scenes: 480
+[2023-05-02 04:26:17,200 INFO    ] number of test scenes: 600
+[2023-05-02 04:26:21,699 INFO    ] Loading pretrained weights from Hugging Face hub (('laion/CLIP-ViT-H-14-laion2B-s32B-b79K', 'open_clip_pytorch_model.bin'))
+[2023-05-02 04:26:25,057 INFO    ] Running training epoch 0
+[2023-05-02 04:32:12,225 INFO    ] train epoch:0 / loss:0.02021 / SRCC:0.5922 / PLCC:0.6122
+[2023-05-02 04:32:12,225 INFO    ] Starting eval...
+[2023-05-02 04:32:12,225 INFO    ] Running validation in epoch 0
+[2023-05-02 04:35:27,594 INFO    ] Epoch:0 ===== loss:0.01349 ===== SRCC:0.8177 ===== PLCC:0.8445
+[2023-05-02 04:35:27,595 INFO    ] Eval on validation subset is done...
+[2023-05-02 04:35:30,438 INFO    ] Saving weights and model of epoch0, SRCC:0.8177109602810549, PLCC:0.8444574518418745
+[2023-05-02 04:35:30,438 INFO    ] Epoch 0 done. Time: 9.1min
+[2023-05-02 04:35:30,438 INFO    ] Running training epoch 1
+[2023-05-02 04:41:17,829 INFO    ] train epoch:1 / loss:0.009718 / SRCC:0.7944 / PLCC:0.8311
+[2023-05-02 04:41:17,830 INFO    ] Starting eval...
+[2023-05-02 04:41:17,830 INFO    ] Running validation in epoch 1
+[2023-05-02 04:44:33,581 INFO    ] Epoch:1 ===== loss:0.01142 ===== SRCC:0.8648 ===== PLCC:0.8795
+[2023-05-02 04:44:33,581 INFO    ] Eval on validation subset is done...
+[2023-05-02 04:44:36,734 INFO    ] Saving weights and model of epoch1, SRCC:0.8647575651777881, PLCC:0.8794780928416921
+[2023-05-02 04:44:36,734 INFO    ] Epoch 1 done. Time: 9.1min
+[2023-05-02 04:44:36,734 INFO    ] Running training epoch 2
+[2023-05-02 04:50:23,945 INFO    ] train epoch:2 / loss:0.008318 / SRCC:0.8263 / PLCC:0.8574
+[2023-05-02 04:50:23,946 INFO    ] Starting eval...
+[2023-05-02 04:50:23,946 INFO    ] Running validation in epoch 2
+[2023-05-02 04:53:39,535 INFO    ] Epoch:2 ===== loss:0.008245 ===== SRCC:0.8856 ===== PLCC:0.8937
+[2023-05-02 04:53:39,535 INFO    ] Eval on validation subset is done...
+[2023-05-02 04:53:42,622 INFO    ] Saving weights and model of epoch2, SRCC:0.8855655918581903, PLCC:0.8937366721531964
+[2023-05-02 04:53:42,622 INFO    ] Epoch 2 done. Time: 9.1min
+[2023-05-02 04:53:42,622 INFO    ] Running training epoch 3
+[2023-05-02 04:59:29,959 INFO    ] train epoch:3 / loss:0.006324 / SRCC:0.8762 / PLCC:0.8937
+[2023-05-02 04:59:29,960 INFO    ] Starting eval...
+[2023-05-02 04:59:29,960 INFO    ] Running validation in epoch 3
+[2023-05-02 05:02:45,592 INFO    ] Epoch:3 ===== loss:0.008046 ===== SRCC:0.8943 ===== PLCC:0.9023
+[2023-05-02 05:02:45,593 INFO    ] Eval on validation subset is done...
+[2023-05-02 05:02:48,669 INFO    ] Saving weights and model of epoch3, SRCC:0.8943071006705381, PLCC:0.9023228801970353
+[2023-05-02 05:02:48,669 INFO    ] Epoch 3 done. Time: 9.1min
+[2023-05-02 05:02:48,669 INFO    ] Running training epoch 4
+[2023-05-02 05:08:36,059 INFO    ] train epoch:4 / loss:0.005859 / SRCC:0.884 / PLCC:0.902
+[2023-05-02 05:08:36,060 INFO    ] Starting eval...
+[2023-05-02 05:08:36,060 INFO    ] Running validation in epoch 4
+[2023-05-02 05:11:51,465 INFO    ] Epoch:4 ===== loss:0.009507 ===== SRCC:0.9065 ===== PLCC:0.915
+[2023-05-02 05:11:51,465 INFO    ] Eval on validation subset is done...
+[2023-05-02 05:11:54,481 INFO    ] Saving weights and model of epoch4, SRCC:0.9064829402963714, PLCC:0.9150257258776096
+[2023-05-02 05:11:54,481 INFO    ] Epoch 4 done. Time: 9.1min
+[2023-05-02 05:11:54,481 INFO    ] Running training epoch 5
+[2023-05-02 05:17:41,602 INFO    ] train epoch:5 / loss:0.005122 / SRCC:0.8966 / PLCC:0.9149
+[2023-05-02 05:17:41,603 INFO    ] Starting eval...
+[2023-05-02 05:17:41,603 INFO    ] Running validation in epoch 5
+[2023-05-02 05:20:56,811 INFO    ] Epoch:5 ===== loss:0.006938 ===== SRCC:0.904 ===== PLCC:0.914
+[2023-05-02 05:20:56,811 INFO    ] Eval on validation subset is done...
+[2023-05-02 05:20:56,812 INFO    ] Epoch 5 done. Time: 9.0min
+[2023-05-02 05:20:56,812 INFO    ] Running training epoch 6
+[2023-05-02 05:26:43,843 INFO    ] train epoch:6 / loss:0.004909 / SRCC:0.9029 / PLCC:0.9186
+[2023-05-02 05:26:43,844 INFO    ] Starting eval...
+[2023-05-02 05:26:43,844 INFO    ] Running validation in epoch 6
+[2023-05-02 05:29:59,259 INFO    ] Epoch:6 ===== loss:0.008383 ===== SRCC:0.8979 ===== PLCC:0.9096
+[2023-05-02 05:29:59,260 INFO    ] Eval on validation subset is done...
+[2023-05-02 05:29:59,260 INFO    ] Epoch 6 done. Time: 9.0min
+[2023-05-02 05:29:59,260 INFO    ] Running training epoch 7
+[2023-05-02 05:35:46,769 INFO    ] train epoch:7 / loss:0.004319 / SRCC:0.913 / PLCC:0.9288
+[2023-05-02 05:35:46,770 INFO    ] Starting eval...
+[2023-05-02 05:35:46,770 INFO    ] Running validation in epoch 7
+[2023-05-02 05:39:02,346 INFO    ] Epoch:7 ===== loss:0.01082 ===== SRCC:0.907 ===== PLCC:0.9189
+[2023-05-02 05:39:02,347 INFO    ] Eval on validation subset is done...
+[2023-05-02 05:39:13,259 INFO    ] Saving weights and model of epoch7, SRCC:0.9069662346975109, PLCC:0.9189143389769852
+[2023-05-02 05:39:13,259 INFO    ] Epoch 7 done. Time: 9.2min
+[2023-05-02 05:39:13,260 INFO    ] Running training epoch 8
+[2023-05-02 05:45:00,890 INFO    ] train epoch:8 / loss:0.004305 / SRCC:0.9095 / PLCC:0.929
+[2023-05-02 05:45:00,891 INFO    ] Starting eval...
+[2023-05-02 05:45:00,891 INFO    ] Running validation in epoch 8
+[2023-05-02 05:48:16,663 INFO    ] Epoch:8 ===== loss:0.007315 ===== SRCC:0.9117 ===== PLCC:0.9248
+[2023-05-02 05:48:16,663 INFO    ] Eval on validation subset is done...
+[2023-05-02 05:48:19,809 INFO    ] Saving weights and model of epoch8, SRCC:0.911689422919334, PLCC:0.9247836312103113
+[2023-05-02 05:48:19,809 INFO    ] Epoch 8 done. Time: 9.1min
+[2023-05-02 05:48:19,809 INFO    ] Running training epoch 9
+[2023-05-02 05:54:07,537 INFO    ] train epoch:9 / loss:0.004039 / SRCC:0.916 / PLCC:0.9335
+[2023-05-02 05:54:07,538 INFO    ] Starting eval...
+[2023-05-02 05:54:07,538 INFO    ] Running validation in epoch 9
+[2023-05-02 05:57:23,246 INFO    ] Epoch:9 ===== loss:0.00873 ===== SRCC:0.8929 ===== PLCC:0.9039
+[2023-05-02 05:57:23,246 INFO    ] Eval on validation subset is done...
+[2023-05-02 05:57:23,246 INFO    ] Epoch 9 done. Time: 9.1min
+[2023-05-02 05:57:23,246 INFO    ] Running training epoch 10
+[2023-05-02 06:03:10,992 INFO    ] train epoch:10 / loss:0.00419 / SRCC:0.9164 / PLCC:0.9309
+[2023-05-02 06:03:10,993 INFO    ] Starting eval...
+[2023-05-02 06:03:10,993 INFO    ] Running validation in epoch 10
+[2023-05-02 06:06:26,583 INFO    ] Epoch:10 ===== loss:0.008806 ===== SRCC:0.8994 ===== PLCC:0.9091
+[2023-05-02 06:06:26,584 INFO    ] Eval on validation subset is done...
+[2023-05-02 06:06:26,584 INFO    ] Epoch 10 done. Time: 9.1min
+[2023-05-02 06:06:26,584 INFO    ] Running training epoch 11
+[2023-05-02 06:12:14,144 INFO    ] train epoch:11 / loss:0.003544 / SRCC:0.9309 / PLCC:0.9419
+[2023-05-02 06:12:14,144 INFO    ] Starting eval...
+[2023-05-02 06:12:14,145 INFO    ] Running validation in epoch 11
+[2023-05-02 06:15:29,276 INFO    ] Epoch:11 ===== loss:0.01059 ===== SRCC:0.9058 ===== PLCC:0.9176
+[2023-05-02 06:15:29,276 INFO    ] Eval on validation subset is done...
+[2023-05-02 06:15:29,277 INFO    ] Epoch 11 done. Time: 9.0min
+[2023-05-02 06:15:29,277 INFO    ] Starting testing...
+[2023-05-02 06:15:29,277 INFO    ] Best Epoch:8
+[2023-05-02 06:19:32,989 INFO    ] Epoch:8 ===== loss:0.003933 ===== SRCC:0.9336 ===== PLCC:0.943
+[2023-05-02 06:19:32,990 INFO    ] --- Split id:0
+[2023-05-02 06:19:32,990 INFO    ] --- Fold id:3
+[2023-05-02 06:19:32,990 INFO    ] --- Model number: 4/10
+[2023-05-02 06:19:32,991 INFO    ] number of train scenes: 1920
+[2023-05-02 06:19:32,991 INFO    ] number of val scenes: 480
+[2023-05-02 06:19:32,991 INFO    ] number of test scenes: 600
+[2023-05-02 06:19:37,594 INFO    ] Loading pretrained weights from Hugging Face hub (('laion/CLIP-ViT-H-14-laion2B-s32B-b79K', 'open_clip_pytorch_model.bin'))
+[2023-05-02 06:19:40,994 INFO    ] Running training epoch 0
+[2023-05-02 06:25:27,848 INFO    ] train epoch:0 / loss:0.02383 / SRCC:0.5708 / PLCC:0.5551
+[2023-05-02 06:25:27,848 INFO    ] Starting eval...
+[2023-05-02 06:25:27,849 INFO    ] Running validation in epoch 0
+[2023-05-02 06:28:42,874 INFO    ] Epoch:0 ===== loss:0.01469 ===== SRCC:0.7609 ===== PLCC:0.8093
+[2023-05-02 06:28:42,874 INFO    ] Eval on validation subset is done...
+[2023-05-02 06:28:45,747 INFO    ] Saving weights and model of epoch0, SRCC:0.7609373035892205, PLCC:0.8093426636304457
+[2023-05-02 06:28:45,747 INFO    ] Epoch 0 done. Time: 9.1min
+[2023-05-02 06:28:45,747 INFO    ] Running training epoch 1
+[2023-05-02 06:34:32,636 INFO    ] train epoch:1 / loss:0.009134 / SRCC:0.8113 / PLCC:0.8452
+[2023-05-02 06:34:32,637 INFO    ] Starting eval...
+[2023-05-02 06:34:32,637 INFO    ] Running validation in epoch 1
+[2023-05-02 06:37:47,899 INFO    ] Epoch:1 ===== loss:0.01223 ===== SRCC:0.7762 ===== PLCC:0.8181
+[2023-05-02 06:37:47,899 INFO    ] Eval on validation subset is done...
+[2023-05-02 06:37:51,107 INFO    ] Saving weights and model of epoch1, SRCC:0.7761963787630579, PLCC:0.8180774028677288
+[2023-05-02 06:37:51,107 INFO    ] Epoch 1 done. Time: 9.1min
+[2023-05-02 06:37:51,107 INFO    ] Running training epoch 2
+[2023-05-02 06:43:38,031 INFO    ] train epoch:2 / loss:0.007761 / SRCC:0.8473 / PLCC:0.8705
+[2023-05-02 06:43:38,032 INFO    ] Starting eval...
+[2023-05-02 06:43:38,032 INFO    ] Running validation in epoch 2
+[2023-05-02 06:46:53,292 INFO    ] Epoch:2 ===== loss:0.01004 ===== SRCC:0.8541 ===== PLCC:0.8781
+[2023-05-02 06:46:53,292 INFO    ] Eval on validation subset is done...
+[2023-05-02 06:47:05,977 INFO    ] Saving weights and model of epoch2, SRCC:0.8540873078949212, PLCC:0.8780938015256777
+[2023-05-02 06:47:05,978 INFO    ] Epoch 2 done. Time: 9.2min
+[2023-05-02 06:47:05,978 INFO    ] Running training epoch 3
+[2023-05-02 06:52:52,870 INFO    ] train epoch:3 / loss:0.006322 / SRCC:0.8776 / PLCC:0.8959
+[2023-05-02 06:52:52,870 INFO    ] Starting eval...
+[2023-05-02 06:52:52,870 INFO    ] Running validation in epoch 3
+[2023-05-02 06:56:08,006 INFO    ] Epoch:3 ===== loss:0.01015 ===== SRCC:0.8348 ===== PLCC:0.8645
+[2023-05-02 06:56:08,007 INFO    ] Eval on validation subset is done...
+[2023-05-02 06:56:08,007 INFO    ] Epoch 3 done. Time: 9.0min
+[2023-05-02 06:56:08,007 INFO    ] Running training epoch 4
+[2023-05-02 07:01:54,960 INFO    ] train epoch:4 / loss:0.005062 / SRCC:0.9024 / PLCC:0.9174
+[2023-05-02 07:01:54,961 INFO    ] Starting eval...
+[2023-05-02 07:01:54,961 INFO    ] Running validation in epoch 4
+[2023-05-02 07:05:10,041 INFO    ] Epoch:4 ===== loss:0.01254 ===== SRCC:0.8623 ===== PLCC:0.8831
+[2023-05-02 07:05:10,042 INFO    ] Eval on validation subset is done...
+[2023-05-02 07:05:13,184 INFO    ] Saving weights and model of epoch4, SRCC:0.8622524672161987, PLCC:0.8830813782575617
+[2023-05-02 07:05:13,184 INFO    ] Epoch 4 done. Time: 9.1min
+[2023-05-02 07:05:13,184 INFO    ] Running training epoch 5
+[2023-05-02 07:11:00,160 INFO    ] train epoch:5 / loss:0.005358 / SRCC:0.895 / PLCC:0.913
+[2023-05-02 07:11:00,161 INFO    ] Starting eval...
+[2023-05-02 07:11:00,161 INFO    ] Running validation in epoch 5
+[2023-05-02 07:14:15,219 INFO    ] Epoch:5 ===== loss:0.01186 ===== SRCC:0.8857 ===== PLCC:0.9036
+[2023-05-02 07:14:15,220 INFO    ] Eval on validation subset is done...
+[2023-05-02 07:14:18,340 INFO    ] Saving weights and model of epoch5, SRCC:0.8856520704358116, PLCC:0.903614084155135
+[2023-05-02 07:14:18,340 INFO    ] Epoch 5 done. Time: 9.1min
+[2023-05-02 07:14:18,340 INFO    ] Running training epoch 6
+[2023-05-02 07:20:05,151 INFO    ] train epoch:6 / loss:0.004802 / SRCC:0.9045 / PLCC:0.9219
+[2023-05-02 07:20:05,151 INFO    ] Starting eval...
+[2023-05-02 07:20:05,152 INFO    ] Running validation in epoch 6
+[2023-05-02 07:23:20,240 INFO    ] Epoch:6 ===== loss:0.009949 ===== SRCC:0.8508 ===== PLCC:0.8755
+[2023-05-02 07:23:20,240 INFO    ] Eval on validation subset is done...
+[2023-05-02 07:23:20,241 INFO    ] Epoch 6 done. Time: 9.0min
+[2023-05-02 07:23:20,241 INFO    ] Running training epoch 7
+[2023-05-02 07:29:07,316 INFO    ] train epoch:7 / loss:0.004773 / SRCC:0.9062 / PLCC:0.9224
+[2023-05-02 07:29:07,317 INFO    ] Starting eval...
+[2023-05-02 07:29:07,317 INFO    ] Running validation in epoch 7
+[2023-05-02 07:32:22,570 INFO    ] Epoch:7 ===== loss:0.01626 ===== SRCC:0.8395 ===== PLCC:0.8604
+[2023-05-02 07:32:22,570 INFO    ] Eval on validation subset is done...
+[2023-05-02 07:32:22,570 INFO    ] Epoch 7 done. Time: 9.0min
+[2023-05-02 07:32:22,570 INFO    ] Running training epoch 8
+[2023-05-02 07:38:09,816 INFO    ] train epoch:8 / loss:0.00418 / SRCC:0.9165 / PLCC:0.9325
+[2023-05-02 07:38:09,817 INFO    ] Starting eval...
+[2023-05-02 07:38:09,817 INFO    ] Running validation in epoch 8
+[2023-05-02 07:41:25,239 INFO    ] Epoch:8 ===== loss:0.01264 ===== SRCC:0.8551 ===== PLCC:0.8782
+[2023-05-02 07:41:25,239 INFO    ] Eval on validation subset is done...
+[2023-05-02 07:41:25,239 INFO    ] Epoch 8 done. Time: 9.0min
+[2023-05-02 07:41:25,239 INFO    ] Starting testing...
+[2023-05-02 07:41:25,239 INFO    ] Best Epoch:5
+[2023-05-02 07:45:28,717 INFO    ] Epoch:5 ===== loss:0.003679 ===== SRCC:0.9436 ===== PLCC:0.9499
+[2023-05-02 07:45:28,718 INFO    ] --- Split id:0
+[2023-05-02 07:45:28,718 INFO    ] --- Fold id:4
+[2023-05-02 07:45:28,718 INFO    ] --- Model number: 5/10
+[2023-05-02 07:45:28,719 INFO    ] number of train scenes: 1920
+[2023-05-02 07:45:28,719 INFO    ] number of val scenes: 480
+[2023-05-02 07:45:28,719 INFO    ] number of test scenes: 600
+[2023-05-02 07:45:33,252 INFO    ] Loading pretrained weights from Hugging Face hub (('laion/CLIP-ViT-H-14-laion2B-s32B-b79K', 'open_clip_pytorch_model.bin'))
+[2023-05-02 07:45:36,563 INFO    ] Running training epoch 0
+[2023-05-02 07:51:23,734 INFO    ] train epoch:0 / loss:0.02035 / SRCC:0.6118 / PLCC:0.6378
+[2023-05-02 07:51:23,735 INFO    ] Starting eval...
+[2023-05-02 07:51:23,735 INFO    ] Running validation in epoch 0
+[2023-05-02 07:54:39,068 INFO    ] Epoch:0 ===== loss:0.01131 ===== SRCC:0.7894 ===== PLCC:0.8151
+[2023-05-02 07:54:39,068 INFO    ] Eval on validation subset is done...
+[2023-05-02 07:54:41,900 INFO    ] Saving weights and model of epoch0, SRCC:0.7894270186659723, PLCC:0.8150671934148921
+[2023-05-02 07:54:41,900 INFO    ] Epoch 0 done. Time: 9.1min
+[2023-05-02 07:54:41,900 INFO    ] Running training epoch 1
+[2023-05-02 08:00:28,925 INFO    ] train epoch:1 / loss:0.01046 / SRCC:0.792 / PLCC:0.8286
+[2023-05-02 08:00:28,925 INFO    ] Starting eval...
+[2023-05-02 08:00:28,926 INFO    ] Running validation in epoch 1
+[2023-05-02 08:03:44,257 INFO    ] Epoch:1 ===== loss:0.01032 ===== SRCC:0.814 ===== PLCC:0.8359
+[2023-05-02 08:03:44,257 INFO    ] Eval on validation subset is done...
+[2023-05-02 08:03:47,340 INFO    ] Saving weights and model of epoch1, SRCC:0.8139558900662018, PLCC:0.8358788846046534
+[2023-05-02 08:03:47,340 INFO    ] Epoch 1 done. Time: 9.1min
+[2023-05-02 08:03:47,340 INFO    ] Running training epoch 2
+[2023-05-02 08:09:34,983 INFO    ] train epoch:2 / loss:0.008258 / SRCC:0.8412 / PLCC:0.8675
+[2023-05-02 08:09:34,984 INFO    ] Starting eval...
+[2023-05-02 08:09:34,984 INFO    ] Running validation in epoch 2
+[2023-05-02 08:12:50,521 INFO    ] Epoch:2 ===== loss:0.007867 ===== SRCC:0.8654 ===== PLCC:0.882
+[2023-05-02 08:12:50,521 INFO    ] Eval on validation subset is done...
+[2023-05-02 08:12:53,590 INFO    ] Saving weights and model of epoch2, SRCC:0.8653953821997249, PLCC:0.8820273152646071
+[2023-05-02 08:12:53,590 INFO    ] Epoch 2 done. Time: 9.1min
+[2023-05-02 08:12:53,590 INFO    ] Running training epoch 3
+[2023-05-02 08:18:41,509 INFO    ] train epoch:3 / loss:0.007047 / SRCC:0.8638 / PLCC:0.8881
+[2023-05-02 08:18:41,510 INFO    ] Starting eval...
+[2023-05-02 08:18:41,510 INFO    ] Running validation in epoch 3
+[2023-05-02 08:21:57,312 INFO    ] Epoch:3 ===== loss:0.006263 ===== SRCC:0.8942 ===== PLCC:0.9023
+[2023-05-02 08:21:57,312 INFO    ] Eval on validation subset is done...
+[2023-05-02 08:22:10,101 INFO    ] Saving weights and model of epoch3, SRCC:0.8941976218907993, PLCC:0.9023330410789601
+[2023-05-02 08:22:10,102 INFO    ] Epoch 3 done. Time: 9.3min
+[2023-05-02 08:22:10,102 INFO    ] Running training epoch 4
+[2023-05-02 08:27:57,857 INFO    ] train epoch:4 / loss:0.005871 / SRCC:0.8915 / PLCC:0.9078
+[2023-05-02 08:27:57,858 INFO    ] Starting eval...
+[2023-05-02 08:27:57,858 INFO    ] Running validation in epoch 4
+[2023-05-02 08:31:13,735 INFO    ] Epoch:4 ===== loss:0.005902 ===== SRCC:0.8992 ===== PLCC:0.9123
+[2023-05-02 08:31:13,735 INFO    ] Eval on validation subset is done...
+[2023-05-02 08:31:16,841 INFO    ] Saving weights and model of epoch4, SRCC:0.8991863287911306, PLCC:0.9122826394488748
+[2023-05-02 08:31:16,841 INFO    ] Epoch 4 done. Time: 9.1min
+[2023-05-02 08:31:16,841 INFO    ] Running training epoch 5
+[2023-05-02 08:37:04,776 INFO    ] train epoch:5 / loss:0.005509 / SRCC:0.897 / PLCC:0.9137
+[2023-05-02 08:37:04,777 INFO    ] Starting eval...
+[2023-05-02 08:37:04,777 INFO    ] Running validation in epoch 5
+[2023-05-02 08:40:20,637 INFO    ] Epoch:5 ===== loss:0.005315 ===== SRCC:0.9146 ===== PLCC:0.9187
+[2023-05-02 08:40:20,637 INFO    ] Eval on validation subset is done...
+[2023-05-02 08:40:32,688 INFO    ] Saving weights and model of epoch5, SRCC:0.9146308067556688, PLCC:0.9187158124895478
+[2023-05-02 08:40:32,688 INFO    ] Epoch 5 done. Time: 9.3min
+[2023-05-02 08:40:32,688 INFO    ] Running training epoch 6
+[2023-05-02 08:46:20,533 INFO    ] train epoch:6 / loss:0.005361 / SRCC:0.8958 / PLCC:0.9161
+[2023-05-02 08:46:20,534 INFO    ] Starting eval...
+[2023-05-02 08:46:20,534 INFO    ] Running validation in epoch 6
+[2023-05-02 08:49:36,376 INFO    ] Epoch:6 ===== loss:0.006002 ===== SRCC:0.8962 ===== PLCC:0.9114
+[2023-05-02 08:49:36,377 INFO    ] Eval on validation subset is done...
+[2023-05-02 08:49:36,377 INFO    ] Epoch 6 done. Time: 9.1min
+[2023-05-02 08:49:36,377 INFO    ] Running training epoch 7
+[2023-05-02 08:55:24,422 INFO    ] train epoch:7 / loss:0.005222 / SRCC:0.9002 / PLCC:0.9184
+[2023-05-02 08:55:24,423 INFO    ] Starting eval...
+[2023-05-02 08:55:24,423 INFO    ] Running validation in epoch 7
+[2023-05-02 08:58:40,210 INFO    ] Epoch:7 ===== loss:0.005471 ===== SRCC:0.9015 ===== PLCC:0.9144
+[2023-05-02 08:58:40,211 INFO    ] Eval on validation subset is done...
+[2023-05-02 08:58:40,211 INFO    ] Epoch 7 done. Time: 9.1min
+[2023-05-02 08:58:40,211 INFO    ] Running training epoch 8
+[2023-05-02 09:04:28,274 INFO    ] train epoch:8 / loss:0.00474 / SRCC:0.9091 / PLCC:0.9263
+[2023-05-02 09:04:28,274 INFO    ] Starting eval...
+[2023-05-02 09:04:28,275 INFO    ] Running validation in epoch 8
+[2023-05-02 09:07:44,216 INFO    ] Epoch:8 ===== loss:0.006235 ===== SRCC:0.9032 ===== PLCC:0.9155
+[2023-05-02 09:07:44,216 INFO    ] Eval on validation subset is done...
+[2023-05-02 09:07:44,217 INFO    ] Epoch 8 done. Time: 9.1min
+[2023-05-02 09:07:44,217 INFO    ] Starting testing...
+[2023-05-02 09:07:44,217 INFO    ] Best Epoch:5
+[2023-05-02 09:11:48,181 INFO    ] Epoch:5 ===== loss:0.005085 ===== SRCC:0.9252 ===== PLCC:0.9291
+[2023-05-02 09:11:48,182 INFO    ] Mean split test SROCC 0.9361953295959253
+[2023-05-02 09:11:48,182 INFO    ] Mean split test PLCC 0.9428448905360778
+[2023-05-02 09:11:48,183 INFO    ] --- Split id:1
+[2023-05-02 09:11:48,183 INFO    ] --- Fold id:0
+[2023-05-02 09:11:48,183 INFO    ] --- Model number: 6/10
+[2023-05-02 09:11:48,184 INFO    ] number of train scenes: 1920
+[2023-05-02 09:11:48,184 INFO    ] number of val scenes: 480
+[2023-05-02 09:11:48,184 INFO    ] number of test scenes: 600
+[2023-05-02 09:11:52,753 INFO    ] Loading pretrained weights from Hugging Face hub (('laion/CLIP-ViT-H-14-laion2B-s32B-b79K', 'open_clip_pytorch_model.bin'))
+[2023-05-02 09:11:55,802 INFO    ] Running training epoch 0
+[2023-05-02 09:17:43,169 INFO    ] train epoch:0 / loss:0.0204 / SRCC:0.5721 / PLCC:0.616
+[2023-05-02 09:17:43,170 INFO    ] Starting eval...
+[2023-05-02 09:17:43,170 INFO    ] Running validation in epoch 0
+[2023-05-02 09:20:58,538 INFO    ] Epoch:0 ===== loss:0.01581 ===== SRCC:0.752 ===== PLCC:0.7916
+[2023-05-02 09:20:58,538 INFO    ] Eval on validation subset is done...
+[2023-05-02 09:21:01,450 INFO    ] Saving weights and model of epoch0, SRCC:0.7519981449558393, PLCC:0.7916487236210532
+[2023-05-02 09:21:01,450 INFO    ] Epoch 0 done. Time: 9.1min
+[2023-05-02 09:21:01,450 INFO    ] Running training epoch 1
+[2023-05-02 09:26:48,902 INFO    ] train epoch:1 / loss:0.009774 / SRCC:0.8059 / PLCC:0.8332
+[2023-05-02 09:26:48,902 INFO    ] Starting eval...
+[2023-05-02 09:26:48,902 INFO    ] Running validation in epoch 1
+[2023-05-02 09:30:04,390 INFO    ] Epoch:1 ===== loss:0.009835 ===== SRCC:0.8325 ===== PLCC:0.861
+[2023-05-02 09:30:04,390 INFO    ] Eval on validation subset is done...
+[2023-05-02 09:30:07,523 INFO    ] Saving weights and model of epoch1, SRCC:0.8324851455531725, PLCC:0.86103999692444
+[2023-05-02 09:30:07,523 INFO    ] Epoch 1 done. Time: 9.1min
+[2023-05-02 09:30:07,523 INFO    ] Running training epoch 2
+[2023-05-02 09:35:54,807 INFO    ] train epoch:2 / loss:0.007454 / SRCC:0.8572 / PLCC:0.8755
+[2023-05-02 09:35:54,808 INFO    ] Starting eval...
+[2023-05-02 09:35:54,808 INFO    ] Running validation in epoch 2
+[2023-05-02 09:39:10,162 INFO    ] Epoch:2 ===== loss:0.009207 ===== SRCC:0.8701 ===== PLCC:0.8913
+[2023-05-02 09:39:10,163 INFO    ] Eval on validation subset is done...
+[2023-05-02 09:39:18,500 INFO    ] Saving weights and model of epoch2, SRCC:0.8700959741161709, PLCC:0.8912595439525869
+[2023-05-02 09:39:18,500 INFO    ] Epoch 2 done. Time: 9.2min
+[2023-05-02 09:39:18,500 INFO    ] Running training epoch 3
+[2023-05-02 09:45:05,878 INFO    ] train epoch:3 / loss:0.006282 / SRCC:0.8783 / PLCC:0.8962
+[2023-05-02 09:45:05,879 INFO    ] Starting eval...
+[2023-05-02 09:45:05,879 INFO    ] Running validation in epoch 3
+[2023-05-02 09:48:21,451 INFO    ] Epoch:3 ===== loss:0.007632 ===== SRCC:0.8836 ===== PLCC:0.904
+[2023-05-02 09:48:21,452 INFO    ] Eval on validation subset is done...
+[2023-05-02 09:48:24,616 INFO    ] Saving weights and model of epoch3, SRCC:0.8836452952206341, PLCC:0.9040345891271435
+[2023-05-02 09:48:24,616 INFO    ] Epoch 3 done. Time: 9.1min
+[2023-05-02 09:48:24,616 INFO    ] Running training epoch 4
+[2023-05-02 09:54:12,065 INFO    ] train epoch:4 / loss:0.005274 / SRCC:0.8987 / PLCC:0.914
+[2023-05-02 09:54:12,066 INFO    ] Starting eval...
+[2023-05-02 09:54:12,066 INFO    ] Running validation in epoch 4
+[2023-05-02 09:57:27,609 INFO    ] Epoch:4 ===== loss:0.008126 ===== SRCC:0.8724 ===== PLCC:0.8975
+[2023-05-02 09:57:27,609 INFO    ] Eval on validation subset is done...
+[2023-05-02 09:57:27,609 INFO    ] Epoch 4 done. Time: 9.0min
+[2023-05-02 09:57:27,609 INFO    ] Running training epoch 5
+[2023-05-02 10:03:15,021 INFO    ] train epoch:5 / loss:0.005113 / SRCC:0.8999 / PLCC:0.9164
+[2023-05-02 10:03:15,022 INFO    ] Starting eval...
+[2023-05-02 10:03:15,022 INFO    ] Running validation in epoch 5
+[2023-05-02 10:06:30,586 INFO    ] Epoch:5 ===== loss:0.006538 ===== SRCC:0.8961 ===== PLCC:0.9105
+[2023-05-02 10:06:30,586 INFO    ] Eval on validation subset is done...
+[2023-05-02 10:06:33,669 INFO    ] Saving weights and model of epoch5, SRCC:0.8961232640579307, PLCC:0.9105216565608442
+[2023-05-02 10:06:33,669 INFO    ] Epoch 5 done. Time: 9.1min
+[2023-05-02 10:06:33,669 INFO    ] Running training epoch 6
+[2023-05-02 10:12:21,072 INFO    ] train epoch:6 / loss:0.004636 / SRCC:0.909 / PLCC:0.9245
+[2023-05-02 10:12:21,073 INFO    ] Starting eval...
+[2023-05-02 10:12:21,073 INFO    ] Running validation in epoch 6
+[2023-05-02 10:15:36,569 INFO    ] Epoch:6 ===== loss:0.005585 ===== SRCC:0.9096 ===== PLCC:0.9228
+[2023-05-02 10:15:36,570 INFO    ] Eval on validation subset is done...
+[2023-05-02 10:15:39,684 INFO    ] Saving weights and model of epoch6, SRCC:0.9095638602956595, PLCC:0.922827934738699
+[2023-05-02 10:15:39,684 INFO    ] Epoch 6 done. Time: 9.1min
+[2023-05-02 10:15:39,684 INFO    ] Running training epoch 7
+[2023-05-02 10:21:27,075 INFO    ] train epoch:7 / loss:0.004767 / SRCC:0.9064 / PLCC:0.9224
+[2023-05-02 10:21:27,076 INFO    ] Starting eval...
+[2023-05-02 10:21:27,076 INFO    ] Running validation in epoch 7
+[2023-05-02 10:24:42,665 INFO    ] Epoch:7 ===== loss:0.01141 ===== SRCC:0.8565 ===== PLCC:0.8758
+[2023-05-02 10:24:42,665 INFO    ] Eval on validation subset is done...
+[2023-05-02 10:24:42,665 INFO    ] Epoch 7 done. Time: 9.0min
+[2023-05-02 10:24:42,665 INFO    ] Running training epoch 8
+[2023-05-02 10:30:30,134 INFO    ] train epoch:8 / loss:0.004163 / SRCC:0.9184 / PLCC:0.9326
+[2023-05-02 10:30:30,134 INFO    ] Starting eval...
+[2023-05-02 10:30:30,135 INFO    ] Running validation in epoch 8
+[2023-05-02 10:33:45,590 INFO    ] Epoch:8 ===== loss:0.00639 ===== SRCC:0.9096 ===== PLCC:0.9259
+[2023-05-02 10:33:45,590 INFO    ] Eval on validation subset is done...
+[2023-05-02 10:33:45,590 INFO    ] Epoch 8 done. Time: 9.0min
+[2023-05-02 10:33:45,590 INFO    ] Running training epoch 9
+[2023-05-02 10:39:33,185 INFO    ] train epoch:9 / loss:0.004502 / SRCC:0.9155 / PLCC:0.9268
+[2023-05-02 10:39:33,186 INFO    ] Starting eval...
+[2023-05-02 10:39:33,186 INFO    ] Running validation in epoch 9
+[2023-05-02 10:42:48,822 INFO    ] Epoch:9 ===== loss:0.009651 ===== SRCC:0.9056 ===== PLCC:0.9202
+[2023-05-02 10:42:48,822 INFO    ] Eval on validation subset is done...
+[2023-05-02 10:42:48,822 INFO    ] Epoch 9 done. Time: 9.1min
+[2023-05-02 10:42:48,822 INFO    ] Starting testing...
+[2023-05-02 10:42:48,822 INFO    ] Best Epoch:6
+[2023-05-02 10:46:52,393 INFO    ] Epoch:6 ===== loss:0.02396 ===== SRCC:0.6859 ===== PLCC:0.7102
+[2023-05-02 10:46:52,394 INFO    ] --- Split id:1
+[2023-05-02 10:46:52,394 INFO    ] --- Fold id:1
+[2023-05-02 10:46:52,394 INFO    ] --- Model number: 7/10
+[2023-05-02 10:46:52,394 INFO    ] number of train scenes: 1920
+[2023-05-02 10:46:52,394 INFO    ] number of val scenes: 480
+[2023-05-02 10:46:52,394 INFO    ] number of test scenes: 600
+[2023-05-02 10:46:56,937 INFO    ] Loading pretrained weights from Hugging Face hub (('laion/CLIP-ViT-H-14-laion2B-s32B-b79K', 'open_clip_pytorch_model.bin'))
+[2023-05-02 10:47:00,246 INFO    ] Running training epoch 0
+[2023-05-02 10:52:48,048 INFO    ] train epoch:0 / loss:0.02184 / SRCC:0.5877 / PLCC:0.5851
+[2023-05-02 10:52:48,049 INFO    ] Starting eval...
+[2023-05-02 10:52:48,049 INFO    ] Running validation in epoch 0
+[2023-05-02 10:56:03,706 INFO    ] Epoch:0 ===== loss:0.01216 ===== SRCC:0.768 ===== PLCC:0.8174
+[2023-05-02 10:56:03,706 INFO    ] Eval on validation subset is done...
+[2023-05-02 10:56:06,575 INFO    ] Saving weights and model of epoch0, SRCC:0.7680201261304307, PLCC:0.8174013642805905
+[2023-05-02 10:56:06,575 INFO    ] Epoch 0 done. Time: 9.1min
+[2023-05-02 10:56:06,575 INFO    ] Running training epoch 1
+[2023-05-02 11:01:54,495 INFO    ] train epoch:1 / loss:0.01012 / SRCC:0.7863 / PLCC:0.8263
+[2023-05-02 11:01:54,496 INFO    ] Starting eval...
+[2023-05-02 11:01:54,496 INFO    ] Running validation in epoch 1
+[2023-05-02 11:05:10,450 INFO    ] Epoch:1 ===== loss:0.009288 ===== SRCC:0.8503 ===== PLCC:0.8726
+[2023-05-02 11:05:10,450 INFO    ] Eval on validation subset is done...
+[2023-05-02 11:05:13,556 INFO    ] Saving weights and model of epoch1, SRCC:0.8503004593399062, PLCC:0.8725580203403298
+[2023-05-02 11:05:13,556 INFO    ] Epoch 1 done. Time: 9.1min
+[2023-05-02 11:05:13,556 INFO    ] Running training epoch 2
+[2023-05-02 11:11:01,473 INFO    ] train epoch:2 / loss:0.007772 / SRCC:0.8496 / PLCC:0.8699
+[2023-05-02 11:11:01,474 INFO    ] Starting eval...
+[2023-05-02 11:11:01,474 INFO    ] Running validation in epoch 2
+[2023-05-02 11:14:17,314 INFO    ] Epoch:2 ===== loss:0.009587 ===== SRCC:0.8724 ===== PLCC:0.8916
+[2023-05-02 11:14:17,314 INFO    ] Eval on validation subset is done...
+[2023-05-02 11:14:20,372 INFO    ] Saving weights and model of epoch2, SRCC:0.872415360885593, PLCC:0.8916228279484838
+[2023-05-02 11:14:20,372 INFO    ] Epoch 2 done. Time: 9.1min
+[2023-05-02 11:14:20,372 INFO    ] Running training epoch 3
+[2023-05-02 11:20:07,787 INFO    ] train epoch:3 / loss:0.006625 / SRCC:0.8702 / PLCC:0.8903
+[2023-05-02 11:20:07,787 INFO    ] Starting eval...
+[2023-05-02 11:20:07,788 INFO    ] Running validation in epoch 3
+[2023-05-02 11:23:23,211 INFO    ] Epoch:3 ===== loss:0.01005 ===== SRCC:0.8854 ===== PLCC:0.9021
+[2023-05-02 11:23:23,211 INFO    ] Eval on validation subset is done...
+[2023-05-02 11:23:26,278 INFO    ] Saving weights and model of epoch3, SRCC:0.8854330401334423, PLCC:0.9021273920284565
+[2023-05-02 11:23:26,278 INFO    ] Epoch 3 done. Time: 9.1min
+[2023-05-02 11:23:26,278 INFO    ] Running training epoch 4
+[2023-05-02 11:29:13,675 INFO    ] train epoch:4 / loss:0.005646 / SRCC:0.8909 / PLCC:0.9073
+[2023-05-02 11:29:13,676 INFO    ] Starting eval...
+[2023-05-02 11:29:13,676 INFO    ] Running validation in epoch 4
+[2023-05-02 11:32:29,294 INFO    ] Epoch:4 ===== loss:0.0111 ===== SRCC:0.8178 ===== PLCC:0.8435
+[2023-05-02 11:32:29,294 INFO    ] Eval on validation subset is done...
+[2023-05-02 11:32:29,294 INFO    ] Epoch 4 done. Time: 9.1min
+[2023-05-02 11:32:29,295 INFO    ] Running training epoch 5
+[2023-05-02 11:38:16,779 INFO    ] train epoch:5 / loss:0.005053 / SRCC:0.9055 / PLCC:0.9176
+[2023-05-02 11:38:16,780 INFO    ] Starting eval...
+[2023-05-02 11:38:16,780 INFO    ] Running validation in epoch 5
+[2023-05-02 11:41:32,229 INFO    ] Epoch:5 ===== loss:0.008127 ===== SRCC:0.8842 ===== PLCC:0.9047
+[2023-05-02 11:41:32,229 INFO    ] Eval on validation subset is done...
+[2023-05-02 11:41:32,229 INFO    ] Epoch 5 done. Time: 9.0min
+[2023-05-02 11:41:32,229 INFO    ] Running training epoch 6
+[2023-05-02 11:47:19,654 INFO    ] train epoch:6 / loss:0.004499 / SRCC:0.9147 / PLCC:0.927
+[2023-05-02 11:47:19,655 INFO    ] Starting eval...
+[2023-05-02 11:47:19,655 INFO    ] Running validation in epoch 6
+[2023-05-02 11:50:34,940 INFO    ] Epoch:6 ===== loss:0.006905 ===== SRCC:0.8918 ===== PLCC:0.9123
+[2023-05-02 11:50:34,941 INFO    ] Eval on validation subset is done...
+[2023-05-02 11:50:46,778 INFO    ] Saving weights and model of epoch6, SRCC:0.8917521802275274, PLCC:0.9122854017073703
+[2023-05-02 11:50:46,778 INFO    ] Epoch 6 done. Time: 9.2min
+[2023-05-02 11:50:46,778 INFO    ] Running training epoch 7
+[2023-05-02 11:56:34,009 INFO    ] train epoch:7 / loss:0.00445 / SRCC:0.9139 / PLCC:0.9278
+[2023-05-02 11:56:34,009 INFO    ] Starting eval...
+[2023-05-02 11:56:34,010 INFO    ] Running validation in epoch 7
+[2023-05-02 11:59:49,476 INFO    ] Epoch:7 ===== loss:0.006187 ===== SRCC:0.8943 ===== PLCC:0.9111
+[2023-05-02 11:59:49,476 INFO    ] Eval on validation subset is done...
+[2023-05-02 11:59:52,591 INFO    ] Saving weights and model of epoch7, SRCC:0.8942705479598538, PLCC:0.9110729219198332
+[2023-05-02 11:59:52,591 INFO    ] Epoch 7 done. Time: 9.1min
+[2023-05-02 11:59:52,591 INFO    ] Running training epoch 8
+[2023-05-02 12:05:39,883 INFO    ] train epoch:8 / loss:0.00441 / SRCC:0.9128 / PLCC:0.9284
+[2023-05-02 12:05:39,884 INFO    ] Starting eval...
+[2023-05-02 12:05:39,884 INFO    ] Running validation in epoch 8
+[2023-05-02 12:08:55,382 INFO    ] Epoch:8 ===== loss:0.006058 ===== SRCC:0.9029 ===== PLCC:0.9177
+[2023-05-02 12:08:55,383 INFO    ] Eval on validation subset is done...
+[2023-05-02 12:08:58,457 INFO    ] Saving weights and model of epoch8, SRCC:0.9028539294891779, PLCC:0.917748009917261
+[2023-05-02 12:08:58,457 INFO    ] Epoch 8 done. Time: 9.1min
+[2023-05-02 12:08:58,457 INFO    ] Running training epoch 9
+[2023-05-02 12:14:45,872 INFO    ] train epoch:9 / loss:0.003937 / SRCC:0.9226 / PLCC:0.9363
+[2023-05-02 12:14:45,873 INFO    ] Starting eval...
+[2023-05-02 12:14:45,873 INFO    ] Running validation in epoch 9
+[2023-05-02 12:18:01,536 INFO    ] Epoch:9 ===== loss:0.006445 ===== SRCC:0.8924 ===== PLCC:0.9121
+[2023-05-02 12:18:01,536 INFO    ] Eval on validation subset is done...
+[2023-05-02 12:18:01,536 INFO    ] Epoch 9 done. Time: 9.1min
+[2023-05-02 12:18:01,536 INFO    ] Running training epoch 10
+[2023-05-02 12:23:49,063 INFO    ] train epoch:10 / loss:0.003864 / SRCC:0.9251 / PLCC:0.9376
+[2023-05-02 12:23:49,064 INFO    ] Starting eval...
+[2023-05-02 12:23:49,064 INFO    ] Running validation in epoch 10
+[2023-05-02 12:27:04,650 INFO    ] Epoch:10 ===== loss:0.007902 ===== SRCC:0.8712 ===== PLCC:0.8929
+[2023-05-02 12:27:04,650 INFO    ] Eval on validation subset is done...
+[2023-05-02 12:27:04,650 INFO    ] Epoch 10 done. Time: 9.1min
+[2023-05-02 12:27:04,650 INFO    ] Running training epoch 11
+[2023-05-02 12:32:52,235 INFO    ] train epoch:11 / loss:0.003449 / SRCC:0.9338 / PLCC:0.9445
+[2023-05-02 12:32:52,236 INFO    ] Starting eval...
+[2023-05-02 12:32:52,236 INFO    ] Running validation in epoch 11
+[2023-05-02 12:36:07,652 INFO    ] Epoch:11 ===== loss:0.009898 ===== SRCC:0.8531 ===== PLCC:0.8799
+[2023-05-02 12:36:07,652 INFO    ] Eval on validation subset is done...
+[2023-05-02 12:36:07,653 INFO    ] Epoch 11 done. Time: 9.1min
+[2023-05-02 12:36:07,653 INFO    ] Starting testing...
+[2023-05-02 12:36:07,653 INFO    ] Best Epoch:8
+[2023-05-02 12:40:11,167 INFO    ] Epoch:8 ===== loss:0.02418 ===== SRCC:0.6865 ===== PLCC:0.7083
+[2023-05-02 12:40:11,168 INFO    ] --- Split id:1
+[2023-05-02 12:40:11,168 INFO    ] --- Fold id:2
+[2023-05-02 12:40:11,168 INFO    ] --- Model number: 8/10
+[2023-05-02 12:40:11,169 INFO    ] number of train scenes: 1920
+[2023-05-02 12:40:11,169 INFO    ] number of val scenes: 480
+[2023-05-02 12:40:11,169 INFO    ] number of test scenes: 600
+[2023-05-02 12:40:15,689 INFO    ] Loading pretrained weights from Hugging Face hub (('laion/CLIP-ViT-H-14-laion2B-s32B-b79K', 'open_clip_pytorch_model.bin'))
+[2023-05-02 12:40:19,048 INFO    ] Running training epoch 0
+[2023-05-02 12:46:06,432 INFO    ] train epoch:0 / loss:0.02066 / SRCC:0.5984 / PLCC:0.6091
+[2023-05-02 12:46:06,432 INFO    ] Starting eval...
+[2023-05-02 12:46:06,433 INFO    ] Running validation in epoch 0
+[2023-05-02 12:49:22,030 INFO    ] Epoch:0 ===== loss:0.00997 ===== SRCC:0.832 ===== PLCC:0.8531
+[2023-05-02 12:49:22,030 INFO    ] Eval on validation subset is done...
+[2023-05-02 12:49:33,838 INFO    ] Saving weights and model of epoch0, SRCC:0.8320068824521653, PLCC:0.8530938568747226
+[2023-05-02 12:49:33,838 INFO    ] Epoch 0 done. Time: 9.2min
+[2023-05-02 12:49:33,838 INFO    ] Running training epoch 1
+[2023-05-02 12:55:21,345 INFO    ] train epoch:1 / loss:0.009631 / SRCC:0.8001 / PLCC:0.8327
+[2023-05-02 12:55:21,346 INFO    ] Starting eval...
+[2023-05-02 12:55:21,346 INFO    ] Running validation in epoch 1
+[2023-05-02 12:58:36,864 INFO    ] Epoch:1 ===== loss:0.01509 ===== SRCC:0.8622 ===== PLCC:0.8816
+[2023-05-02 12:58:36,864 INFO    ] Eval on validation subset is done...
+[2023-05-02 12:58:39,950 INFO    ] Saving weights and model of epoch1, SRCC:0.8622098528087817, PLCC:0.8815725531853241
+[2023-05-02 12:58:39,950 INFO    ] Epoch 1 done. Time: 9.1min
+[2023-05-02 12:58:39,950 INFO    ] Running training epoch 2
+[2023-05-02 13:04:27,648 INFO    ] train epoch:2 / loss:0.00767 / SRCC:0.8476 / PLCC:0.8695
+[2023-05-02 13:04:27,649 INFO    ] Starting eval...
+[2023-05-02 13:04:27,649 INFO    ] Running validation in epoch 2
+[2023-05-02 13:07:43,302 INFO    ] Epoch:2 ===== loss:0.008803 ===== SRCC:0.8749 ===== PLCC:0.8932
+[2023-05-02 13:07:43,302 INFO    ] Eval on validation subset is done...
+[2023-05-02 13:07:55,263 INFO    ] Saving weights and model of epoch2, SRCC:0.8748569967074821, PLCC:0.8931696149837516
+[2023-05-02 13:07:55,263 INFO    ] Epoch 2 done. Time: 9.3min
+[2023-05-02 13:07:55,263 INFO    ] Running training epoch 3
+[2023-05-02 13:13:42,735 INFO    ] train epoch:3 / loss:0.006972 / SRCC:0.8637 / PLCC:0.882
+[2023-05-02 13:13:42,736 INFO    ] Starting eval...
+[2023-05-02 13:13:42,736 INFO    ] Running validation in epoch 3
+[2023-05-02 13:16:58,072 INFO    ] Epoch:3 ===== loss:0.007802 ===== SRCC:0.8997 ===== PLCC:0.9108
+[2023-05-02 13:16:58,073 INFO    ] Eval on validation subset is done...
+[2023-05-02 13:17:01,199 INFO    ] Saving weights and model of epoch3, SRCC:0.8996818791211089, PLCC:0.9108313425716077
+[2023-05-02 13:17:01,199 INFO    ] Epoch 3 done. Time: 9.1min
+[2023-05-02 13:17:01,199 INFO    ] Running training epoch 4
+[2023-05-02 13:22:48,425 INFO    ] train epoch:4 / loss:0.005377 / SRCC:0.8954 / PLCC:0.9104
+[2023-05-02 13:22:48,426 INFO    ] Starting eval...
+[2023-05-02 13:22:48,426 INFO    ] Running validation in epoch 4
+[2023-05-02 13:26:03,857 INFO    ] Epoch:4 ===== loss:0.01752 ===== SRCC:0.9067 ===== PLCC:0.9141
+[2023-05-02 13:26:03,858 INFO    ] Eval on validation subset is done...
+[2023-05-02 13:26:06,954 INFO    ] Saving weights and model of epoch4, SRCC:0.906698599843355, PLCC:0.9140552770405452
+[2023-05-02 13:26:06,954 INFO    ] Epoch 4 done. Time: 9.1min
+[2023-05-02 13:26:06,954 INFO    ] Running training epoch 5
+[2023-05-02 13:31:54,032 INFO    ] train epoch:5 / loss:0.004873 / SRCC:0.9012 / PLCC:0.9193
+[2023-05-02 13:31:54,032 INFO    ] Starting eval...
+[2023-05-02 13:31:54,033 INFO    ] Running validation in epoch 5
+[2023-05-02 13:35:09,532 INFO    ] Epoch:5 ===== loss:0.005224 ===== SRCC:0.9141 ===== PLCC:0.9258
+[2023-05-02 13:35:09,532 INFO    ] Eval on validation subset is done...
+[2023-05-02 13:35:12,599 INFO    ] Saving weights and model of epoch5, SRCC:0.9140902697804951, PLCC:0.9258066111390147
+[2023-05-02 13:35:12,600 INFO    ] Epoch 5 done. Time: 9.1min
+[2023-05-02 13:35:12,600 INFO    ] Running training epoch 6
+[2023-05-02 13:41:00,073 INFO    ] train epoch:6 / loss:0.004717 / SRCC:0.9065 / PLCC:0.9219
+[2023-05-02 13:41:00,074 INFO    ] Starting eval...
+[2023-05-02 13:41:00,074 INFO    ] Running validation in epoch 6
+[2023-05-02 13:44:15,705 INFO    ] Epoch:6 ===== loss:0.01216 ===== SRCC:0.9207 ===== PLCC:0.9264
+[2023-05-02 13:44:15,706 INFO    ] Eval on validation subset is done...
+[2023-05-02 13:44:18,829 INFO    ] Saving weights and model of epoch6, SRCC:0.9206590154387304, PLCC:0.9263940832078463
+[2023-05-02 13:44:18,830 INFO    ] Epoch 6 done. Time: 9.1min
+[2023-05-02 13:44:18,830 INFO    ] Running training epoch 7
+[2023-05-02 13:50:06,477 INFO    ] train epoch:7 / loss:0.004566 / SRCC:0.9122 / PLCC:0.9245
+[2023-05-02 13:50:06,478 INFO    ] Starting eval...
+[2023-05-02 13:50:06,478 INFO    ] Running validation in epoch 7
+[2023-05-02 13:53:22,207 INFO    ] Epoch:7 ===== loss:0.01416 ===== SRCC:0.9057 ===== PLCC:0.9126
+[2023-05-02 13:53:22,207 INFO    ] Eval on validation subset is done...
+[2023-05-02 13:53:22,207 INFO    ] Epoch 7 done. Time: 9.1min
+[2023-05-02 13:53:22,207 INFO    ] Running training epoch 8
+[2023-05-02 13:59:09,944 INFO    ] train epoch:8 / loss:0.004282 / SRCC:0.9161 / PLCC:0.9294
+[2023-05-02 13:59:09,945 INFO    ] Starting eval...
+[2023-05-02 13:59:09,945 INFO    ] Running validation in epoch 8
+[2023-05-02 14:02:25,844 INFO    ] Epoch:8 ===== loss:0.006846 ===== SRCC:0.9149 ===== PLCC:0.926
+[2023-05-02 14:02:25,844 INFO    ] Eval on validation subset is done...
+[2023-05-02 14:02:25,844 INFO    ] Epoch 8 done. Time: 9.1min
+[2023-05-02 14:02:25,844 INFO    ] Running training epoch 9
+[2023-05-02 14:08:13,765 INFO    ] train epoch:9 / loss:0.004018 / SRCC:0.9218 / PLCC:0.9339
+[2023-05-02 14:08:13,766 INFO    ] Starting eval...
+[2023-05-02 14:08:13,766 INFO    ] Running validation in epoch 9
+[2023-05-02 14:11:29,829 INFO    ] Epoch:9 ===== loss:0.009752 ===== SRCC:0.9211 ===== PLCC:0.9253
+[2023-05-02 14:11:29,829 INFO    ] Eval on validation subset is done...
+[2023-05-02 14:11:32,831 INFO    ] Saving weights and model of epoch9, SRCC:0.921073787070602, PLCC:0.9253183757931365
+[2023-05-02 14:11:32,831 INFO    ] Epoch 9 done. Time: 9.1min
+[2023-05-02 14:11:32,831 INFO    ] Running training epoch 10
+[2023-05-02 14:17:20,702 INFO    ] train epoch:10 / loss:0.003705 / SRCC:0.9265 / PLCC:0.9393
+[2023-05-02 14:17:20,703 INFO    ] Starting eval...
+[2023-05-02 14:17:20,703 INFO    ] Running validation in epoch 10
+[2023-05-02 14:20:36,626 INFO    ] Epoch:10 ===== loss:0.008229 ===== SRCC:0.9094 ===== PLCC:0.9206
+[2023-05-02 14:20:36,626 INFO    ] Eval on validation subset is done...
+[2023-05-02 14:20:36,626 INFO    ] Epoch 10 done. Time: 9.1min
+[2023-05-02 14:20:36,627 INFO    ] Running training epoch 11
+[2023-05-02 14:26:24,568 INFO    ] train epoch:11 / loss:0.003771 / SRCC:0.9242 / PLCC:0.938
+[2023-05-02 14:26:24,569 INFO    ] Starting eval...
+[2023-05-02 14:26:24,569 INFO    ] Running validation in epoch 11
+[2023-05-02 14:29:40,643 INFO    ] Epoch:11 ===== loss:0.006815 ===== SRCC:0.9177 ===== PLCC:0.9238
+[2023-05-02 14:29:40,644 INFO    ] Eval on validation subset is done...
+[2023-05-02 14:29:40,644 INFO    ] Epoch 11 done. Time: 9.1min
+[2023-05-02 14:29:40,644 INFO    ] Running training epoch 12
+[2023-05-02 14:35:28,640 INFO    ] train epoch:12 / loss:0.003433 / SRCC:0.9301 / PLCC:0.9438
+[2023-05-02 14:35:28,641 INFO    ] Starting eval...
+[2023-05-02 14:35:28,641 INFO    ] Running validation in epoch 12
+[2023-05-02 14:38:44,718 INFO    ] Epoch:12 ===== loss:0.01144 ===== SRCC:0.8962 ===== PLCC:0.9086
+[2023-05-02 14:38:44,718 INFO    ] Eval on validation subset is done...
+[2023-05-02 14:38:44,718 INFO    ] Epoch 12 done. Time: 9.1min
+[2023-05-02 14:38:44,718 INFO    ] Starting testing...
+[2023-05-02 14:38:44,718 INFO    ] Best Epoch:9
+[2023-05-02 14:42:48,831 INFO    ] Epoch:9 ===== loss:0.02833 ===== SRCC:0.6795 ===== PLCC:0.7053
+[2023-05-02 14:42:48,832 INFO    ] --- Split id:1
+[2023-05-02 14:42:48,832 INFO    ] --- Fold id:3
+[2023-05-02 14:42:48,832 INFO    ] --- Model number: 9/10
+[2023-05-02 14:42:48,833 INFO    ] number of train scenes: 1920
+[2023-05-02 14:42:48,833 INFO    ] number of val scenes: 480
+[2023-05-02 14:42:48,833 INFO    ] number of test scenes: 600
+[2023-05-02 14:42:53,441 INFO    ] Loading pretrained weights from Hugging Face hub (('laion/CLIP-ViT-H-14-laion2B-s32B-b79K', 'open_clip_pytorch_model.bin'))
+[2023-05-02 14:42:56,824 INFO    ] Running training epoch 0
+[2023-05-02 14:48:44,426 INFO    ] train epoch:0 / loss:0.01999 / SRCC:0.6257 / PLCC:0.6257
+[2023-05-02 14:48:44,427 INFO    ] Starting eval...
+[2023-05-02 14:48:44,427 INFO    ] Running validation in epoch 0
+[2023-05-02 14:51:59,748 INFO    ] Epoch:0 ===== loss:0.0176 ===== SRCC:0.7377 ===== PLCC:0.7877
+[2023-05-02 14:51:59,748 INFO    ] Eval on validation subset is done...
+[2023-05-02 14:52:02,677 INFO    ] Saving weights and model of epoch0, SRCC:0.7377126692319332, PLCC:0.7876582454801939
+[2023-05-02 14:52:02,677 INFO    ] Epoch 0 done. Time: 9.1min
+[2023-05-02 14:52:02,677 INFO    ] Running training epoch 1
+[2023-05-02 14:57:50,450 INFO    ] train epoch:1 / loss:0.009253 / SRCC:0.8144 / PLCC:0.8431
+[2023-05-02 14:57:50,451 INFO    ] Starting eval...
+[2023-05-02 14:57:50,451 INFO    ] Running validation in epoch 1
+[2023-05-02 15:01:06,004 INFO    ] Epoch:1 ===== loss:0.01122 ===== SRCC:0.8134 ===== PLCC:0.8469
+[2023-05-02 15:01:06,004 INFO    ] Eval on validation subset is done...
+[2023-05-02 15:01:09,195 INFO    ] Saving weights and model of epoch1, SRCC:0.8133967120342418, PLCC:0.8468661257087984
+[2023-05-02 15:01:09,195 INFO    ] Epoch 1 done. Time: 9.1min
+[2023-05-02 15:01:09,195 INFO    ] Running training epoch 2
+[2023-05-02 15:06:56,748 INFO    ] train epoch:2 / loss:0.007414 / SRCC:0.8511 / PLCC:0.8765
+[2023-05-02 15:06:56,749 INFO    ] Starting eval...
+[2023-05-02 15:06:56,749 INFO    ] Running validation in epoch 2
+[2023-05-02 15:10:12,901 INFO    ] Epoch:2 ===== loss:0.009956 ===== SRCC:0.8601 ===== PLCC:0.8836
+[2023-05-02 15:10:12,902 INFO    ] Eval on validation subset is done...
+[2023-05-02 15:10:15,982 INFO    ] Saving weights and model of epoch2, SRCC:0.8600883872222645, PLCC:0.8836157125509239
+[2023-05-02 15:10:15,982 INFO    ] Epoch 2 done. Time: 9.1min
+[2023-05-02 15:10:15,982 INFO    ] Running training epoch 3
+[2023-05-02 15:16:03,729 INFO    ] train epoch:3 / loss:0.005847 / SRCC:0.8867 / PLCC:0.9044
+[2023-05-02 15:16:03,729 INFO    ] Starting eval...
+[2023-05-02 15:16:03,730 INFO    ] Running validation in epoch 3
+[2023-05-02 15:19:19,905 INFO    ] Epoch:3 ===== loss:0.009525 ===== SRCC:0.8662 ===== PLCC:0.886
+[2023-05-02 15:19:19,905 INFO    ] Eval on validation subset is done...
+[2023-05-02 15:19:22,989 INFO    ] Saving weights and model of epoch3, SRCC:0.8662275427525903, PLCC:0.8860481601042629
+[2023-05-02 15:19:22,989 INFO    ] Epoch 3 done. Time: 9.1min
+[2023-05-02 15:19:22,989 INFO    ] Running training epoch 4
+[2023-05-02 15:25:11,235 INFO    ] train epoch:4 / loss:0.005191 / SRCC:0.9012 / PLCC:0.9154
+[2023-05-02 15:25:11,235 INFO    ] Starting eval...
+[2023-05-02 15:25:11,236 INFO    ] Running validation in epoch 4
+[2023-05-02 15:28:26,738 INFO    ] Epoch:4 ===== loss:0.008837 ===== SRCC:0.8521 ===== PLCC:0.876
+[2023-05-02 15:28:26,738 INFO    ] Eval on validation subset is done...
+[2023-05-02 15:28:26,738 INFO    ] Epoch 4 done. Time: 9.1min
+[2023-05-02 15:28:26,739 INFO    ] Running training epoch 5
+[2023-05-02 15:34:14,198 INFO    ] train epoch:5 / loss:0.004952 / SRCC:0.9056 / PLCC:0.9193
+[2023-05-02 15:34:14,199 INFO    ] Starting eval...
+[2023-05-02 15:34:14,199 INFO    ] Running validation in epoch 5
+[2023-05-02 15:37:29,663 INFO    ] Epoch:5 ===== loss:0.01031 ===== SRCC:0.8638 ===== PLCC:0.8826
+[2023-05-02 15:37:29,663 INFO    ] Eval on validation subset is done...
+[2023-05-02 15:37:29,663 INFO    ] Epoch 5 done. Time: 9.0min
+[2023-05-02 15:37:29,663 INFO    ] Running training epoch 6
+[2023-05-02 15:43:17,299 INFO    ] train epoch:6 / loss:0.004706 / SRCC:0.9081 / PLCC:0.9237
+[2023-05-02 15:43:17,300 INFO    ] Starting eval...
+[2023-05-02 15:43:17,300 INFO    ] Running validation in epoch 6
+[2023-05-02 15:46:33,317 INFO    ] Epoch:6 ===== loss:0.01206 ===== SRCC:0.8624 ===== PLCC:0.8809
+[2023-05-02 15:46:33,317 INFO    ] Eval on validation subset is done...
+[2023-05-02 15:46:33,317 INFO    ] Epoch 6 done. Time: 9.1min
+[2023-05-02 15:46:33,317 INFO    ] Starting testing...
+[2023-05-02 15:46:33,317 INFO    ] Best Epoch:3
+[2023-05-02 15:50:37,257 INFO    ] Epoch:3 ===== loss:0.02802 ===== SRCC:0.6618 ===== PLCC:0.6737
+[2023-05-02 15:50:37,258 INFO    ] --- Split id:1
+[2023-05-02 15:50:37,258 INFO    ] --- Fold id:4
+[2023-05-02 15:50:37,258 INFO    ] --- Model number: 10/10
+[2023-05-02 15:50:37,259 INFO    ] number of train scenes: 1920
+[2023-05-02 15:50:37,259 INFO    ] number of val scenes: 480
+[2023-05-02 15:50:37,259 INFO    ] number of test scenes: 600
+[2023-05-02 15:50:41,769 INFO    ] Loading pretrained weights from Hugging Face hub (('laion/CLIP-ViT-H-14-laion2B-s32B-b79K', 'open_clip_pytorch_model.bin'))
+[2023-05-02 15:50:44,709 INFO    ] Running training epoch 0
+[2023-05-02 15:56:33,761 INFO    ] train epoch:0 / loss:0.02379 / SRCC:0.579 / PLCC:0.5794
+[2023-05-02 15:56:33,762 INFO    ] Starting eval...
+[2023-05-02 15:56:33,762 INFO    ] Running validation in epoch 0
+[2023-05-02 15:59:48,903 INFO    ] Epoch:0 ===== loss:0.01107 ===== SRCC:0.7999 ===== PLCC:0.8218
+[2023-05-02 15:59:48,903 INFO    ] Eval on validation subset is done...
+[2023-05-02 15:59:51,697 INFO    ] Saving weights and model of epoch0, SRCC:0.7999433914159434, PLCC:0.8218021493667956
+[2023-05-02 15:59:51,697 INFO    ] Epoch 0 done. Time: 9.1min
+[2023-05-02 15:59:51,697 INFO    ] Running training epoch 1
+[2023-05-02 16:05:39,674 INFO    ] train epoch:1 / loss:0.01039 / SRCC:0.7978 / PLCC:0.8297
+[2023-05-02 16:05:39,675 INFO    ] Starting eval...
+[2023-05-02 16:05:39,675 INFO    ] Running validation in epoch 1
+[2023-05-02 16:08:55,705 INFO    ] Epoch:1 ===== loss:0.009993 ===== SRCC:0.8437 ===== PLCC:0.8535
+[2023-05-02 16:08:55,706 INFO    ] Eval on validation subset is done...
+[2023-05-02 16:08:58,707 INFO    ] Saving weights and model of epoch1, SRCC:0.8437097986650502, PLCC:0.8534672784317996
+[2023-05-02 16:08:58,707 INFO    ] Epoch 1 done. Time: 9.1min
+[2023-05-02 16:08:58,707 INFO    ] Running training epoch 2
+[2023-05-02 16:14:45,950 INFO    ] train epoch:2 / loss:0.008537 / SRCC:0.8335 / PLCC:0.8629
+[2023-05-02 16:14:45,951 INFO    ] Starting eval...
+[2023-05-02 16:14:45,951 INFO    ] Running validation in epoch 2
+[2023-05-02 16:18:01,368 INFO    ] Epoch:2 ===== loss:0.007877 ===== SRCC:0.8801 ===== PLCC:0.8775
+[2023-05-02 16:18:01,368 INFO    ] Eval on validation subset is done...
+[2023-05-02 16:18:12,934 INFO    ] Saving weights and model of epoch2, SRCC:0.8800881171401419, PLCC:0.877490140691788
+[2023-05-02 16:18:12,934 INFO    ] Epoch 2 done. Time: 9.2min
+[2023-05-02 16:18:12,934 INFO    ] Running training epoch 3
+[2023-05-02 16:24:04,650 INFO    ] train epoch:3 / loss:0.006909 / SRCC:0.8684 / PLCC:0.8904
+[2023-05-02 16:24:04,650 INFO    ] Starting eval...
+[2023-05-02 16:24:04,650 INFO    ] Running validation in epoch 3
+[2023-05-02 16:27:20,417 INFO    ] Epoch:3 ===== loss:0.005629 ===== SRCC:0.9029 ===== PLCC:0.9117
+[2023-05-02 16:27:20,418 INFO    ] Eval on validation subset is done...
+[2023-05-02 16:27:23,491 INFO    ] Saving weights and model of epoch3, SRCC:0.9028868294007039, PLCC:0.9116636822244817
+[2023-05-02 16:27:23,491 INFO    ] Epoch 3 done. Time: 9.2min
+[2023-05-02 16:27:23,491 INFO    ] Running training epoch 4
+[2023-05-02 16:33:12,142 INFO    ] train epoch:4 / loss:0.006253 / SRCC:0.881 / PLCC:0.9014
+[2023-05-02 16:33:12,143 INFO    ] Starting eval...
+[2023-05-02 16:33:12,143 INFO    ] Running validation in epoch 4
+[2023-05-02 16:36:27,879 INFO    ] Epoch:4 ===== loss:0.007506 ===== SRCC:0.892 ===== PLCC:0.904
+[2023-05-02 16:36:27,879 INFO    ] Eval on validation subset is done...
+[2023-05-02 16:36:27,879 INFO    ] Epoch 4 done. Time: 9.1min
+[2023-05-02 16:36:27,879 INFO    ] Running training epoch 5
+[2023-05-02 16:42:16,054 INFO    ] train epoch:5 / loss:0.005586 / SRCC:0.8959 / PLCC:0.9126
+[2023-05-02 16:42:16,055 INFO    ] Starting eval...
+[2023-05-02 16:42:16,055 INFO    ] Running validation in epoch 5
+[2023-05-02 16:45:31,704 INFO    ] Epoch:5 ===== loss:0.0064 ===== SRCC:0.9105 ===== PLCC:0.9058
+[2023-05-02 16:45:31,704 INFO    ] Eval on validation subset is done...
+[2023-05-02 16:45:34,917 INFO    ] Saving weights and model of epoch5, SRCC:0.9104852608208307, PLCC:0.9057855080900192
+[2023-05-02 16:45:34,917 INFO    ] Epoch 5 done. Time: 9.1min
+[2023-05-02 16:45:34,917 INFO    ] Running training epoch 6
+[2023-05-02 16:51:22,977 INFO    ] train epoch:6 / loss:0.005232 / SRCC:0.8984 / PLCC:0.9182
+[2023-05-02 16:51:22,978 INFO    ] Starting eval...
+[2023-05-02 16:51:22,978 INFO    ] Running validation in epoch 6
+[2023-05-02 16:54:38,811 INFO    ] Epoch:6 ===== loss:0.005597 ===== SRCC:0.912 ===== PLCC:0.9196
+[2023-05-02 16:54:38,811 INFO    ] Eval on validation subset is done...
+[2023-05-02 16:54:41,901 INFO    ] Saving weights and model of epoch6, SRCC:0.9120118048068081, PLCC:0.9196379016479163
+[2023-05-02 16:54:41,901 INFO    ] Epoch 6 done. Time: 9.1min
+[2023-05-02 16:54:41,901 INFO    ] Running training epoch 7
+[2023-05-02 17:00:29,997 INFO    ] train epoch:7 / loss:0.004714 / SRCC:0.9089 / PLCC:0.9266
+[2023-05-02 17:00:29,997 INFO    ] Starting eval...
+[2023-05-02 17:00:29,998 INFO    ] Running validation in epoch 7
+[2023-05-02 17:03:45,985 INFO    ] Epoch:7 ===== loss:0.005376 ===== SRCC:0.908 ===== PLCC:0.9167
+[2023-05-02 17:03:45,985 INFO    ] Eval on validation subset is done...
+[2023-05-02 17:03:45,985 INFO    ] Epoch 7 done. Time: 9.1min
+[2023-05-02 17:03:45,985 INFO    ] Running training epoch 8
+[2023-05-02 17:09:37,906 INFO    ] train epoch:8 / loss:0.004719 / SRCC:0.91 / PLCC:0.9268
+[2023-05-02 17:09:37,907 INFO    ] Starting eval...
+[2023-05-02 17:09:37,907 INFO    ] Running validation in epoch 8
+[2023-05-02 17:12:53,770 INFO    ] Epoch:8 ===== loss:0.005943 ===== SRCC:0.908 ===== PLCC:0.9178
+[2023-05-02 17:12:53,770 INFO    ] Eval on validation subset is done...
+[2023-05-02 17:12:53,771 INFO    ] Epoch 8 done. Time: 9.1min
+[2023-05-02 17:12:53,771 INFO    ] Running training epoch 9
+[2023-05-02 17:18:41,592 INFO    ] train epoch:9 / loss:0.004065 / SRCC:0.9234 / PLCC:0.9371
+[2023-05-02 17:18:41,593 INFO    ] Starting eval...
+[2023-05-02 17:18:41,593 INFO    ] Running validation in epoch 9
+[2023-05-02 17:21:57,054 INFO    ] Epoch:9 ===== loss:0.004638 ===== SRCC:0.9246 ===== PLCC:0.9342
+[2023-05-02 17:21:57,055 INFO    ] Eval on validation subset is done...
+[2023-05-02 17:22:00,214 INFO    ] Saving weights and model of epoch9, SRCC:0.9245910220474798, PLCC:0.934187712825502
+[2023-05-02 17:22:00,214 INFO    ] Epoch 9 done. Time: 9.1min
+[2023-05-02 17:22:00,214 INFO    ] Running training epoch 10
+[2023-05-02 17:27:47,472 INFO    ] train epoch:10 / loss:0.004665 / SRCC:0.9114 / PLCC:0.9274
+[2023-05-02 17:27:47,472 INFO    ] Starting eval...
+[2023-05-02 17:27:47,473 INFO    ] Running validation in epoch 10
+[2023-05-02 17:31:02,842 INFO    ] Epoch:10 ===== loss:0.004869 ===== SRCC:0.9248 ===== PLCC:0.9328
+[2023-05-02 17:31:02,842 INFO    ] Eval on validation subset is done...
+[2023-05-02 17:31:05,917 INFO    ] Saving weights and model of epoch10, SRCC:0.9248143856466647, PLCC:0.932836946837165
+[2023-05-02 17:31:05,917 INFO    ] Epoch 10 done. Time: 9.1min
+[2023-05-02 17:31:05,917 INFO    ] Running training epoch 11
+[2023-05-02 17:36:53,227 INFO    ] train epoch:11 / loss:0.003801 / SRCC:0.9268 / PLCC:0.9413
+[2023-05-02 17:36:53,228 INFO    ] Starting eval...
+[2023-05-02 17:36:53,228 INFO    ] Running validation in epoch 11
+[2023-05-02 17:40:08,626 INFO    ] Epoch:11 ===== loss:0.008284 ===== SRCC:0.9076 ===== PLCC:0.9196
+[2023-05-02 17:40:08,626 INFO    ] Eval on validation subset is done...
+[2023-05-02 17:40:08,627 INFO    ] Epoch 11 done. Time: 9.0min
+[2023-05-02 17:40:08,627 INFO    ] Running training epoch 12
+[2023-05-02 17:45:55,815 INFO    ] train epoch:12 / loss:0.003701 / SRCC:0.9311 / PLCC:0.943
+[2023-05-02 17:45:55,816 INFO    ] Starting eval...
+[2023-05-02 17:45:55,816 INFO    ] Running validation in epoch 12
+[2023-05-02 17:49:11,140 INFO    ] Epoch:12 ===== loss:0.007056 ===== SRCC:0.8885 ===== PLCC:0.9037
+[2023-05-02 17:49:11,141 INFO    ] Eval on validation subset is done...
+[2023-05-02 17:49:11,141 INFO    ] Epoch 12 done. Time: 9.0min
+[2023-05-02 17:49:11,141 INFO    ] Running training epoch 13
+[2023-05-02 17:54:58,406 INFO    ] train epoch:13 / loss:0.003749 / SRCC:0.9284 / PLCC:0.9423
+[2023-05-02 17:54:58,406 INFO    ] Starting eval...
+[2023-05-02 17:54:58,406 INFO    ] Running validation in epoch 13
+[2023-05-02 17:58:13,688 INFO    ] Epoch:13 ===== loss:0.005134 ===== SRCC:0.9124 ===== PLCC:0.9218
+[2023-05-02 17:58:13,688 INFO    ] Eval on validation subset is done...
+[2023-05-02 17:58:13,688 INFO    ] Epoch 13 done. Time: 9.0min
+[2023-05-02 17:58:13,688 INFO    ] Starting testing...
+[2023-05-02 17:58:13,688 INFO    ] Best Epoch:10
+[2023-05-02 18:02:16,809 INFO    ] Epoch:10 ===== loss:0.02405 ===== SRCC:0.6878 ===== PLCC:0.7129
+[2023-05-02 18:02:16,810 INFO    ] Mean split test SROCC 0.680291829160625
+[2023-05-02 18:02:16,811 INFO    ] Mean split test PLCC 0.7020636558340259

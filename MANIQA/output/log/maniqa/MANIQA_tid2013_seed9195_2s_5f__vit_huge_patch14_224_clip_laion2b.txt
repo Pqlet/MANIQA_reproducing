@@ -1,0 +1,9 @@
+[2023-05-03 20:40:13,368 INFO    ] {'db_name': 'TID2013', 'train_dis_path': 'C:\\Users\\MQTyor\\ai_pc\\Reserch_ai\\IQA\\datasets\\tid2013\\distorted_images', 'train_txt_file_name': 'C:\\Users\\MQTyor\\ai_pc\\Reserch_ai\\IQA\\datasets\\tid2013\\mos_with_names.txt', 'batch_size': 3, 'learning_rate': 3.7500000000000005e-06, 'weight_decay': 1e-05, 'n_epoch': 20, 'val_freq': 1, 'T_max': 50, 'eta_min': 0, 'num_avg_val': 5, 'crop_size': 224, 'num_workers': 4, 'early_stopping': 3, 'n_splits': 2, 'n_folds': 5, 'metrics_file': 'MANIQA_tid2013_seed9195_2s_5f__vit_huge_patch14_224_clip_laion2b.pkl', 'metrics_txt': 'MANIQA_tid2013_seed9195_2s_5f__vit_huge_patch14_224_clip_laion2b__metrics.txt', 'debug': False, 'patch_size': 14, 'img_size': 224, 'embed_dim': 1280, 'dim_mlp': 768, 'num_heads': [4, 4], 'window_size': 4, 'depths': [2, 2], 'num_outputs': 1, 'num_tab': 2, 'scale': 0.13, 'backbone_str': 'default', 'model_name': 'MANIQA_tid2013_seed9195_2s_5f__vit_huge_patch14_224_clip_laion2b', 'output_path': './output', 'snap_path': './output/models/MANIQA_tid2013_seed9195_2s_5f__vit_huge_patch14_224_clip_laion2b', 'log_path': './output/log/maniqa/', 'log_file': 'MANIQA_tid2013_seed9195_2s_5f__vit_huge_patch14_224_clip_laion2b.txt', 'tensorboard_path': './output/tensorboard/MANIQA_tid2013_seed9195_2s_5f__vit_huge_patch14_224_clip_laion2b'}
+[2023-05-03 20:40:13,369 INFO    ] Seed : 9195
+[2023-05-03 20:40:13,381 INFO    ] --- Split id:0
+[2023-05-03 20:40:13,381 INFO    ] --- Fold id:0
+[2023-05-03 20:40:13,381 INFO    ] --- Model number: 1/10
+[2023-05-03 20:40:13,381 INFO    ] number of train scenes: 1920
+[2023-05-03 20:40:13,382 INFO    ] number of val scenes: 480
+[2023-05-03 20:40:13,382 INFO    ] number of test scenes: 600
+[2023-05-03 20:40:15,455 INFO    ] Running training epoch 0
