@@ -11,7 +11,7 @@ Trying to reproduce results of MANIQA paper
 - [ ] 5) Exepriments with different backbones - 2 splits - 5 folds
   - [x] 5.1) DEFAULT backbone - vit_base_patch8_224
   - [ ] 5.2) vit_base_patch8_224_dino 
-  - [ ] 5.3) vit_large_patch14_224_clip_laion2b 
+  - [x] 5.3) vit_large_patch14_224_clip_laion2b 
   - [ ] 5.4) Larger ViT ? 
   - [ ] 5.5) CLIP ViT - OpenCLIP
   - [ ] 5.6) ResNet...
