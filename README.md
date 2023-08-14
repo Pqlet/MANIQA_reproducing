@@ -1,5 +1,5 @@
 # MANIQA_reproducing
-Trying to reproduce results of MANIQA paper
+Reproducing results and examining the MANIQA, method of Blind Image Quiality Assessment.
 
 ## TO DO TID2013 training 
 - [x] 1) dataset for TID2013 and dataloader
@@ -10,10 +10,9 @@ Trying to reproduce results of MANIQA paper
 - [x] 4) how to train new models so that we won't have memory problems ? 
 - [ ] 5) Exepriments with different backbones - 2 splits - 5 folds
   - [x] 5.1) DEFAULT backbone - vit_base_patch8_224
-  - [ ] 5.2) vit_base_patch8_224_dino 
-  - [x] 5.3) vit_large_patch14_224_clip_laion2b 
-  - [ ] 5.4) Larger ViT ? 
-  - [ ] 5.5) CLIP ViT - OpenCLIP
-  - [ ] 5.6) ResNet...
+  - [x] 5.2) vit_large_patch14_224_clip_laion2b  
+  - [ ] 5.3) vit_base_patch8_224_dino 
+  - [ ] 5.4) CLIP ViT - OpenCLIP
+  - [ ] 5.5) ResNet
 - [x] *) Write a logger that logs to a file AND prints to the console
  
