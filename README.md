@@ -1,7 +1,18 @@
 # MANIQA_reproducing
 Reproducing results and examining the MANIQA, method of Blind Image Quiality Assessment.
+## Current Results
+The training has been conducted with 2 train/test splits (80:20 correspondingly) with different seeds, 5fold grouped CV inside the train split. The resulting SROCC in the split is the average of the results of 5 CV models on the corresponding test split.
+| Backbone | SROCC, split 1 | SROCC, split 2 |
+| --- | --- | --- |
+|vit_base_patch8_224	| 0.9509	| 0.7422|
+|vit_large_patch14_224_clip_laion2b |	0.9362 |	0.6803|
+|vit_huge_patch14_224_clip_laion2b |	0.9466 |	0.6765|
+## Current Conclusions
+The model's performance is highly susceptible to the split. 
+Also the averaging method during inference impacts the quality with five_point_crop being superior to the random crops.
 
-## TO DO TID2013 training 
+The impact of the patch_size on the performance seems to prevail over the model size and the pre-training task.
+## TODO TID2013 training 
 - [x] 1) dataset for TID2013 and dataloader
  Rewrite Dataset to take dist_img and scores as pandas DataFrame to stratify train_test_split and make val and test Datasets
 - [x] 2) validation on val set and test set 
