@@ -1,5 +1,5 @@
 # MANIQA_reproducing
-Reproducing results and examining the MANIQA, method of Blind Image Quiality Assessment.
+Reproducing results and examining the MANIQA, SOTA method for Blind Image Quiality Assessment (BIQA) from the NTIRE workshop at CVPR 2022.
 ## Current Results
 The training has been conducted with 2 train/test splits (80:20 correspondingly) with different seeds, 5fold grouped CV inside the train split. The resulting SROCC in the split is the average of the results of 5 CV models on the corresponding test split.
 | Backbone | SROCC, split 1 | SROCC, split 2 |
