@@ -9,10 +9,11 @@ The training has been conducted with 2 train/test splits (80:20 correspondingly)
 |vit_huge_patch14_224_clip_laion2b |	0.9466 |	0.6765|
 ## Current Conclusions
 Although the number of experiments is small, some intermediate conclusions can be drawn.
-The model's performance is highly susceptible to the split. 
-Also the averaging method during inference impacts the quality with five_point_crop being superior to the random crops.
 
-The impact of the patch_size on the performance seems to prevail over the model size and the pre-training task.
+- The model's performance is highly susceptible to the split. 
+- The impact of the patch_size on the performance seems to prevail over the model size and the pre-training task.
+- Also the averaging method during inference impacts the quality with five_point_crop being superior to the random crops.
+
 ## TODO TID2013 training 
 - [x] 1) dataset for TID2013 and dataloader
  Rewrite Dataset to take dist_img and scores as pandas DataFrame to stratify train_test_split and make val and test Datasets
